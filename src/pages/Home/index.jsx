@@ -13,7 +13,7 @@ export default function Home() {
         Erick 2
       </div>
       <div>
-        Guillermo1  
+        Guillermo13  
       </div>
       <div>
         Guillermo2 
