@@ -14,9 +14,10 @@ export default function Home() {
       </div>
       <div>
         Guillermo13  
+        <button>1</button>
       </div>
       <div>
-        Guillermo2 
+        Guillermo22 
       </div>
       <div>
         Abraham1
