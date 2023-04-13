@@ -3,10 +3,8 @@
   height: 100vh;
 }
 
-.input {
-  width: 200px;
-  
-  
+.inputg {
+  width: 200px;  
 }
 
 .btn-color {
@@ -101,3 +99,16 @@
   }
 }
 
+.SectionBuscarFiltros {
+  /* border: solid yellow; */
+  height: auto;
+  display: none;
+}
+
+.btn-color2 {
+  background-color: #CD1C65;
+  color: white;
+  font-size: 12px;
+  
+  
+}
