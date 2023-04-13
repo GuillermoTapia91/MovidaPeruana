@@ -33,19 +33,13 @@ export default function Home() {
       refDiv1.current.style.height = "100vh"
       refDiv2.current.style.display = "none"
     }
-    // if(refMenuBtn.current.textContent==="Buscar"){
-    //   refMenuBtn.current.textContent = "Close"
-    //   refMenu.current.style.display = "block"
-    // }else{
-    //   refMenuBtn.current.textContent = "Menú"
-    //   refMenu.current.style.display = "none"
-    // }
+    
   }
 
   const handleSelect = (e) => {
-    console.log(selectDistritos)
-    setSelectDistritos(e.target.value)
     
+    setSelectDistritos(e.target.value)
+    console.log(selectDistritos)
   }
   
   const [listas, setlistas] = useState([
@@ -291,12 +285,12 @@ export default function Home() {
                 {/* <input className="form-control" type="text" placeholder="Ej: San Miguel" id="input-buscar" /> */}
                 <select name="distrito"className="form-select" id="" onChange={handleSelect}>
                   <option value="">Distritos</option>
-                  <option value="sanMiguel">San Miguel</option>
+                  <option value="san miguel">San Miguel</option>
                   <option value="miraflores">Miraflores</option>
                   <option value="barranco">Barranco</option>
-                  <option value="puebloLibre">Pueblo Libre</option>
-                  <option value="losOlivos">Los Olivos</option>
-                  <option value="sanJuanMiraflores">San Juan de Miraflores</option>
+                  <option value="pueblo libre">Pueblo Libre</option>
+                  <option value="los olivos">Los Olivos</option>
+                  <option value="san juan de miraflores">San Juan de Miraflores</option>
                   <option value="chancay">Chancay</option>
                   <option value="huaral">Huaral</option>
                 </select>
@@ -311,55 +305,54 @@ export default function Home() {
             <div className=""><img src={barImg} width="400px" alt="" className="img-fluid heartbeat" /></div>
           </div>
       </div>          
-      <div className="SectionBuscarFiltros bg-black bg-gradient p-3" ref={refDiv2} >inicia
+      <div className="SectionBuscarFiltros bg-black bg-gradient p-3" ref={refDiv2} >
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">  
-            {listas.length > 0 && listas.map((lista) => 
-              (
-                <div key={lista.id} className="col">
-                  <div className="card">
-                    <div className="card-body">
-                      <div className="text-center">
-                        <img src={lista.logo} className="img-thumbnail" width="200px" alt="..."/>
-                      </div>
-                      <p className="mb-1 mt-1">Nombre: {lista.nombre}</p>
-                      <p>Dirección: {lista.direccion}</p>
-                      {/* <p className="new-line">
-                        Horario:\n Lunes:${lista.horario.lun}\nMartes:${lista.horario.mar}\n Miércoles:${lista.horario.mie}\nJueves:${lista.horario.jue}\nViernes:${lista.horario.vie}\nSábado:${lista.horario.sab}\nDomingo:${lista.horario.dom}
-                      </p> */}
-                      <div className="text-center"  > 
-                        <button type="button" className="btn btn-color2" data-bs-toggle="modal" data-bs-target="#exampleModal">Horario</button>
-                      
-                        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby={lista.nombre}     aria-hidden="true">
-                          <div className="modal-dialog">
-                            <div className="modal-content">
-                              <div className="modal-header">
-                                <h1 className="modal-title fs-5" id="exampleModalLabel">Horario</h1>
-                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div className="modal-body">
-                                Horario:Lunes:{lista.horario.lun}
-                                Martes:{lista.horario.mar} 
-                                Miércoles:{lista. horario.mie}
-                                Jueves:{lista.horario.jue}
-                                Viernes:{lista.horario.vie}
-                                Sábado:${lista.horario.sab}
-                                Domingo:${lista.horario.dom}
-                              </div>
-                              <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              </div>
-                            </div>
-                          </div>
+            {listas.filter((listas)=>listas.distrito===selectDistritos).map((lista)=>
+            // <div className='mm' key={lista.id}>{lista.nombre}</div>
+            <div key={lista.id} className="col">
+            <div className="card">
+              <div className="card-body">
+                <div className="text-center">
+                  <img src={lista.logo} className="img-thumbnail" width="200px" alt="..."/>
+                </div>
+                <p className="mb-1 mt-1">Nombre: {lista.nombre}</p>
+                <p>Dirección: {lista.direccion}</p>
+                
+                <div className="text-center"  > 
+                  <button type="button" className="btn btn-color2" data-bs-toggle="modal" data-bs-target="#exampleModal">Horario</button>
+                
+                  <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby={lista.nombre}     aria-hidden="true">
+                    <div className="modal-dialog">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h1 className="modal-title fs-5" id="exampleModalLabel">Horario</h1>
+                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <button className="btn btn-color2 m-1">Fotos</button>
-                        <button className="btn btn-color2">Opiniones</button>
-                      </div>   
+                        <div className="modal-body">
+                          Horario:Lunes:{lista.horario.lun}
+                          Martes:{lista.horario.mar} 
+                          Miércoles:{lista. horario.mie}
+                          Jueves:{lista.horario.jue}
+                          Viernes:{lista.horario.vie}
+                          Sábado:${lista.horario.sab}
+                          Domingo:${lista.horario.dom}
+                        </div>
+                        <div className="modal-footer">
+                          <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              
-              ))}
+                  <button className="btn btn-color2 m-1">Fotos</button>
+                  <button className="btn btn-color2">Opiniones</button>
+                </div>   
+              </div>
+            </div>
+          </div>
+            )}
+            {/* arrays.filter(array=>array.algo === algo).map((array) =>()) */}
+
           </div>
         </div>
       </div>  
