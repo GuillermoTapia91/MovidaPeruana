@@ -10,7 +10,25 @@ import logo1 from "../../assets/Sanmiguel/MiTercerLugar/logo.jpg"
 import logo2 from "../../assets/Sanmiguel/PachaInti/logo.jpg"
 import logo3 from "../../assets/Sanmiguel/EnLounge&Bar/logo.jpg"
 import logo4 from "../../assets/Sanmiguel/FestivalSanMiguel/logo.jpg"
+import logo5 from "../../assets/Sanmiguel/Sopranos31/logo.jpg"
+import logo6 from "../../assets/Sanmiguel/Sopranos16/logo.jpg"
+import logo7 from "../../assets/Sanmiguel/Rustica/logo.jpg"
+import logo8 from "../../assets/Sanmiguel/FridayS/logo.jpg"
+import logo9 from "../../assets/Sanmiguel/FridaysO/logo.jpg"
+import logo10 from "../../assets/Sanmiguel/Chilis/logo.png"
+
+
 import logo11 from "../../assets/Miraflores/wahios/logo.jpg"
+import logo21 from "../../assets/Chancay/img/kaemalogo.jpg"
+import logo22 from "../../assets/Chancay/img/waikylogo.png"
+import logo23 from "../../assets/Chancay/img/lahuertaencantadalogo.png"
+import logo24 from "../../assets/Chancay/img/lobitologo.png"
+// import logo25 from "../../assets/Huaral/img/legonlogo.png"
+import logo26 from "../../assets/Huaral/img/gothiklogo.jpg"
+import logo27 from "../../assets/Huaral/img/casaviejalogo.png"
+
+
+
 
 
 export default function Home() {
@@ -130,7 +148,7 @@ export default function Home() {
       id:5,
       nombre: "Sopranos",
       direccion: "Av. La Marina 3151,San Miguel",
-      logo: "",
+      logo: logo5,
       carta: "",//si es que hay
       horario: {
         lun: "07:00pm a 01:00am",
@@ -150,7 +168,7 @@ export default function Home() {
       id:6,
       nombre: "Sopranos",
       direccion: "Av. La Marina 1687,San Miguel",
-      logo: "",
+      logo: logo6,
       carta: "",//si es que hay
       horario: {
         lun: "07:00pm a 01:00am",
@@ -170,7 +188,7 @@ export default function Home() {
       id:7,
       nombre: "Rustica",
       direccion: "Av. La Marina 2631, San Miguel",
-      logo: "../../assets/Sanmiguel/FestivalSanMiguel/logo.jpg",
+      logo: logo7,
       carta: "",//si es que hay
       horario: {
         lun: "12:00pm a 12:30am",
@@ -190,7 +208,7 @@ export default function Home() {
       id:8,
       nombre: "Fridays",
       direccion: "Av. La Marina 2355 - C.C. La Marina Open Plaza,San Miguel",
-      logo: "",
+      logo: logo8,
       carta: "",//si es que hay
       horario: {
         lun: "07:00pm a 11:30am",
@@ -210,7 +228,7 @@ export default function Home() {
       id:9,
       nombre: "Fridays",
       direccion: "Av. La Marina 2000, C.C Plaza San Miguel",
-      logo: "",
+      logo: logo9,
       carta: "",//si es que hay
       horario: {
         lun: "07:00pm a 11:30am",
@@ -230,7 +248,7 @@ export default function Home() {
       id:10,
       nombre: "Chilis",
       direccion: "Calle Mantaro Nro. 220, C.C. Plaza San Miguel",
-      logo: "",
+      logo: logo10,
       carta: "",//si es que hay
       horario: {
         lun: "07:00pm a 11:00am",
@@ -264,6 +282,144 @@ export default function Home() {
       fotos: [],
       web: "https://www.instagram.com/wahiosculturebar/?hl=es"
     },
+    {
+      establecimiento: "discoteca",
+      id: 21,
+      distrito: "chancay",
+      nombre: "Kaema club",
+      direccion: "C. Lopez de Zuñiga, Chancay 15131 ",
+      logo: logo21,
+      carta: "",//si es que hay
+      telefono: " 981 522 697",
+      horario: {
+          lun: "",
+          mar: "",
+          mie: "",
+          jue: "",
+          vie: "",
+          sab: "7:00pm a 4:00am",
+          dom: "7:00pm a 4:00am"
+      }
+
+    },
+    {
+        establecimiento: "bar",
+        id: 22,
+        distrito: "chancay",
+        nombre: "WAYKI'S BAR",
+        direccion: "Calle San Martin 153, Chancay 15131 ",
+        logo: logo22,
+        carta: "",//si es que hay
+        telefono: "933 694 706",
+        horario: {
+            lun: "7:00pm a 2:00am",
+            mar: "7:00pm a 2:00am",
+            mie: "7:00pm a 2:00am",
+            jue: "7:00pm a 2:00am",
+            vie: "7:00pm a 2:00am",
+            sab: "7:00pm a 4:00am",
+            dom: "7:00pm a 4:00am"
+
+        }
+    },
+    {
+        establecimiento: "bar",
+        id: 23,
+        distrito: "chancay",
+        nombre: "la huerta encantada",
+        direccion: "Boulevard Diego, C. Lopez de Zuñiga 450, Chancay 15131",
+        logo: logo23,
+        carta: "",//si es que hay
+        telefono: "946 519 352",
+        horario: {
+            lun: "12:00pm a 18:00pm",
+            mar: "12:00pm a 18:00pm",
+            mie: "12:00pm a 18:00pm",
+            jue: "12:00pm a 18:00pm",
+            vie: "12:00pm a 23:00pm",
+            sab: "12:00pm a 23:00pm",
+            dom: "12:00pm a 23:00pm"
+        }
+
+    },
+    {
+        establecimiento: "bar",
+        id: 24,
+        distrito: "chancay",
+        nombre: "Lobitos Restobar",
+        direccion: "Junin 380, Chancay 15131",
+        logo: logo24,
+        carta: "cdn.me-qr.com",//si es que hay
+        telefono: "958 534 920",
+        horario: {
+            lun: "12:00pm a 18:00pm",
+            mar: "12:00pm a 18:00pm",
+            mie: "12:00pm a 18:00pm",
+            jue: "12:00pm a 18:00pm",
+            vie: "12:00pm a 23:00pm",
+            sab: "12:00pm a 23:00pm",
+            dom: "12:00pm a 23:00pm"
+        }
+
+    },
+    {
+      establecimiento: "discoteca",
+      id:25,
+      distrito: "huaral",
+      nombre: "Legon",
+      direccion: "Los Geranios 347, Huaral 15202 ",
+      logo:"",
+      carta: "",//si es que hay
+      telefono: " 934 557 270",
+      horario: {
+          lun: "",
+          mar: "",
+          mie: "",
+          jue: "",
+          vie: "",
+          sab: "7:00pm a 4:00am",
+          dom: "7:00pm a 4:00am"
+      }
+    },
+    {
+      establecimiento: "discoteca",
+      id: 26,
+      distrito: "huaral",
+      nombre: "Gothik Disco",
+      direccion: "Julio C. Tello 152, Huaral 15202 ",
+      logo: logo26,
+      carta: "",//si es que hay
+      telefono: "",
+      horario: {
+          lun: "",
+          mar: "",
+          mie: "",
+          jue: "",
+          vie: "",
+          sab: "22:00pm a 6:00am",
+          dom: "22:00pm a 6:00am"
+      }
+    },
+    {
+      establecimiento: "discoteca",
+      id: 27,
+      distrito: "huaral",
+      nombre: "casa vieja",
+      direccion: "Perú 120, Huaral 15202 ",
+      logo: logo27,
+      carta: "",//si es que hay
+      telefono: " ",
+      horario: {
+          lun: "",
+          mar: "",
+          mie: "",
+          jue: "",
+          vie: "",
+          sab: "23:00pm a 6:00am",
+          dom: ""
+      }
+    },
+
   ])
   return(
     <div>
@@ -308,7 +464,7 @@ export default function Home() {
       <div className="SectionBuscarFiltros bg-black bg-gradient p-3" ref={refDiv2} >
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">  
-            {listas.filter((listas)=>listas.distrito===selectDistritos).map((lista)=>
+            {listas.filter((lista)=>lista.distrito===selectDistritos).map((lista)=>
             // <div className='mm' key={lista.id}>{lista.nombre}</div>
             <div key={lista.id} className="col">
             <div className="card">
