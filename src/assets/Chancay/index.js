@@ -25,7 +25,7 @@ const listas = [
         direccion: "Calle San Martin 153, Chancay 15131 ",
         logo: "./images/logo-miTercerLugar.jpg",
         carta: "",//si es que hay
-        telefono: "933 694 706"
+        telefono: "933 694 706",
         horario: {
             lun: "7:00pm a 2:00am",
             mar: "7:00pm a 2:00am",
