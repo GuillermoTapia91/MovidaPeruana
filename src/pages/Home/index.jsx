@@ -2,7 +2,7 @@ import "./indexErick.css";
 import "./indexGuillermo.css";
 import "./indexJoel.css";
 import "./indexJercy.css";
-//Guillermo
+//GuillermoImportInicio
 import discoImg from "../../assets/img/buscarPorDistrito_disco.jpg";
 import barImg from "../../assets/img/buscarPorDistrito_bar.jpg";
 import { useState, useRef } from "react";
@@ -11,16 +11,24 @@ import logo2 from "../../assets/Sanmiguel/PachaInti/logo.jpg";
 import logo3 from "../../assets/Sanmiguel/EnLounge&Bar/logo.jpg";
 import logo4 from "../../assets/Sanmiguel/FestivalSanMiguel/logo.jpg";
 import logo11 from "../../assets/Miraflores/wahios/logo.jpg";
-//Erick
+//GuillermoImportFinal
+//ErickImportInicio
 import video from "../../assets/video/discoteca.mp4";
 import Buble from "../../assets/img/burbuja7 (1).png";
-//Joel
+//ErickImportFinal
+//AbrahamImportInicio
 import evento1 from "../../assets/img/eva-ayllon.jpg";
 import evento2 from "../../assets/img/gianmarco.jpg";
 import evento3 from "../../assets/img/grupo-5.jpg";
 import evento4 from "../../assets/img/kanukayeltigre.jpg";
+
+//AbrahamImportFinal
+//JercyImportInicio
+
+//JercyImportFinal
+
 export default function Home() {
-  //Guillermo
+  //GuillermoInicio
   let refMenuBtn = useRef();
   let refDiv1 = useRef();
   let refDiv2 = useRef();
@@ -270,16 +278,28 @@ export default function Home() {
       web: "https://www.instagram.com/wahiosculturebar/?hl=es",
     },
   ]);
+
+  //GuillermoFinal
+  //ErickInicio
+
+  //ErickFinal
+  //AbrahamInicio
+
+  //AbrahamFinal
+  //JercyInicio
+
+  //JercyFinal
+
   return (
     <div>
       <div>
         {/*Erick*/}
-        <div className="container">
+        <div className="container containerE">
           <video src={video} muted autoPlay loop></video>
-          <div className="capa"></div>
+          {/* <div className="capa"></div> */}
           <div className="intro">
             <h1>Que comienze la Fiesta</h1>
-            <h3>Encuentra la juerga mas cerca de tu zona</h3>
+            <h3 className="h3G">Encuentra la juerga mas cerca de tu zona</h3>
             <button className="busqueda btn btn-outline-primary">
               Bares/Discotecas
             </button>
@@ -287,6 +307,7 @@ export default function Home() {
           <div>{/* <img className="base" src={Buble} alt="" /> */}</div>
         </div>
       </div>
+
       {/* //Guillermo */}
 
       <div
@@ -449,21 +470,30 @@ export default function Home() {
         <div className=" bg-black  p-3">
           <div>
             <h2 className="text-center p-3 ">EVENTOS</h2>
-            </div>
+          </div>
           <div className="row row-cols-1 row-cols-md-4 g-4 ">
             <div className="col">
               <div className="card h-100">
-                <img src={evento1} className="card-img-top img-thumbnail" alt="..." />
+                <img
+                  src={evento1}
+                  className="card-img-top img-thumbnail"
+                  alt="..."
+                />
                 <div className="card-body">
                   <h5 className="card-title text-center">EVA AYLLON</h5>
                   <p className="card-text">
-                  This is a wider card with supporting text below as a natural
+                    This is a wider card with supporting text below as a natural
                     lead-in to additional content. This card has even longer
                     content than the first to show that equal height action.
                   </p>
                 </div>
                 <div>
-                <a href="https://teleticket.com.pe/evento/vuelve-el-mejor-regalo-para-mama-eva-ayllon-y-tania-libertad-auditorio-del-colegio-santa-ursula" class="btn btn-primary m-2">Link del evento</a>
+                  <a
+                    href="https://teleticket.com.pe/evento/vuelve-el-mejor-regalo-para-mama-eva-ayllon-y-tania-libertad-auditorio-del-colegio-santa-ursula"
+                    class="btn btn-primary m-2"
+                  >
+                    Link del evento
+                  </a>
                 </div>
                 <div className="card-footer">
                   <small className="text-body-secondary">
@@ -474,17 +504,26 @@ export default function Home() {
             </div>
             <div className="col">
               <div class="card h-100">
-                <img src={evento2} className="card-img-top img-thumbnail" alt="..." />
+                <img
+                  src={evento2}
+                  className="card-img-top img-thumbnail"
+                  alt="..."
+                />
                 <div className="card-body">
                   <h5 className="card-title text-center">GIANMARCO</h5>
                   <p className="card-text">
-                  This is a wider card with supporting text below as a natural
+                    This is a wider card with supporting text below as a natural
                     lead-in to additional content. This card has even longer
                     content than the first to show that equal height action.
                   </p>
                 </div>
                 <div className="link">
-                <a href="https://teleticket.com.pe/gianmarco30-2022/" class="btn btn-primary m-2 ">Link del evento</a>
+                  <a
+                    href="https://teleticket.com.pe/gianmarco30-2022/"
+                    class="btn btn-primary m-2 "
+                  >
+                    Link del evento
+                  </a>
                 </div>
                 <div className="card-footer">
                   <small className="text-body-secondary">
@@ -495,7 +534,11 @@ export default function Home() {
             </div>
             <div className="col">
               <div className="card h-100">
-                <img src={evento3} className="card-img-top img-thumbnail" alt="..." />
+                <img
+                  src={evento3}
+                  className="card-img-top img-thumbnail"
+                  alt="..."
+                />
                 <div className="card-body">
                   <h5 className="card-title text-center">GRUPO 5</h5>
                   <p className="card-text">
@@ -505,7 +548,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                <a href="https://teleticket.com.pe/50aniversario-grupo5" class="btn btn-primary m-2">Link del evento</a>
+                  <a
+                    href="https://teleticket.com.pe/50aniversario-grupo5"
+                    class="btn btn-primary m-2"
+                  >
+                    Link del evento
+                  </a>
                 </div>
                 <div className="card-footer">
                   <small className="text-body-secondary">
@@ -516,7 +564,11 @@ export default function Home() {
             </div>
             <div className="col">
               <div className="card h-100">
-                <img src={evento4} className="card-img-top img-thumbnail" alt="..." />
+                <img
+                  src={evento4}
+                  className="card-img-top img-thumbnail"
+                  alt="..."
+                />
                 <div className="card-body">
                   <h5 className="card-title text-center">KANUKA Y EL TIGRE</h5>
                   <p className="card-text">
@@ -526,7 +578,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                <a href="https://www.joinnus.com/events/concerts/lima-todos-crecemos-distinto-la-historia-de-kanaku-y-el-tigre-52856" class="btn btn-primary m-2 ">Link del evento</a>
+                  <a
+                    href="https://www.joinnus.com/events/concerts/lima-todos-crecemos-distinto-la-historia-de-kanaku-y-el-tigre-52856"
+                    class="btn btn-primary m-2 "
+                  >
+                    Link del evento
+                  </a>
                 </div>
                 <div className="card-footer">
                   <small className="text-body-secondary">
