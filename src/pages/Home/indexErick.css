@@ -22,13 +22,14 @@
     height: 100vh;
     background-color: #1c1c1d;
     opacity: 0.5;
-    /* mix-blend-mode:overlay; */
+     mix-blend-mode:overlay; 
   }
   .intro{
     position: relative;
     color: white;
     text-align: center;
-    gap: 10px;
+    
+    
   }
   .busqueda{
   color:rgb(243, 44, 94);
@@ -42,3 +43,13 @@
   h3{
     margin-bottom: 18px;
   }
+  .buble{
+    z-index: 1;
+    position:absolute;
+    width: 100%;
+    max-width: 100%;
+    height:0px;
+  }
+.base{
+  width: 100%;
+}

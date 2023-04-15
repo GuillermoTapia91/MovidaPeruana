@@ -271,21 +271,24 @@ export default function Home() {
     <div>
       <div >
         {/*Erick*/}
-      <div className="container">
-                <video src={video} muted autoPlay loop>
-                </video>
-                <div className="capa"></div>
-                <div className="intro">
-                    <h1>Que comienze la Fiesta</h1>
-                    <h3>Encuentra la juerga mas cerca de tu zona</h3>
-                    <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button>
-                </div>
-                <div>
-                    {/* <img className="base" src={Buble} alt="" /> */}
-                </div>
+        <div className="container">
+        
+          <video src={video} muted autoPlay loop>
+          </video>
+          <div className="capa"></div>
+          <div className="intro">
+            <h1>Que comienze la Fiesta</h1>
+            <h3>Encuentra la juerga mas cerca de tu zona</h3>
+            <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button>
+            
+          </div>
+          <div className='buble'>
+              <img className="base" src={Buble} alt="" />
             </div>
+        </div>
+
       </div>
-          {/* //Guillermo */}
+      {/* //Guillermo */}
 
       <div className="SectionBuscarPorDistritos  d-sm-flex justify-content-sm-center align-items-sm-center 
        gap-4 bg-black bg-gradient text-white p-2" ref={refDiv1}>
@@ -328,7 +331,7 @@ export default function Home() {
                 <div className="card">
                   <div className="card-body">
                     <div className="text-center">
-                      <img src={lista.logo} className="img-thumbnail" width="200px" alt="..." />
+                      <img src={lista.logo} className="img-thumbnail " width="200px" alt="..." />
                     </div>
                     <p className="mb-1 mt-1">Nombre: {lista.nombre}</p>
                     <p>Dirección: {lista.direccion}</p>
