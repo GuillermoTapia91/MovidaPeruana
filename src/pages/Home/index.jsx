@@ -2,7 +2,7 @@ import './indexErick.css'
 import './indexGuillermo.css'
 import './indexJoel.css'
 import './indexJercy.css'
-//Guillermo
+//GuillermoImportInicio
 import discoImg from "../../assets/img/buscarPorDistrito_disco.jpg"
 import barImg from "../../assets/img/buscarPorDistrito_bar.jpg"
 import { useState, useRef } from "react"
@@ -11,12 +11,20 @@ import logo2 from "../../assets/Sanmiguel/PachaInti/logo.jpg"
 import logo3 from "../../assets/Sanmiguel/EnLounge&Bar/logo.jpg"
 import logo4 from "../../assets/Sanmiguel/FestivalSanMiguel/logo.jpg"
 import logo11 from "../../assets/Miraflores/wahios/logo.jpg"
-//Erick
+//GuillermoImportFinal
+//ErickImportInicio
 import video from "../../assets/video/discoteca.mp4"
 import Buble from "../../assets/img/burbuja7 (1).png"
+//ErickImportFinal
+//AbrahamImportInicio
+
+//AbrahamImportFinal
+//JercyImportInicio
+
+//JercyImportFinal
 
 export default function Home() {
-  //Guillermo
+  //GuillermoInicio
   let refMenuBtn = useRef()
   let refDiv1 = useRef()
   let refDiv2 = useRef()
@@ -43,6 +51,7 @@ export default function Home() {
     setSelectDistritos(e.target.value)
     console.log(selectDistritos)
   }
+
 
   const [listas, setlistas] = useState([
     {
@@ -267,17 +276,29 @@ export default function Home() {
       web: "https://www.instagram.com/wahiosculturebar/?hl=es"
     },
   ])
+  
+  //GuillermoFinal
+  //ErickInicio
+
+  //ErickFinal
+  //AbrahamInicio
+
+  //AbrahamFinal
+  //JercyInicio
+
+  //JercyFinal
+
   return (
     <div>
       <div >
         {/*Erick*/}
-      <div className="container">
+      <div className="container containerE">
                 <video src={video} muted autoPlay loop>
                 </video>
-                <div className="capa"></div>
+                {/* <div className="capa"></div> */}
                 <div className="intro">
                     <h1>Que comienze la Fiesta</h1>
-                    <h3>Encuentra la juerga mas cerca de tu zona</h3>
+                    <h3 className='h3G'>Encuentra la juerga mas cerca de tu zona</h3>
                     <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button>
                 </div>
                 <div>
@@ -285,6 +306,7 @@ export default function Home() {
                 </div>
             </div>
       </div>
+      
           {/* //Guillermo */}
 
       <div className="SectionBuscarPorDistritos  d-sm-flex justify-content-sm-center align-items-sm-center 
