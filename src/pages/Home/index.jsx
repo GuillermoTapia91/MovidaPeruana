@@ -21,7 +21,6 @@ import evento1 from "../../assets/img/eva-ayllon.jpg";
 import evento2 from "../../assets/img/gianmarco.jpg";
 import evento3 from "../../assets/img/grupo-5.jpg";
 import evento4 from "../../assets/img/kanukayeltigre.jpg";
-
 //AbrahamImportFinal
 //JercyImportInicio
 
@@ -53,6 +52,7 @@ export default function Home() {
     setSelectDistritos(e.target.value);
     console.log(selectDistritos);
   };
+
 
   const [listas, setlistas] = useState([
     {
@@ -278,7 +278,7 @@ export default function Home() {
       web: "https://www.instagram.com/wahiosculturebar/?hl=es",
     },
   ]);
-
+  
   //GuillermoFinal
   //ErickInicio
 
@@ -307,7 +307,7 @@ export default function Home() {
           <div>{/* <img className="base" src={Buble} alt="" /> */}</div>
         </div>
       </div>
-
+      
       {/* //Guillermo */}
 
       <div
