@@ -1,13 +1,14 @@
-.containerE{
+.container{
     min-width: 100%;
     min-height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    object-fit: cover;
   }
   video{
-    position: absolute;
+    position: relative;
     top:0;
     left:0;
     width: 100%;
@@ -22,14 +23,13 @@
     height: 100vh;
     background-color: #1c1c1d;
     opacity: 0.5;
-     mix-blend-mode:overlay; 
+    mix-blend-mode:overlay; 
   }
   .intro{
-    position: relative;
+    position: absolute;
     color: white;
     text-align: center;
-    
-    
+    z-index: 1;
   }
   .busqueda{
   color:rgb(243, 44, 94);

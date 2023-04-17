@@ -1,6 +1,7 @@
 .SectionBuscarPorDistritos {
   /* border: solid yellow; */
   height: 100vh;
+  position: relative;
 }
 
 .inputg {

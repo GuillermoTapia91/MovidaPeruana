@@ -297,7 +297,7 @@ export default function Home() {
         <div className="container">
           <video src={video} muted autoPlay loop>
           </video>
-          <div className="capa"></div>
+          {/* <div className="capa"></div> */}
           <div className="intro">
             <h1>Que comienze la Fiesta</h1>
             <h3>Encuentra la juerga mas cerca de tu zona</h3>
@@ -311,7 +311,7 @@ export default function Home() {
       {/* //Guillermo */}
 
       <div
-        className="SectionBuscarPorDistritos  d-sm-flex justify-content-sm-center align-items-sm-center 
+        className="SectionBuscarPorDistritos  d-sm-flex justify-content-sm-center align-items-sm-center
         gap-4 bg-black bg-gradient text-white p-2"
         ref={refDiv1}
       >
