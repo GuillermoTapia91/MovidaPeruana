@@ -1,27 +1,29 @@
+import "./indexErick.css";
+import "./indexGuillermo.css";
+import "./indexJoel.css";
+import "./indexJercy.css";
+//GuillermoImportInicio
 import { useState, useRef } from "react"
 import { db } from "./db"
 import { districts } from "./districts"
-
 import { SchedulePlace } from "../../components"
-
 import discoImg from "../../assets/img/buscarPorDistrito_disco.jpg"
 import barImg from "../../assets/img/buscarPorDistrito_bar.jpg"
 // import logo25 from "../../assets/Huaral/img/legonlogo.png"
 //GuillermoImportFinal
 //ErickImportInicio
 import video from "../../assets/video/discoteca.mp4";
+import Buble from "../../assets/img/burbuja7 (1).png";
 //ErickImportFinal
 //AbrahamImportInicio
 import evento1 from "../../assets/img/eva-ayllon.jpg";
 import evento2 from "../../assets/img/gianmarco.jpg";
 import evento3 from "../../assets/img/grupo-5.jpg";
 import evento4 from "../../assets/img/kanukayeltigre.jpg";
+//AbrahamImportFinal
+//JercyImportInicio
 
-import "./indexErick.css";
-import "./indexGuillermo.css";
-import "./indexJoel.css";
-import "./indexJercy.css";
-
+//JercyImportFinal
 
 export default function Home() {
   //GuillermoInicio
@@ -53,6 +55,7 @@ export default function Home() {
   }
 
   const handleSelectDistritos = (e) => {
+    setSelectDistritos(e.target.value)
     const filterByDistrict = db.filter((place) => place.distrito === e.target.value)
     setlistas(filterByDistrict)
   }

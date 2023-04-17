@@ -15,8 +15,8 @@ export default function SchedulePlace({ currentList: lista }) {
               <p>Miércoles:{lista?.horario.mie}</p>
               <p>Jueves:{lista?.horario.jue}</p>
               <p>Viernes:{lista?.horario.vie}</p>
-              <p>Sábado:${lista?.horario.sab}</p>
-              <p>Domingo:${lista?.horario.dom}</p>
+              <p>Sábado:{lista?.horario.sab}</p>
+              <p>Domingo:{lista?.horario.dom}</p>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
