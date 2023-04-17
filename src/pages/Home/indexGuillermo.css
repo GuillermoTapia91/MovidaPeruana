@@ -13,7 +13,7 @@
 }
 
 .inputg {
-  width: 200px;  
+  width: 249px;  
 }
 
 .inputSelectEstablecimiento {
@@ -124,20 +124,20 @@
   font-size: 12px;
 }
 
-.selectG {
-  /* border: solid white;  */
+/* .selectG {
+  border: solid white; 
 }
 .imagenesG {
-  /* border: solid blue; */
+  border: solid blue;
 }
 
 .imgDisco {
-  /* border: solid yellow; */
+  border: solid yellow;
 }
 
 .imgBar {
-  /* border: solid red; */
-}
+  border: solid red;
+} */
 
 /* .horario {
   display: none;
