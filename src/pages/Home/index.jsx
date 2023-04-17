@@ -278,7 +278,7 @@ export default function Home() {
       web: "https://www.instagram.com/wahiosculturebar/?hl=es",
     },
   ]);
-  
+
   //GuillermoFinal
   //ErickInicio
 
@@ -294,25 +294,25 @@ export default function Home() {
     <div>
       <div>
         {/*Erick*/}
-      <div className="container">
-                <video src={video} muted autoPlay loop>
-                </video>
-                <div className="capa"></div>
-                <div className="intro">
-                    <h1>Que comienze la Fiesta</h1>
-                    <h3>Encuentra la juerga mas cerca de tu zona</h3>
-                    <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button>
-                </div>
-                <div>
-                    {/* <img className="base" src={Buble} alt="" /> */}
-                </div>
-            </div>
+        <div className="container">
+          <video src={video} muted autoPlay loop>
+          </video>
+          <div className="capa"></div>
+          <div className="intro">
+            <h1>Que comienze la Fiesta</h1>
+            <h3>Encuentra la juerga mas cerca de tu zona</h3>
+            <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button>
+          </div>
+          <div>
+            {/* <img className="base" src={Buble} alt="" /> */}
+          </div>
+        </div>
       </div>
-          {/* //Guillermo */}
+      {/* //Guillermo */}
 
       <div
         className="SectionBuscarPorDistritos  d-sm-flex justify-content-sm-center align-items-sm-center 
-       gap-4 bg-black bg-gradient text-white p-2"
+        gap-4 bg-black bg-gradient text-white p-2"
         ref={refDiv1}
       >
         <div className="gap-1 mb-3">
@@ -394,67 +394,67 @@ export default function Home() {
                     <p className="mb-1 mt-1">Nombre: {lista.nombre}</p>
                     <p>Dirección: {lista.direccion}</p>
 
-                      <div className="text-center">
-                        <button
-                          type="button"
-                          className="btn btn-color2"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                        >
-                          Horario
-                        </button>
+                    <div className="text-center">
+                      <button
+                        type="button"
+                        className="btn btn-color2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        Horario
+                      </button>
 
-                        <div
-                          className="modal fade"
-                          id="exampleModal"
-                          tabIndex="-1"
-                          aria-labelledby={lista.nombre}
-                          aria-hidden="true"
-                        >
-                          <div className="modal-dialog">
-                            <div className="modal-content">
-                              <div className="modal-header">
-                                <h1
-                                  className="modal-title fs-5"
-                                  id="exampleModalLabel"
-                                >
-                                  Horario
-                                </h1>
-                                <button
-                                  type="button"
-                                  className="btn-close"
-                                  data-bs-dismiss="modal"
-                                  aria-label="Close"
-                                ></button>
-                              </div>
-                              <div className="modal-body">
-                                Horario:Lunes:{lista.horario.lun}
-                                Martes:{lista.horario.mar}
-                                Miércoles:{lista.horario.mie}
-                                Jueves:{lista.horario.jue}
-                                Viernes:{lista.horario.vie}
-                                Sábado:${lista.horario.sab}
-                                Domingo:${lista.horario.dom}
-                              </div>
-                              <div className="modal-footer">
-                                <button
-                                  type="button"
-                                  className="btn btn-secondary"
-                                  data-bs-dismiss="modal"
-                                >
-                                  Close
-                                </button>
-                              </div>
+                      <div
+                        className="modal fade"
+                        id="exampleModal"
+                        tabIndex="-1"
+                        aria-labelledby={lista.nombre}
+                        aria-hidden="true"
+                      >
+                        <div className="modal-dialog">
+                          <div className="modal-content">
+                            <div className="modal-header">
+                              <h1
+                                className="modal-title fs-5"
+                                id="exampleModalLabel"
+                              >
+                                Horario
+                              </h1>
+                              <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div className="modal-body">
+                              Horario:Lunes:{lista.horario.lun}
+                              Martes:{lista.horario.mar}
+                              Miércoles:{lista.horario.mie}
+                              Jueves:{lista.horario.jue}
+                              Viernes:{lista.horario.vie}
+                              Sábado:${lista.horario.sab}
+                              Domingo:${lista.horario.dom}
+                            </div>
+                            <div className="modal-footer">
+                              <button
+                                type="button"
+                                className="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                              >
+                                Close
+                              </button>
                             </div>
                           </div>
                         </div>
-                        <button className="btn btn-color2 m-1">Fotos</button>
-                        <button className="btn btn-color2">Opiniones</button>
                       </div>
+                      <button className="btn btn-color2 m-1">Fotos</button>
+                      <button className="btn btn-color2">Opiniones</button>
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
+            )}
             {/* arrays.filter(array=>array.algo === algo).map((array) =>()) */}
           </div>
         </div>
