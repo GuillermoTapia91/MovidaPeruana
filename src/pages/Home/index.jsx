@@ -294,7 +294,7 @@ export default function Home() {
     <div>
       <div>
         {/*Erick*/}
-        <div className="container">
+        <div className="containerEr">
           <video src={video} muted autoPlay loop>
           </video>
           <div className="capa"></div>
