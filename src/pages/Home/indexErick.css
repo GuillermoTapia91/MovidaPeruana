@@ -6,7 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
+
 video{
   position: absolute;
   top:0;

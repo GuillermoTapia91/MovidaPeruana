@@ -48,6 +48,7 @@ export default function Home() {
   let refDiv2 = useRef()
   const [buttonBuscar,setButtonBuscar]= useState(false)
   const [selectDistritos,setSelectDistritos]= useState("")
+  const [selectEstablecimientos,setSelectEstablecimientos]= useState("")
   
   const handleButton = (e) => {
     if(refMenuBtn.current.textContent==="Buscar"){
@@ -64,10 +65,15 @@ export default function Home() {
     
   }
 
-  const handleSelect = (e) => {
+  const handleSelectDistritos = (e) => {
     
     setSelectDistritos(e.target.value)
     console.log(selectDistritos)
+  }
+  const handleSelectEstablecimientos = (e) => {
+    
+    setSelectEstablecimientos(e.target.value)
+    
   }
   
   const [listas, setlistas] = useState([
@@ -463,9 +469,9 @@ export default function Home() {
       
       {/* //Guillermo */}
 
-      <div className="SectionBuscarPorDistritos  d-sm-flex justify-content-sm-center align-items-sm-center 
-       gap-4 bg-black bg-gradient text-white p-2" ref={refDiv1}>
-          <div className="gap-1 mb-3">
+      <div className="SectionBuscarPorDistritos d-sm-flex justify-content-sm-center align-items-sm-center 
+       gap-4 bg-black bg-gradient text-white p-2 " ref={refDiv1}>
+          <div className="gap-1 mb-3 selectG">
             <div>
               <h3 className="text-center tracking-in-contract-bck-bottom">Descubre bares y discotecas </h3>
               <h3 className="text-center tracking-in-contract-bck-bottom"> disponibles en tu distrito</h3>
@@ -473,7 +479,7 @@ export default function Home() {
             <div className=" input-container mt-3 d-flex   justify-content-center align-items-center gap-3 ">
               <div className="inputg" >
                 {/* <input className="form-control" type="text" placeholder="Ej: San Miguel" id="input-buscar" /> */}
-                <select name="distrito"className="form-select" id="" onChange={handleSelect}>
+                <select name="distrito"className="form-select" id="" onChange={handleSelectDistritos}>
                   <option value="">Distritos</option>
                   <option value="san miguel">San Miguel</option>
                   <option value="miraflores">Miraflores</option>
@@ -490,56 +496,75 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" d-sm-flex justify-content-sm-center align-items-sm-center gap-5 mt-3 text-center " >
-            <div className="mb-3"><img src={discoImg} width="380px" alt="" className="img-fluid heartbeat" /></div>
-            <div className=""><img src={barImg} width="400px" alt="" className="img-fluid heartbeat" /></div>
+          <div className=" d-sm-flex justify-content-sm-center align-items-sm-center gap-5 mt-3 text-center imagenesG" >
+            <div className="imgDisco"><img src={discoImg} width="380px" alt="" className="img-fluid heartbeat" /></div>
+            <div className="imgBar"><img src={barImg} width="400px" alt="" className="img-fluid heartbeat" /></div>
           </div>
       </div>          
       <div className="SectionBuscarFiltros bg-black bg-gradient p-3" ref={refDiv2} >
+      <select name="establecimiento"className="form-select" id="" onChange={handleSelectEstablecimientos} >
+                  <option value="-">establecimiento</option>
+                  <option value="bar">bar</option>
+                  <option value="discoteca">discoteca</option>
+      </select>
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">  
-            {listas.filter((lista)=>lista.distrito===selectDistritos).map((lista)=>
+            
+            {
+            listas.filter((lista)=>(
+              
+              lista.distrito===selectDistritos&&lista.establecimiento===selectEstablecimientos)).map((lista)=>
             // <div className='mm' key={lista.id}>{lista.nombre}</div>
             <div key={lista.id} className="col">
-            <div className="card">
-              <div className="card-body">
-                <div className="text-center">
-                  <img src={lista.logo} className="img-thumbnail" width="200px" alt="..."/>
-                </div>
-                <p className="mb-1 mt-1">Nombre: {lista.nombre}</p>
-                <p>Dirección: {lista.direccion}</p>
-                
-                <div className="text-center"  > 
-                  <button type="button" className="btn btn-color2" data-bs-toggle="modal" data-bs-target="#exampleModal">Horario</button>
-                
-                  <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby={lista.nombre}     aria-hidden="true">
-                    <div className="modal-dialog">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h1 className="modal-title fs-5" id="exampleModalLabel">Horario</h1>
-                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div className="modal-body">
-                          Horario:Lunes:{lista.horario.lun}
-                          Martes:{lista.horario.mar} 
-                          Miércoles:{lista. horario.mie}
-                          Jueves:{lista.horario.jue}
-                          Viernes:{lista.horario.vie}
-                          Sábado:${lista.horario.sab}
-                          Domingo:${lista.horario.dom}
-                        </div>
-                        <div className="modal-footer">
-                          <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <div className="card">
+                <div className="card-body">
+                  <div className="text-center">
+                    <img src={lista.logo} className="img-thumbnail" width="200px" alt="..."/>
+                  </div>
+                  <p className="mb-1 mt-1">Nombre: {lista.nombre}</p>
+                  <p>Dirección: {lista.direccion}</p>
+                  
+                  <div className="text-center"  > 
+                    <button type="button" className="btn btn-color2" data-bs-toggle="modal" data-bs-target="#exampleModal">Horario</button>
+                  
+                    <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby={lista.nombre}     aria-hidden="true">
+                      <div className="modal-dialog">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Horario</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div className="modal-body">
+                            Horario:Lunes:{lista.horario.lun}
+                            Martes:{lista.horario.mar} 
+                            Miércoles:{lista. horario.mie}
+                            Jueves:{lista.horario.jue}
+                            Viernes:{lista.horario.vie}
+                            Sábado:${lista.horario.sab}
+                            Domingo:${lista.horario.dom}
+                          </div>
+                          <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <button id="btnfotosG" className="btn btn-color2 m-1">Fotos</button>
+                    <button className="btn btn-color2">Opiniones</button>
                   </div>
-                  <button className="btn btn-color2 m-1">Fotos</button>
-                  <button className="btn btn-color2">Opiniones</button>
-                </div>   
+                  <div id="horarioG" style={{display:"none"}}>
+                    Horario:Lunes:{lista.horario.lun}
+                    Martes:{lista.horario.mar} 
+                    Miércoles:{lista. horario.mie}
+                    Jueves:{lista.horario.jue}
+                    Viernes:{lista.horario.vie}
+                    Sábado:${lista.horario.sab}
+                    Domingo:${lista.horario.dom}                                                      
+                  </div>
+
+                </div>
               </div>
             </div>
-          </div>
             )}
             {/* arrays.filter(array=>array.algo === algo).map((array) =>()) */}
 

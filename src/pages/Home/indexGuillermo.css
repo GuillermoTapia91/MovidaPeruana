@@ -1,6 +1,15 @@
+/* --bs-breakpoint-xs: 0;
+--bs-breakpoint-sm: 576px;
+--bs-breakpoint-md: 768px;
+--bs-breakpoint-lg: 992px;
+--bs-breakpoint-xl: 1200px;
+--bs-breakpoint-xxl: 1400px; */
+
+
 .SectionBuscarPorDistritos {
-  /* border: solid yellow; */
+  /* border: solid slateblue;  */
   height: 100vh;
+  
 }
 
 .inputg {
@@ -109,8 +118,23 @@
   background-color: #CD1C65;
   color: white;
   font-size: 12px;
-  
-  
 }
 
+.selectG {
+  /* border: solid white;  */
+}
+.imagenesG {
+  /* border: solid blue; */
+}
 
+.imgDisco {
+  /* border: solid yellow; */
+}
+
+.imgBar {
+  /* border: solid red; */
+}
+
+/* .horario {
+  display: none;
+} */
