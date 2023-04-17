@@ -15,7 +15,7 @@ import logo22 from "../../assets/Chancay/img/waikylogo.png"
 import logo23 from "../../assets/Chancay/img/lahuertaencantadalogo.png"
 import logo24 from "../../assets/Chancay/img/lobitologo.png"
 
-import Buble from "../../assets/img/burbuja7 (1).png";
+
 import logo26 from "../../assets/Huaral/img/gothiklogo.jpg"
 import logo27 from "../../assets/Huaral/img/casaviejalogo.png"
 

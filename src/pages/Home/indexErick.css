@@ -1,46 +1,57 @@
-
-.containerE{
-  min-width: 100%;
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} 
-
-video{
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100%;
-  height:100%;
-  object-fit: cover;
-}
-.capa{
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100%;
-  height: 100vh;
-  background-color: #1c1c1d;
-  opacity: 0.5;
-  /* mix-blend-mode:overlay; */
-}
-.intro{
-  position: relative;
-  color: white;
-  text-align: center;
-  gap: 10px;
-}
-.busqueda{
-color:rgb(243, 44, 94);
-border-color:rgb(243, 44, 94);
-}
-.busqueda:hover{
-  background-color: rgb(243, 44, 94);
-  color:black;
+.containerEr{
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    padding: 0;
+  }
+  video{
+    position: relative;
+    top:0;
+    left:0;
+    margin: 0;
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+  }
+  .capa{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1c1c1d;
+    opacity: 0.5;
+    mix-blend-mode:overlay; 
+  }
+  .intro{
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+  .busqueda{
+  color:rgb(243, 44, 94);
   border-color:rgb(243, 44, 94);
-}
-.h3G{
-  margin-bottom: 18px;
+  }
+  .busqueda:hover{
+    background-color: rgb(243, 44, 94);
+    color:black;
+    border-color:rgb(243, 44, 94);
+  }
+  .h3G{
+    margin-bottom: 18px;
+  }
+  .buble{
+    z-index: 1;
+    position:absolute;
+    width: 100%;
+    max-width: 100%;
+    height:0px;
+  }
+.base{
+  width: 100%;
 }
