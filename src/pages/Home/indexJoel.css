@@ -1,0 +1,13 @@
+.btn.btn-primary.m-2{
+    background-color: rgb(243, 44, 94);
+    border: 0;
+    display: block;
+    justify-content: center;
+}
+.text-center.p-3{
+    color:white;
+    font-size: 50px;
+}
+.card-text{
+    text-align: center;
+}
