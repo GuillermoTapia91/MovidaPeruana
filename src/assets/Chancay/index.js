@@ -6,7 +6,7 @@ const listas = [
         direccion: "C. Lopez de Zuñiga, Chancay 15131 ",
         logo: "./images/logo-miTercerLugar.jpg",
         carta: "",//si es que hay
-        telefono: " 981 522 697"
+        telefono: " 981 522 697",
         horario: {
             lun: "",
             mar: "",
