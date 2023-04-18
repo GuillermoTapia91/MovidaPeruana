@@ -25,7 +25,7 @@ const listas = [
         direccion: "Calle San Martin 153, Chancay 15131 ",
         logo: "./images/logo-miTercerLugar.jpg",
         carta: "",//si es que hay
-        telefono: "933 694 706"
+        telefono: "933 694 706",
         horario: {
             lun: "7:00pm a 2:00am",
             mar: "7:00pm a 2:00am",
@@ -44,7 +44,7 @@ const listas = [
         direccion: "Boulevard Diego, C. Lopez de Zuñiga 450, Chancay 15131",
         logo: "./images/logo-miTercerLugar.jpg",
         carta: "",//si es que hay
-        telefono: "946 519 352"
+        telefono: "946 519 352",
         horario: {
             lun: "12:00pm a 18:00pm",
             mar: "12:00pm a 18:00pm",
@@ -63,7 +63,7 @@ const listas = [
         direccion: "Junin 380, Chancay 15131",
         logo: "./images/logo-miTercerLugar.jpg",
         carta: "cdn.me-qr.com",//si es que hay
-        telefono: "958 534 920"
+        telefono: "958 534 920",
         horario: {
             lun: "12:00pm a 18:00pm",
             mar: "12:00pm a 18:00pm",
