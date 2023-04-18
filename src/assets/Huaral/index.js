@@ -6,7 +6,7 @@ const listas = [
         direccion: "Los Geranios 347, Huaral 15202 ",
         logo: "",
         carta: "",//si es que hay
-        telefono: " 934 557 270"
+        telefono: " 934 557 270",
         horario: {
             lun: "",
             mar: "",
@@ -25,7 +25,7 @@ const listas = [
         direccion: "Julio C. Tello 152, Huaral 15202 ",
         logo: "",
         carta: "",//si es que hay
-        telefono: ""
+        telefono: "",
         horario: {
             lun: "",
             mar: "",
@@ -44,7 +44,7 @@ const listas = [
         direccion: "Perú 120, Huaral 15202 ",
         logo: "",
         carta: "",//si es que hay
-        telefono: " "
+        telefono: " ",
         horario: {
             lun: "",
             mar: "",
