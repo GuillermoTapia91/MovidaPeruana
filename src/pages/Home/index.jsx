@@ -92,9 +92,10 @@ export default function Home() {
           </video>
           <div className="capa"></div>
           <div className="intro">
-            <h1>Que comienze la Fiesta</h1>
-            <h3>Encuentra la juerga mas cerca de tu zona</h3>
-            <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button>
+            <h1>Que comience la Fiesta</h1>
+            <h3>Encuentra la juerga más cerca de tu zona</h3>
+            {/* <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button> */}
+            <a className="busqueda" href="#BusquedaDistrito">Bares/Discotecas</a>
           </div>
           <div>
             {/* <img className="base" src={Buble} alt="" /> */}
@@ -104,7 +105,7 @@ export default function Home() {
       
       {/* //Guillermo */}
 
-      <div className="SectionBuscarPorDistritos d-sm-flex justify-content-sm-center align-items-sm-center 
+      <div id="BusquedaDistrito" className="SectionBuscarPorDistritos d-sm-flex justify-content-sm-center align-items-sm-center 
        gap-4 bg-black bg-gradient text-white p-2 " ref={refDiv1}>
           <div className="gap-1 mb-3 selectG">
             <div>
