@@ -10,6 +10,8 @@ export default function MainLayout(){
         <nav className="navbar bg-transparent fixed-top">
             <div className="container-fluid justify-content-around ">
                 <img src={logo} width={280} alt="" />
+                <a href="#eventos">Eventos</a>
+
                 <button className="menu navbar-toggler text-" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <img src={menu}alt="" />
                 </button>
