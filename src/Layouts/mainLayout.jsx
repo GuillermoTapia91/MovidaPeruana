@@ -1,9 +1,12 @@
 import logo from "../assets/img/Logo.png"
 import menu from "../assets/img/hamburg.png"
 import "./layouts.css"
+import { Outlet } from "react-router-dom"
 
 export default function MainLayout(){
+
     return (
+        <>
         <nav className="navbar bg-transparent fixed-top">
             <div className="container-fluid justify-content-around ">
                 <img src={logo} width={280} alt="" />
@@ -44,6 +47,8 @@ export default function MainLayout(){
                     </div>
                 </div>
             </div>
-        </nav>  
+        </nav> 
+        <Outlet/>
+        </>
     )
 }

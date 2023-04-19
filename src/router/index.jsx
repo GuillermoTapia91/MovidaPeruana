@@ -6,9 +6,9 @@ export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        
+        <Route element={<MainLayout/>}>
           <Route path="/" element={<HomeView />} />
-     
+        </Route>
         <Route path="/SignIn" element={<SignInView />} />
       </Routes>
     </BrowserRouter>
