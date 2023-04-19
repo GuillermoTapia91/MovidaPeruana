@@ -92,8 +92,8 @@ export default function Home() {
           </video>
           <div className="capa"></div>
           <div className="intro">
-            <h1>Que comience la Fiesta</h1>
-            <h3>Encuentra la juerga más cerca de tu zona</h3>
+            <h1 className="lyric1" >Que comience la Fiesta</h1>
+            <h3 className="lyric2" >Encuentra la juerga más cerca de tu zona</h3>
             {/* <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button> */}
             <a className="busqueda" href="#BusquedaDistrito">Bares/Discotecas</a>
           </div>
@@ -185,7 +185,7 @@ export default function Home() {
       <div>
         <div className=" bg-black  p-3">
           <div>
-            <h2 className="text-center p-3 ">EVENTOS</h2>
+            <h2 id="Eventos"  className="text-center p-3 ">EVENTOS</h2>
           </div>
           <div className="row row-cols-1 row-cols-md-4 g-4 ">
             <div className="col">
