@@ -162,16 +162,6 @@ export default function Home() {
                     <button id="btnfotosG" className="btn btn-color2 m-1">Fotos</button>
                     <button className="btn btn-color2">Opiniones</button>
                   </div>
-                  <div id="horarioG" style={{display:"none"}}>
-                    Horario:Lunes:{lista.horario.lun}
-                    Martes:{lista.horario.mar} 
-                    Miércoles:{lista. horario.mie}
-                    Jueves:{lista.horario.jue}
-                    Viernes:{lista.horario.vie}
-                    Sábado:${lista.horario.sab}
-                    Domingo:${lista.horario.dom}                                                      
-                  </div>
-
                 </div>
               </div>
             </div>

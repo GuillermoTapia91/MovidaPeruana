@@ -20,14 +20,14 @@ export const districts =
       value: "pueblo libre",
       label: "Pueblo Libre"
     },
-    {
-      value: "los olivos",
-      label: "Los Olivos"
-    },
-    {
-      value: "san juan de miraflores",
-      label: "San Juan de Miraflores"
-    },
+    // {
+    //   value: "los olivos",
+    //   label: "Los Olivos"
+    // },
+    // {
+    //   value: "san juan de miraflores",
+    //   label: "San Juan de Miraflores"
+    // },
     {
       value: "chancay",
       label: "Chancay"
