@@ -31,6 +31,11 @@ import logo26 from "../../assets/Huaral/img/gothiklogo.jpg"
 import logo27 from "../../assets/Huaral/img/casaviejalogo.png"
 
 import logo61 from "../../assets/PuebloLibre/theClubLima/logo.jpg"
+import logo62 from "../../assets/PuebloLibre/kalua/logo.jpg"
+import logo63 from "../../assets/PuebloLibre/Hops/logo.jpg"
+import logo64 from "../../assets/PuebloLibre/barelyBar/logo.jpeg"
+import logo65 from "../../assets/PuebloLibre/MiTercerLugarP/logo.jpg"
+
 
 export const db = [
   {
@@ -588,7 +593,92 @@ export const db = [
       vie: "07:00pm a 5:15am",
       sab: "07:00pm a 5:00am",
       dom: "07:00pm a 5:00am"
-    }
+    },
+    fotos: [],
+    web: "https://www.instagram.com/theclublima/"
   },
+  {
+    establecimiento: "discoteca",
+    id: 62,
+    distrito: "pueblo libre",
+    nombre: "Kalúa",
+    direccion: "Av. La Marina 1520, Pueblo Libre",
+    logo: logo62,
+    carta: "",//si es que hay
+    telefono: " ",
+    horario: {
+      lun: "07:00pm a 5:00am",
+      mar: "07:00pm a 5:00am",
+      mie: "07:00pm a 5:00am",
+      jue: "07:00pm a 5:00am",
+      vie: "07:00pm a 5:00am",
+      sab: "07:00pm a 5:00am",
+      dom: "07:00pm a 5:00am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/kalua_discobar/?hl=es"
+  },
+  {
+    establecimiento: "discoteca",
+    id: 63,
+    distrito: "pueblo libre",
+    nombre: "Hops",
+    direccion: "Av. General Vivanco 785, Pueblo Libre",
+    logo: logo63,
+    carta: "",//si es que hay
+    telefono: " ",
+    horario: {
+      lun: "04:00pm a 11:00pm",
+      mar: "04:00pm a 11:00pm",
+      mie: "04:00pm a 01:00am",
+      jue: "04:00pm a 02:00am",
+      vie: "04:00pm a 02:00am",
+      sab: "04:00pm a 02:30am",
+      dom: "04:00pm a 11:00pm"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/hops_peru/"
+  },
+  {
+    establecimiento: "bar",
+    id: 64,
+    distrito: "pueblo libre",
+    nombre: "Barely Bar",
+    direccion: "Calle Antonio Polo 756, Pueblo Libre",
+    logo: logo64,
+    carta: "",//si es que hay
+    telefono: " ",
+    horario: {
+      lun: "04:00pm a 11:00pm",
+      mar: "04:00pm a 11:00pm",
+      mie: "04:00pm a 01:00am",
+      jue: "04:00pm a 02:00am",
+      vie: "04:00pm a 02:00am",
+      sab: "04:00pm a 02:30am",
+      dom: "04:00pm a 11:00pm"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/barleybar.oficial/"
+  },
+  {
+    establecimiento: "bar",
+    id: 65,
+    distrito: "pueblo libre",
+    nombre: "Mi tercer lugar",
+    direccion: "Av. José de San Martín 493, Pueblo Libre",
+    logo: logo65,
+    carta: "https://www.mitercerlugar.com.pe/static/documentos/carta.pdf",//si es que hay
+    horario: {
+      lun: "5:00pm a 11:00pm",
+      mar: "5:00pm a 11:00pm",
+      mie: "5:00pm a 11:00pm",
+      jue: "4:00pm 11:00pm",
+      vie: "4:00pm a 11:00pm",
+      sab: "4:00pm a 11:00pm",
+      dom: "5:00pm a 11:00pm"
+    },
+    fotos: [],
+    web: "https://www.mitercerlugar.com.pe/"
 
+  },
 ]
