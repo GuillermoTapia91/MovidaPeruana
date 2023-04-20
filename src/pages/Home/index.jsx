@@ -183,9 +183,9 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <div className=" bg-black  p-3">
-          <div>
-            <h2 id="Eventos"  className="text-center p-3 ">EVENTOS</h2>
+        <div id="eventos" className=" bg-black  p-3">
+          <div >
+            <h2   className="text-center p-3 ">EVENTOS</h2>
           </div>
           <div className="row row-cols-1 row-cols-md-4 g-4 ">
             <div className="col">
