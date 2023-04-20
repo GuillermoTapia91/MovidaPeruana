@@ -56,14 +56,35 @@ export default function Home() {
   }
 
   const handleSelectDistritos = (e) => {
+    if(!e.target.value){
+      setlistas(db)
+      setSelectEstablecimientos("")
+      setSelectDistritos("")
+      return
+    }
+    
+    
     setSelectDistritos(e.target.value)
+    setSelectEstablecimientos("")
     const filterByDistrict = db.filter((place) => place.distrito === e.target.value)
+    
     setlistas(filterByDistrict)
+    
   }
 
+
   const handleSelectEstablecimientos = (e) => {  
-    const filterByDistrictAndEstablishment = db.filter((place) => place.distrito === selectDistritos && place.establecimiento === e.target.value)
-    setlistas(filterByDistrictAndEstablishment)
+    if(selectDistritos==="") {
+      setSelectEstablecimientos(e.target.value)
+      const filterByDistrictAndEstablishment = db.filter((place) => place.establecimiento === e.target.value)
+      setlistas(filterByDistrictAndEstablishment)
+    }else{
+      setSelectEstablecimientos(e.target.value)
+      const filterByDistrictAndEstablishment = db.filter((place) => place.distrito === selectDistritos && place.establecimiento === e.target.value)
+      setlistas(filterByDistrictAndEstablishment)
+    }
+   
+    
   }
 
   const handleSetCurrentList = ({id}) => {
@@ -106,7 +127,7 @@ export default function Home() {
       {/* //Guillermo */}
 
       <div id="BusquedaDistrito" className="SectionBuscarPorDistritos d-sm-flex justify-content-sm-center align-items-sm-center 
-       gap-4 bg-black bg-gradient text-white p-2 " ref={refDiv1}>
+       gap-4 bg-black  text-white p-2 " ref={refDiv1}>
           <div className="gap-1 mb-3 selectG">
             <div>
               <h3 className="text-center tracking-in-contract-bck-bottom">Descubre bares y discotecas </h3>
@@ -115,7 +136,7 @@ export default function Home() {
             <div className=" input-container mt-3 d-flex   justify-content-center align-items-center gap-3 ">
               <div className="inputg" >
                 {/* <input className="form-control" type="text" placeholder="Ej: San Miguel" id="input-buscar" /> */}
-                <select name="distrito"className="form-select" id="" onChange={handleSelectDistritos}>
+                <select name="distrito" className="form-select" id="" onChange={handleSelectDistritos}>
                   {
                     districts.map((district, index) => (
                       <option key={index} value={district.value}>{district.label}</option>
@@ -136,8 +157,8 @@ export default function Home() {
       <div className="SectionBuscarFiltros bg-black bg-gradient p-3" ref={refDiv2} >
       <div className="inputSelectEstablecimiento mb-2
       ">
-        <select name="establecimiento"className="form-select" id="" onChange={handleSelectEstablecimientos} >
-          <option disabled selected>establecimiento</option>
+        <select name="establecimiento"className="form-select" value={selectEstablecimientos} id="" onChange={handleSelectEstablecimientos} >
+          <option value="">establecimiento</option>
           <option value="bar">bar</option>
           <option value="discoteca">discoteca</option>
         </select>

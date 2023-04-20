@@ -1,8 +1,16 @@
 export const districts =
   [
+    // {
+    //   value: "",
+    //   label: "Selecciona un distrito"
+    // },
     {
-      value: "",
-      label: "Selecciona un distrito"
+      value:"-",
+      label:"Selecciona distrito"
+    },
+    {
+      value:"",
+      label:"Todos"
     },
     {
       value: "san miguel",
