@@ -1,7 +1,4 @@
-<<<<<<< HEAD
- /* #root {
-=======
- #root {
+  #root {
   width: 100%;
   min-height: 100vh;
   margin: 0;
@@ -9,13 +6,6 @@
 
 }
 
-/* #root {
->>>>>>> development
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
 /* 
 .logo {
   height: 6em;

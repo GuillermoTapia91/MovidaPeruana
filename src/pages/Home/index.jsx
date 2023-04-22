@@ -57,20 +57,38 @@ export default function Home() {
   };
 
   const handleSelectDistritos = (e) => {
+    if (!e.target.value) {
+      setlistas(db);
+      setSelectEstablecimientos("");
+      setSelectDistritos("");
+      return;
+    }
+
     setSelectDistritos(e.target.value);
+    setSelectEstablecimientos("");
     const filterByDistrict = db.filter(
       (place) => place.distrito === e.target.value
     );
+
     setlistas(filterByDistrict);
   };
 
   const handleSelectEstablecimientos = (e) => {
-    const filterByDistrictAndEstablishment = db.filter(
-      (place) =>
-        place.distrito === selectDistritos &&
-        place.establecimiento === e.target.value
-    );
-    setlistas(filterByDistrictAndEstablishment);
+    if (selectDistritos === "") {
+      setSelectEstablecimientos(e.target.value);
+      const filterByDistrictAndEstablishment = db.filter(
+        (place) => place.establecimiento === e.target.value
+      );
+      setlistas(filterByDistrictAndEstablishment);
+    } else {
+      setSelectEstablecimientos(e.target.value);
+      const filterByDistrictAndEstablishment = db.filter(
+        (place) =>
+          place.distrito === selectDistritos &&
+          place.establecimiento === e.target.value
+      );
+      setlistas(filterByDistrictAndEstablishment);
+    }
   };
 
   const handleSetCurrentList = ({ id }) => {
@@ -98,11 +116,12 @@ export default function Home() {
           <video src={video} muted autoPlay loop></video>
           <div className="capa"></div>
           <div className="intro">
-            <h1>Que comienze la Fiesta</h1>
-            <h3>Encuentra la juerga mas cerca de tu zona</h3>
-            <button className="busqueda btn btn-outline-primary">
+            <h1 className="lyric1">Que comience la Fiesta</h1>
+            <h3 className="lyric2">Encuentra la juerga más cerca de tu zona</h3>
+            {/* <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button> */}
+            <a className="busqueda" href="#BusquedaDistrito">
               Bares/Discotecas
-            </button>
+            </a>
           </div>
           <div>{/* <img className="base" src={Buble} alt="" /> */}</div>
         </div>
@@ -111,8 +130,9 @@ export default function Home() {
       {/* //Guillermo */}
 
       <div
+        id="BusquedaDistrito"
         className="SectionBuscarPorDistritos d-sm-flex justify-content-sm-center align-items-sm-center 
-       gap-4 bg-black bg-gradient text-white p-2 "
+       gap-4 bg-black  text-white p-2 "
         ref={refDiv1}
       >
         <div className="gap-1 mb-3 selectG">
@@ -182,12 +202,11 @@ export default function Home() {
           <select
             name="establecimiento"
             className="form-select"
+            value={selectEstablecimientos}
             id=""
             onChange={handleSelectEstablecimientos}
           >
-            <option disabled selected>
-              establecimiento
-            </option>
+            <option value="">establecimiento</option>
             <option value="bar">bar</option>
             <option value="discoteca">discoteca</option>
           </select>
@@ -226,15 +245,6 @@ export default function Home() {
                       </button>
                       <button className="btn btn-color2">Opiniones</button>
                     </div>
-                    <div id="horarioG" style={{ display: "none" }}>
-                      Horario:Lunes:{lista.horario.lun}
-                      Martes:{lista.horario.mar}
-                      Miércoles:{lista.horario.mie}
-                      Jueves:{lista.horario.jue}
-                      Viernes:{lista.horario.vie}
-                      Sábado:${lista.horario.sab}
-                      Domingo:${lista.horario.dom}
-                    </div>
                   </div>
                 </div>
               </div>
@@ -243,359 +253,237 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/*<div>
-        <div className=" bg-black  p-3">
-          <div>
-            <h2 className="text-center p-3 ">EVENTOS</h2>
+
+      <div>
+        <div id="eventos" className="bg-black  p-4">
+          <div className="">
+            <h2 className="text-center p-2">EVENTOS</h2>
           </div>
-          <div className="row row-cols-1 row-cols-md-4 g-4 ">
-            <div className="col">
-              <div className="card h-100">
-                <img
-                  src={evento1}
-                  className="card-img-top img-thumbnail"
-                  alt="..."
-                />
-                <div className="card-body">
-                  <h5 className="card-title text-center">EVA AYLLON</h5>
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This card has even longer
-                    content than the first to show that equal height action.
-                  </p>
+          <div
+            id="carouselExampleCaptions"
+            className="carousel carousel-dark slide"
+            data-bs-ride="false"
+          >
+            <div class="carousel-indicators m-2">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+
+            <div className="carousel-inner ">
+              <div className="carousel-item active ">
+                <div className="card-group ">
+                  <div className="card ms-1 p-2">
+                    <img
+                      src={evento1}
+                      className="card-img-top border border-dark border border-3 rounded-1"
+                      alt="..."
+                    />
+                    <div className="card-body ">
+                      <h5 className="card-title text-center">EVA AYLLON</h5>
+                      <p className="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                      <div>
+                        <a href="" className="btn btn-primary m-2 ">
+                          Link del evento
+                        </a>
+                      </div>
+                      <div className="card-footer">
+                        <p className="card-text">
+                          <small className="text-muted">
+                            Last updated 3 mins ago
+                          </small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="card ms-1 p-2 ">
+                    <img
+                      src={evento2}
+                      className="card-img-top border border-dark border border-3 rounded-1"
+                      alt="..."
+                    />
+                    <div className="card-body ">
+                      <h5 className="card-title text-center">GIANMARCO</h5>
+                      <p className="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This card has
+                        even longer content than the first to show
+                      </p>
+                      <div>
+                        <a href="" className="btn btn-primary m-2 ">
+                          Link del evento
+                        </a>
+                      </div>
+                      <div className="card-footer ">
+                        <p className="card-text">
+                          <small className="text-muted ">
+                            Last updated 3 mins ago
+                          </small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card ms-1 p-2">
+                    <img
+                      src={evento3}
+                      className="card-img-top border border-dark border border-3 rounded-2"
+                      alt="..."
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title text-center">GRUPO 5</h5>
+                      <p className="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This card has
+                        even longer content than the first to show that equal
+                        height action.
+                      </p>
+                      <div>
+                        <a href="" className="btn btn-primary m-2 ">
+                          Link del evento
+                        </a>
+                      </div>
+                      <div className="card-footer ">
+                        <p className="card-text">
+                          <small className="text-muted">
+                            Last updated 3 mins ago
+                          </small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <a
-                    href="https://teleticket.com.pe/evento/vuelve-el-mejor-regalo-para-mama-eva-ayllon-y-tania-libertad-auditorio-del-colegio-santa-ursula"
-                    className="btn btn-primary m-2"
-                  >
-                    Link del evento
-                  </a>
-                </div>
-                <div className="card-footer">
-                  <small className="text-body-secondary">
-                    Publicado hace 10 min.
-                  </small>
+              </div>
+              <div className="carousel-item">
+                <div className="card-group">
+                  <div className="card p-2">
+                    <img
+                      src={evento4}
+                      className="card-img-top border border-dark border border-3 rounded-1"
+                      alt="..."
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title text-center">
+                        KANUKA Y EL TIGRE
+                      </h5>
+                      <p className="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                      <div>
+                        <a href="" className="btn btn-primary m-2 ">
+                          Link del evento
+                        </a>
+                      </div>
+                      <div className="card-footer ">
+                        <p className="card-text ">
+                          <small className="text-muted">
+                            Last updated 3 mins ago
+                          </small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card ms-1 p-2">
+                    <img
+                      src={evento5}
+                      class="card-img-top border border-dark border border-3 rounded-1"
+                      alt="..."
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title text-center">AGUA MARINA</h5>
+                      <p className="card-text">
+                        This card has supporting text below as a natural lead-in
+                        to additional content.
+                      </p>
+                      <div>
+                        <a href="" className="btn btn-primary m-2 ">
+                          Link del evento
+                        </a>
+                      </div>
+                      <div className="card-footer ">
+                        <p className="card-text">
+                          <small className="text-muted">
+                            Last updated 3 mins ago
+                          </small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card ms-1 p-2">
+                    <img
+                      src={evento6}
+                      className="card-img-top border border-dark border border-3 rounded-1"
+                      alt="..."
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title text-center">
+                        DANIELA DANCOURT
+                      </h5>
+                      <p className="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This card has
+                        even longer content than the first to show that equal
+                        height action.
+                      </p>
+                      <div>
+                        <a href="" className="btn btn-primary m-2 ">
+                          Link del evento
+                        </a>
+                      </div>
+                      <div className="card-footer ">
+                        <p className="card-text">
+                          <small className="text-muted">
+                            Last updated 3 mins ago
+                          </small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col">
-              <div className="card h-100">
-                <img
-                  src={evento2}
-                  className="card-img-top img-thumbnail"
-                  alt="..."
-                />
-                <div className="card-body">
-                  <h5 className="card-title text-center">GIANMARCO</h5>
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This card has even longer
-                    content than the first to show that equal height action.
-                  </p>
-                </div>
-                <div className="link">
-                  <a
-                    href="https://teleticket.com.pe/gianmarco30-2022/"
-                    className="btn btn-primary m-2 "
-                  >
-                    Link del evento
-                  </a>
-                </div>
-                <div className="card-footer">
-                  <small className="text-body-secondary">
-                    Publicado hace 1 hora.
-                  </small>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="card h-100">
-                <img
-                  src={evento3}
-                  className="card-img-top img-thumbnail"
-                  alt="..."
-                />
-                <div className="card-body">
-                  <h5 className="card-title text-center">GRUPO 5</h5>
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This card has even longer
-                    content than the first to show that equal height action.
-                  </p>
-                </div>
-                <div>
-                  <a
-                    href="https://teleticket.com.pe/50aniversario-grupo5"
-                    className="btn btn-primary m-2"
-                  >
-                    Link del evento
-                  </a>
-                </div>
-                <div className="card-footer">
-                  <small className="text-body-secondary">
-                    Publicado hace 20 min.
-                  </small>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="card h-100">
-                <img
-                  src={evento4}
-                  className="card-img-top img-thumbnail"
-                  alt="..."
-                />
-                <div className="card-body">
-                  <h5 className="card-title text-center">KANUKA Y EL TIGRE</h5>
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This card has even longer
-                    content than the first to show that equal height action.
-                  </p>
-                </div>
-                <div>
-                  <a
-                    href="https://www.joinnus.com/events/concerts/lima-todos-crecemos-distinto-la-historia-de-kanaku-y-el-tigre-52856"
-                    className="btn btn-primary m-2 "
-                  >
-                    Link del evento
-                  </a>
-                </div>
-                <div className="card-footer">
-                  <small className="text-body-secondary">
-                    Publicado hace 4 horas.
-                  </small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-            */}
-      <div className="bg-black  p-3">
-        <div
-          id="carouselExampleCaptions"
-          className="carousel carousel-dark slide"
-          data-bs-ride="false"
-        >
-          <div class="carousel-indicators">
             <button
+              className="carousel-control-prev"
               type="button"
               data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
             <button
+              className="carousel-control-next"
               type="button"
               data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
-
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="card-group ">
-                <div className="card">
-                  <img
-                    src={evento1}
-                    className="card-img-top img-thumbnail"
-                    alt="..."
-                  />
-                  <div className="card-body ">
-                    <h5 className="card-title text-center">EVA AYLLON</h5>
-                    <p className="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <div>
-                      <a href="" className="btn btn-primary m-2 ">
-                        Link del evento
-                      </a>
-                    </div>
-                    <div className="card-footer">
-                      <p className="card-text">
-                        <small className="text-muted">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card">
-                  <img
-                    src={evento2}
-                    className="card-img-top img-thumbnail"
-                    alt="..."
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title text-center">GIANMARCO</h5>
-                    <p className="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This card has even
-                      longer content than the first to show
-                    </p>
-                    <div>
-                      <a href="" className="btn btn-primary m-2 ">
-                        Link del evento
-                      </a>
-                    </div>
-                    <div className="card-footer ">
-                      <p className="card-text">
-                        <small className="text-muted ">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <img
-                    src={evento3}
-                    className="card-img-top img-thumbnail"
-                    alt="..."
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title text-center">GRUPO 5</h5>
-                    <p className="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This card has even
-                      longer content than the first to show that equal height
-                      action.
-                    </p>
-                    <div>
-                      <a href="" className="btn btn-primary m-2 ">
-                        Link del evento
-                      </a>
-                    </div>
-                    <div className="card-footer ">
-                      <p className="card-text">
-                        <small className="text-muted">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="card-group">
-                <div className="card">
-                  <img
-                    src={evento4}
-                    className="card-img-top img-thumbnail"
-                    alt="..."
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title text-center">
-                      KANUKA Y EL TIGRE
-                    </h5>
-                    <p className="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <div>
-                      <a href="" className="btn btn-primary m-2 ">
-                        Link del evento
-                      </a>
-                    </div>
-                    <div className="card-footer ">
-                      <p className="card-text ">
-                        <small className="text-muted">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <img
-                    src={evento5}
-                    class="card-img-top img-thumbnail"
-                    alt="..."
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title text-center">AGUA MARINA</h5>
-                    <p className="card-text">
-                      This card has supporting text below as a natural lead-in
-                      to additional content.
-                    </p>
-                    <div>
-                      <a href="" className="btn btn-primary m-2 ">
-                        Link del evento
-                      </a>
-                    </div>
-                    <div className="card-footer ">
-                      <p className="card-text">
-                        <small className="text-muted">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <img
-                    src={evento6}
-                    className="card-img-top img-thumbnail"
-                    alt="..."
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title text-center">DANIELA DANCOURT</h5>
-                    <p className="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This card has even
-                      longer content than the first to show that equal height
-                      action.
-                    </p>
-                    <div>
-                      <a href="" className="btn btn-primary m-2 ">
-                        Link del evento
-                      </a>
-                    </div>
-                    <div className="card-footer ">
-                      <p className="card-text">
-                        <small className="text-muted">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
       <div>Jercy1</div>

@@ -10,14 +10,31 @@ import logo9 from "../../assets/Sanmiguel/FridaysO/logo.jpg"
 import logo10 from "../../assets/Sanmiguel/Chilis/logo.png"
 
 import logo11 from "../../assets/Miraflores/wahios/logo.jpg"
+import logo12 from "../../assets/Miraflores/mollysIrishBar&Restobar/logo.jpg"
+import logo13 from "../../assets/Miraflores/laCachinaBar/logo.jpg"
+import logo14 from "../../assets/Miraflores/elInfusionista/logo.jpg"
+import logo15 from "../../assets/Miraflores/barPublico/logo.jpg"
+
+import logo16 from "../../assets/Barranco/barrancoBar/logo.jpg"
+import logo17 from "../../assets/Barranco/garrison/logo.jpg"
+import logo18 from "../../assets/Barranco/laPosadaDelMirador/logo.jpg"
+import logo19 from "../../assets/Barranco/aguaBenditaBar/logo.jpg"
+import logo20 from "../../assets/Barranco/ayahuasca/logo.png"
+
 import logo21 from "../../assets/Chancay/img/kaemalogo.jpg"
 import logo22 from "../../assets/Chancay/img/waikylogo.png"
 import logo23 from "../../assets/Chancay/img/lahuertaencantadalogo.png"
 import logo24 from "../../assets/Chancay/img/lobitologo.png"
 
-
+import logo25 from "../../assets/Huaral/img/legonlogo.png"
 import logo26 from "../../assets/Huaral/img/gothiklogo.jpg"
 import logo27 from "../../assets/Huaral/img/casaviejalogo.png"
+
+import logo61 from "../../assets/PuebloLibre/theClubLima/logo.jpg"
+import logo62 from "../../assets/PuebloLibre/kalua/logo.jpg"
+import logo63 from "../../assets/PuebloLibre/Hops/logo.jpg"
+import logo64 from "../../assets/PuebloLibre/barelyBar/logo.jpeg"
+import logo65 from "../../assets/PuebloLibre/MiTercerLugarP/logo.jpg"
 
 
 export const db = [
@@ -243,6 +260,186 @@ export const db = [
     web: "https://www.instagram.com/wahiosculturebar/?hl=es"
   },
   {
+    establecimiento: "bar",
+    distrito: "miraflores",
+    id: 12,
+    nombre: "Molly’s Irish Bar & restobar",
+    direccion: "C. Berlín 172, Miraflores",
+    logo: logo12,
+    carta: "https://molly-s-irish-bar-restaurant.cluvi.pe/molly-s-irish-bar-restaurant/menu",//si es que hay
+    horario: {
+      lun: "12:00pm a 01:00am",
+      mar: "12:00pm a 01:00am",
+      mie: "12:00pm a 01:00am",
+      jue: "12:00pm a 01:00am",
+      vie: "12:00pm a 03:00am",
+      sab: "12:00pm a 03:00am",
+      dom: "12:00pm a 03:00am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/mollysirishbar_lima/?hl=es"
+  },
+  {
+    establecimiento: "bar",
+    distrito: "miraflores",
+    id: 13,
+    nombre: "La Cachina Bar",
+    direccion: "C. Manuel Bonilla 116, Miraflores",
+    logo: logo13,
+    carta: "",//si es que hay
+    horario: {
+      lun: "05:00pm a 12:30am",
+      mar: "05:00pm a 12:30am",
+      mie: "05:00pm a 12:30am",
+      jue: "05:00pm a 12:30am",
+      vie: "05:00pm a 03:30am",
+      sab: "05:00pm a 03:30am",
+      dom: "05:00pm a 12:30am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/lacachinabar/?hl=es"
+  },
+  {
+    establecimiento: "bar",
+    distrito: "miraflores",
+    id: 14,
+    nombre: "El infusionista",
+    direccion: "C. Manuel Bonilla 123, Miraflores",
+    logo: logo14,
+    carta: "",//si es que hay
+    horario: {
+      lun: "05:00pm a 12:30am",
+      mar: "05:00pm a 12:30am",
+      mie: "05:00pm a 12:30am",
+      jue: "05:00pm a 12:30am",
+      vie: "05:00pm a 03:00am",
+      sab: "05:00pm a 03:00am",
+      dom: "05:00pm a 12:30am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/el_infusionista/?hl=es"
+  },
+  {
+    establecimiento: "bar",
+    distrito: "miraflores",
+    id: 15,
+    nombre: "Bar público",
+    direccion: "C. Esperanza 339, Miraflores",
+    logo: logo15,
+    carta: "",//si es que hay
+    horario: {
+      lun: "07:00pm a 01:00am",
+      mar: "07:00pm a 01:00am",
+      mie: "07:00pm a 01:00am",
+      jue: "07:00pm a 01:00am",
+      vie: "07:00pm a 03:00am",
+      sab: "07:00pm a 03:00am",
+      dom: "07:00pm a 03:00am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/bar_publico/?hl=es"
+  },
+  {
+    establecimiento: "bar",
+    distrito: "barranco",
+    id: 16,
+    nombre: "Barranco Bar",
+    direccion: "Pl. Butters 291, Barranco",
+    logo: logo16,
+    carta: "",//si es que hay
+    horario: {
+      lun: "No hay atención",
+      mar: "No hay atención",
+      mie: "No hay atención",
+      jue: "07:00pm a 03:00am",
+      vie: "07:00pm a 03:00am",
+      sab: "07:00pm a 03:00am",
+      dom: "07:00pm a 03:00am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/barrancobaroficial/?hl=es"
+  },
+  {
+    establecimiento: "bar",
+    distrito: "barranco",
+    id: 17,
+    nombre: "Garrison Bar",
+    direccion: "28 De Julio 203, Barranco",
+    logo: logo17,
+    carta: "",//si es que hay
+    horario: {
+      lun: "No hay atención",
+      mar: "06:00pm a 12:00am",
+      mie: "06:00pm a 12:00am",
+      jue: "06:00pm a 12:00am",
+      vie: "06:00pm a 02:30am",
+      sab: "06:00pm a 02:30am",
+      dom: "06:00pm a 02:30am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/garrisonperu/?hl=es"
+  }, 
+  {
+      establecimiento: "bar",
+      distrito: "barranco",
+      id: 18,
+      nombre: "La posada del mirador",
+      direccion: "C. la Ermita 104, Barranco",
+      logo: logo18,
+      carta: "",//si es que hay
+      horario: {
+        lun: "12:00pm a 12:00am",
+        mar: "12:00pm a 12:00am",
+        mie: "12:00pm a 12:00am",
+        jue: "12:00pm a 12:00am",
+        vie: "06:00pm a 02:30am",
+        sab: "06:00pm a 02:30am",
+        dom: "06:00pm a 02:30am"
+      },
+    fotos: [],
+    web: "https://www.instagram.com/laposadadelmirador/?hl=es"
+  },
+  {
+    establecimiento: "bar",
+    distrito: "barranco",
+    id: 19,
+    nombre: "Aguabendita Bar",
+    direccion: "Av. Francisco Bolognesi 235, Barranco",
+    logo: logo19,
+    carta: "",//si es que hay
+    horario: {
+      lun: "06:00pm a 12:00am",
+      mar: "06:00pm a 12:00am",
+      mie: "06:00pm a 12:00am",
+      jue: "06:00pm a 12:00am",
+      vie: "06:00pm a 02:30am",
+      sab: "06:00pm a 02:30am",
+      dom: "06:00pm a 02:30am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/aguabendita.bar/?hl=es"
+  },
+  {
+    establecimiento: "bar",
+    distrito: "barranco",
+    id: 20,
+    nombre: "Ayahuasca",
+    direccion: "Av. Prol. Gral. Jose de San Martin 130, Barranco",
+    logo: logo20,
+    carta: "",//si es que hay
+    horario: {
+      lun: "12:00pm a 01:00am",
+      mar: "12:00pm a 01:00am",
+      mie: "12:00pm a 01:00am",
+      jue: "12:00pm a 03:00am",
+      vie: "12:00pm a 03:00am",
+      sab: "12:00pm a 03:00am",
+      dom: "12:00pm a 01:00am"
+    },
+    fotos: [],
+    web: "https://ayahuascarestobar.com/"
+  },  
+  {
     establecimiento: "discoteca",
     id: 21,
     distrito: "chancay",
@@ -328,7 +525,7 @@ export const db = [
     distrito: "huaral",
     nombre: "Legon",
     direccion: "Los Geranios 347, Huaral 15202 ",
-    logo: "",
+    logo: logo25,
     carta: "",//si es que hay
     telefono: " 934 557 270",
     horario: {
@@ -379,5 +576,109 @@ export const db = [
       dom: ""
     }
   },
+  {
+    establecimiento: "discoteca",
+    id: 61,
+    distrito: "pueblo libre",
+    nombre: "The Club Lima",
+    direccion: "Av. La Marina 1518, Pueblo Libre",
+    logo: logo61,
+    carta: "",//si es que hay
+    telefono: " ",
+    horario: {
+      lun: "07:00pm a 5:00am",
+      mar: "07:00pm a 5:00am",
+      mie: "07:00pm a 5:00am",
+      jue: "07:00pm a 5:00am",
+      vie: "07:00pm a 5:15am",
+      sab: "07:00pm a 5:00am",
+      dom: "07:00pm a 5:00am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/theclublima/"
+  },
+  {
+    establecimiento: "discoteca",
+    id: 62,
+    distrito: "pueblo libre",
+    nombre: "Kalúa",
+    direccion: "Av. La Marina 1520, Pueblo Libre",
+    logo: logo62,
+    carta: "",//si es que hay
+    telefono: " ",
+    horario: {
+      lun: "07:00pm a 5:00am",
+      mar: "07:00pm a 5:00am",
+      mie: "07:00pm a 5:00am",
+      jue: "07:00pm a 5:00am",
+      vie: "07:00pm a 5:00am",
+      sab: "07:00pm a 5:00am",
+      dom: "07:00pm a 5:00am"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/kalua_discobar/?hl=es"
+  },
+  {
+    establecimiento: "discoteca",
+    id: 63,
+    distrito: "pueblo libre",
+    nombre: "Hops",
+    direccion: "Av. General Vivanco 785, Pueblo Libre",
+    logo: logo63,
+    carta: "",//si es que hay
+    telefono: " ",
+    horario: {
+      lun: "04:00pm a 11:00pm",
+      mar: "04:00pm a 11:00pm",
+      mie: "04:00pm a 01:00am",
+      jue: "04:00pm a 02:00am",
+      vie: "04:00pm a 02:00am",
+      sab: "04:00pm a 02:30am",
+      dom: "04:00pm a 11:00pm"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/hops_peru/"
+  },
+  {
+    establecimiento: "bar",
+    id: 64,
+    distrito: "pueblo libre",
+    nombre: "Barely Bar",
+    direccion: "Calle Antonio Polo 756, Pueblo Libre",
+    logo: logo64,
+    carta: "",//si es que hay
+    telefono: " ",
+    horario: {
+      lun: "04:00pm a 11:00pm",
+      mar: "04:00pm a 11:00pm",
+      mie: "04:00pm a 01:00am",
+      jue: "04:00pm a 02:00am",
+      vie: "04:00pm a 02:00am",
+      sab: "04:00pm a 02:30am",
+      dom: "04:00pm a 11:00pm"
+    },
+    fotos: [],
+    web: "https://www.instagram.com/barleybar.oficial/"
+  },
+  {
+    establecimiento: "bar",
+    id: 65,
+    distrito: "pueblo libre",
+    nombre: "Mi tercer lugar",
+    direccion: "Av. José de San Martín 493, Pueblo Libre",
+    logo: logo65,
+    carta: "https://www.mitercerlugar.com.pe/static/documentos/carta.pdf",//si es que hay
+    horario: {
+      lun: "5:00pm a 11:00pm",
+      mar: "5:00pm a 11:00pm",
+      mie: "5:00pm a 11:00pm",
+      jue: "4:00pm 11:00pm",
+      vie: "4:00pm a 11:00pm",
+      sab: "4:00pm a 11:00pm",
+      dom: "5:00pm a 11:00pm"
+    },
+    fotos: [],
+    web: "https://www.mitercerlugar.com.pe/"
 
+  },
 ]
