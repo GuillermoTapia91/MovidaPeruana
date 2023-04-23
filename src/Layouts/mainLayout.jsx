@@ -22,10 +22,10 @@ window.addEventListener("scroll", function (){
                             <a className="selectLayout" href="">¿eres un negocio?</a>
                             </li>
                             <li>
-                                <a className="selectLayout" href="">SingIn</a>
+                                <a className="selectLayout" href="http://localhost:3000/signin">Iniciar Sesión</a>
                             </li>
                             <li>
-                                <a className="selectLayout" href="">Registrate</a>
+                                <a className="selectLayout" href="http://localhost:3000/signup">Registrate</a>
                             </li>
                         </ul>
                     </div>
