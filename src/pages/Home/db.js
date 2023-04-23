@@ -1,13 +1,41 @@
 import logo1 from "../../assets/Sanmiguel/MiTercerLugar/logo.jpg"
+import foto1_1 from "../../assets/Sanmiguel/MiTercerLugar/fotoInterior1.jpg"
+import foto1_2 from "../../assets/Sanmiguel/MiTercerLugar/fotoInterior2.jpg"
+import foto1_3 from "../../assets/Sanmiguel/MiTercerLugar/fotoInterior3.jpg"
+import foto1_4 from "../../assets/Sanmiguel/MiTercerLugar/fotoInterior4.jpg"
 import logo2 from "../../assets/Sanmiguel/PachaInti/logo.jpg"
+import foto2_1 from "../../assets/Sanmiguel/PachaInti/fotoInterior1.jpg"
+import foto2_2 from "../../assets/Sanmiguel/PachaInti/fotoInterior2.jpg"
+import foto2_3 from "../../assets/Sanmiguel/PachaInti/fotoInterior3.jpg"
+import foto2_4 from "../../assets/Sanmiguel/PachaInti/fotoInterior4.jpg"
 import logo3 from "../../assets/Sanmiguel/EnLounge&Bar/logo.jpg"
+import foto3_1 from "../../assets/Sanmiguel/EnLounge&Bar/fotoInterior1.jpg"
+import foto3_2 from "../../assets/Sanmiguel/EnLounge&Bar/fotoInterior2.jpg"
+import foto3_3 from "../../assets/Sanmiguel/EnLounge&Bar/fotoInterior3.jpg"
+import foto3_4 from "../../assets/Sanmiguel/EnLounge&Bar/fotoInterior4.jpg"
 import logo4 from "../../assets/Sanmiguel/FestivalSanMiguel/logo.jpg"
+import foto4_1 from "../../assets/Sanmiguel/FestivalSanMiguel/fotoExterior1.jpg"
+import foto4_2 from "../../assets/Sanmiguel/FestivalSanMiguel/fotoInterior1.jpg"
+import foto4_3 from "../../assets/Sanmiguel/FestivalSanMiguel/fotoInterior2.jpg"
+import foto4_4 from "../../assets/Sanmiguel/FestivalSanMiguel/fotoInterior3.jpg"
 import logo5 from "../../assets/Sanmiguel/Sopranos31/logo.jpg"
+import foto5_1 from "../../assets/Sanmiguel/Sopranos31/fotoInterior1.jpg"
+import foto5_2 from "../../assets/Sanmiguel/Sopranos31/fotoInterior2.jpg"
 import logo6 from "../../assets/Sanmiguel/Sopranos16/logo.jpg"
+import foto6_1 from "../../assets/Sanmiguel/Sopranos16/fotoInterior1.jpg"
+import foto6_2 from "../../assets/Sanmiguel/Sopranos16/fotoInterior2.jpg"
 import logo7 from "../../assets/Sanmiguel/Rustica/logo.jpg"
+import foto7_1 from "../../assets/Sanmiguel/Rustica/fotoInterior1.jpg"
+import foto7_2 from "../../assets/Sanmiguel/Rustica/fotoInterior2.jpg"
 import logo8 from "../../assets/Sanmiguel/FridayS/logo.jpg"
+import foto8_1 from "../../assets/Sanmiguel/FridayS/fotoInterior1.jpg"
+import foto8_2 from "../../assets/Sanmiguel/FridayS/fotoInterior2.jpg"
 import logo9 from "../../assets/Sanmiguel/FridaysO/logo.jpg"
+import foto9_1 from "../../assets/Sanmiguel/FridaysO/fotoInterior1.jpg"
+import foto9_2 from "../../assets/Sanmiguel/FridaysO/fotoInterior2.jpg"
 import logo10 from "../../assets/Sanmiguel/Chilis/logo.png"
+import foto10_1 from "../../assets/Sanmiguel/Chilis/fotoInterior1.jpg"
+import foto10_2 from "../../assets/Sanmiguel/Chilis/fotoInterior2.jpg"
 
 import logo11 from "../../assets/Miraflores/wahios/logo.jpg"
 import logo12 from "../../assets/Miraflores/mollysIrishBar&Restobar/logo.jpg"
@@ -45,6 +73,10 @@ export const db = [
     nombre: "Mi tercer lugar",
     direccion: "Av. La Mar 2261, San Miguel ",
     logo: logo1,
+    foto1:foto1_1,
+    foto2:foto1_2,
+    foto3:foto1_3,
+    foto4:foto1_4,
     carta: "https://www.mitercerlugar.com.pe/static/documentos/carta.pdf",//si es que hay
     horario: {
       lun: "5:00pm a 11:00pm",
@@ -61,11 +93,15 @@ export const db = [
   },
   {
     establecimiento: "bar",
-    id: 2,
+    id: 3,
     distrito: "san miguel",
     nombre: "EN lounge & bar",
     direccion: "Av. Riva Agüero 754, San Miguel",
     logo: logo3,
+    foto1:foto3_1,
+    foto2:foto3_2,
+    foto3:foto3_3,
+    foto4:foto3_4,
     carta: "",//si es que hay
     horario: {
       lun: "5:00pm a 01:00am",
@@ -81,11 +117,15 @@ export const db = [
   },
   {
     establecimiento: "bar",
-    id: 3,
+    id: 4,
     distrito: "san miguel",
     nombre: "Festival San Miguel",
     direccion: "Av. la Marina 2517, San Miguel",
     logo: logo4,
+    foto1:foto4_1,
+    foto2:foto4_2,
+    foto3:foto4_3,
+    foto4:foto4_4,
     carta: "https://drive.google.com/file/d/1PUuIF7nO0bZa_5IW1g3UhDEDyB9LLLV0/view",//si es que hay
     horario: {
       lun: "11:30am a 01:00am",
@@ -101,11 +141,15 @@ export const db = [
   },
   {
     establecimiento: "bar",
-    id: 4,
+    id: 2,
     distrito: "san miguel",
     nombre: "Pacha Inti",
     direccion: "Mercedes Gallagher de Parks 396, San Miguel",
     logo: logo2,
+    foto1:foto2_1,
+    foto2:foto2_2,
+    foto3:foto2_3,
+    foto4:foto2_4,
     carta: "https://drive.google.com/file/d/1PUuIF7nO0bZa_5IW1g3UhDEDyB9LLLV0/view",//si es que hay
     horario: {
       lun: "No hay atención",
@@ -126,6 +170,8 @@ export const db = [
     nombre: "Sopranos",
     direccion: "Av. La Marina 3151,San Miguel",
     logo: logo5,
+    foto1:foto5_1,
+    foto2:foto5_2,
     carta: "",//si es que hay
     horario: {
       lun: "07:00pm a 01:00am",
@@ -146,6 +192,8 @@ export const db = [
     nombre: "Sopranos",
     direccion: "Av. La Marina 1687,San Miguel",
     logo: logo6,
+    foto1:foto6_1,
+    foto2:foto6_2,
     carta: "",//si es que hay
     horario: {
       lun: "07:00pm a 01:00am",
@@ -166,6 +214,8 @@ export const db = [
     nombre: "Rustica",
     direccion: "Av. La Marina 2631, San Miguel",
     logo: logo7,
+    foto1:foto7_1,
+    foto2:foto7_2,
     carta: "",//si es que hay
     horario: {
       lun: "12:00pm a 12:30am",
@@ -186,6 +236,8 @@ export const db = [
     nombre: "Fridays",
     direccion: "Av. La Marina 2355 - C.C. La Marina Open Plaza,San Miguel",
     logo: logo8,
+    foto1:foto8_1,
+    foto2:foto8_2,
     carta: "",//si es que hay
     horario: {
       lun: "07:00pm a 11:30am",
@@ -206,6 +258,8 @@ export const db = [
     nombre: "Fridays",
     direccion: "Av. La Marina 2000, C.C Plaza San Miguel",
     logo: logo9,
+    foto1:foto9_1,
+    foto2:foto9_2,
     carta: "",//si es que hay
     horario: {
       lun: "07:00pm a 11:30am",
@@ -226,6 +280,8 @@ export const db = [
     nombre: "Chilis",
     direccion: "Calle Mantaro Nro. 220, C.C. Plaza San Miguel",
     logo: logo10,
+    foto1:foto10_1,
+    foto2:foto10_2,
     carta: "",//si es que hay
     horario: {
       lun: "07:00pm a 11:00am",

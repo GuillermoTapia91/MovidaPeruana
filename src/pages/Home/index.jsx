@@ -21,6 +21,7 @@ import evento1 from "../../assets/img/eva-ayllon.jpg";
 import evento2 from "../../assets/img/gianmarco.jpg";
 import evento3 from "../../assets/img/grupo-5.jpg";
 import evento4 from "../../assets/img/kanukayeltigre.jpg";
+import FotosLugar from "../../components/FotosLugar";
 //AbrahamImportFinal
 //JercyImportInicio
 
@@ -179,7 +180,7 @@ export default function Home() {
                   <div className="text-center"  >
                     <button type="button" className="btn btn-color2" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() =>handleSetCurrentList(lista)}>Horario</button> 
           
-                    <button id="btnfotosG" className="btn btn-color2 m-1">Fotos</button>
+                    <button id="btnfotosG" className="btn btn-color2 m-1" data-bs-toggle="modal" data-bs-target="#exampleModal2" onClick={() =>handleSetCurrentList(lista)} >Fotos</button>
                     <button className="btn btn-color2">Opiniones</button>
                   </div>
                 </div>
@@ -333,6 +334,7 @@ export default function Home() {
       <div>Jercy2</div>
       <div>footer</div>
       <SchedulePlace currentList={currentList} />
+      <FotosLugar currentList={currentList} />
     </div>
   );
 }
