@@ -115,7 +115,6 @@ export default function Home() {
           <div className="intro">
             <h1 className="lyric1" >Que comience la Fiesta</h1>
             <h3 className="lyric2" >Encuentra la juerga más cerca de tu zona</h3>
-            {/* <button className="busqueda btn btn-outline-primary">Bares/Discotecas</button> */}
             <a className="busqueda" href="#BusquedaDistrito">Bares/Discotecas</a>
           </div>
           <div>
