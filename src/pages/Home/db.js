@@ -38,6 +38,10 @@ import foto10_1 from "../../assets/Sanmiguel/Chilis/fotoInterior1.jpg"
 import foto10_2 from "../../assets/Sanmiguel/Chilis/fotoInterior2.jpg"
 
 import logo11 from "../../assets/Miraflores/wahios/logo.jpg"
+import foto11_1 from "../../assets/Miraflores/wahios/fotoInterior1.jpg"
+import foto11_2 from "../../assets/Miraflores/wahios/fotoInterior2.jpg"
+import foto11_3 from "../../assets/Miraflores/wahios/fotoInterior3.jpg"
+import foto11_4 from "../../assets/Miraflores/wahios/fotoInterior4.jpg"
 import logo12 from "../../assets/Miraflores/mollysIrishBar&Restobar/logo.jpg"
 import logo13 from "../../assets/Miraflores/laCachinaBar/logo.jpg"
 import logo14 from "../../assets/Miraflores/elInfusionista/logo.jpg"
@@ -302,6 +306,10 @@ export const db = [
     nombre: "Wahios",
     direccion: "C. Berlín 192, Miraflores",
     logo: logo11,
+    foto1:foto11_1,
+    foto2:foto11_2,
+    foto3:foto11_3,
+    foto4:foto11_4,
     carta: "",//si es que hay
     horario: {
       lun: "07:00pm a 11:00am",
