@@ -15,51 +15,98 @@
     flex-direction: column;
     gap: 29px;
 }
-.loginLogo{
+
+.loginLogo {
     width: 230px;
 }
-.in-up{
+
+.in-up {
     color: white;
 }
-.s-in-ses{
+
+.inicio-crear {
+    text-decoration: none;
+    color: rgb(180, 178, 178);
 }
-.mar-20{
-margin: 20px;
+
+.inicio-crear:active{
+    color: #fff;
+    border-bottom: 2px solid #07f;
 }
-.l{
+.inicio-crear:hover{
+    color:white;
+}
+
+.mar-20 {
+    margin: 20px;
+}
+
+.l {
     color: #8A9183;
     font-size: 16px;
 }
-.W-80{
+
+.W-80 {
     width: 80%;
-    border: 1px solid hsla(0,0%,100%,.25);
+    border: 1px solid hsla(0, 0%, 100%, .25);
     background-color: #141414;
     height: 8vh;
-    color: hsla(0,0%,100%,.5);
+    color: hsla(0, 0%, 100%, .5);
     font-weight: 400;
 }
-.login{
+
+.login {
     display: flex;
     gap: 20px;
 }
-.bodyForm{
+
+.bodyForm {
     display: flex;
     align-items: center;
     text-align: center;
     width: 50%;
 }
-.formLogin{
+
+.formLogin {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
 }
-.btn-signin{
+
+.btn-signin {
     width: 80%;
     height: 6vh;
     border-radius: 15px;
     font-weight: bolder;
 }
-.github{
-    color: white;
+
+.btnMedia {
+    gap: 9px;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.btnGit {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    align-items: center;
+    background-color: #302f2f;
+    border-radius: 15px;
+    color: aliceblue;
+    gap: 16px;
+    justify-content: center;
+}
+
+.btnGit:hover {
+    border-color: aliceblue;
+    color: aquamarine;
+}
+
+.btnGit img {
+    width: 12%;
+    height: 6vh;
 }
