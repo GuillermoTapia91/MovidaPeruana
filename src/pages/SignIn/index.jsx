@@ -8,7 +8,7 @@ export default function SignIn() {
   return (
     <div className="login-body">
 
-      <div className="container">
+      <div className="container-sign">
         <img className="loginLogo" src={logo} alt="" />
         <h5 className="in-up">
           <a className="inicio-crear mar-20" href="http://localhost:3000/signin">Iniciar Sesión</a>
