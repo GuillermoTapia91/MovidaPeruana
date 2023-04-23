@@ -284,7 +284,7 @@ export default function Home() {
             <div className="carousel-inner ">
               <div className="carousel-item active ">
                 <div className="card-group ">
-                  <div className="card ms-1 p-2">
+                  <div className="card ms-1 p-2 rounded-1">
                     <img
                       src={evento1}
                       className="card-img-top border border-dark border border-3 rounded-1"
@@ -312,7 +312,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="card ms-1 p-2 ">
+                  <div className="card ms-1 p-2 rounded-1">
                     <img
                       src={evento2}
                       className="card-img-top border border-dark border border-3 rounded-1"
@@ -339,7 +339,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="card ms-1 p-2">
+                  <div className="card ms-1 p-2 rounded-1">
                     <img
                       src={evento3}
                       className="card-img-top border border-dark border border-3 rounded-2"
@@ -371,7 +371,7 @@ export default function Home() {
               </div>
               <div className="carousel-item">
                 <div className="card-group">
-                  <div className="card p-2">
+                  <div className="card ms-1 p-2 rounded-1">
                     <img
                       src={evento4}
                       className="card-img-top border border-dark border border-3 rounded-1"
@@ -400,7 +400,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="card ms-1 p-2">
+                  <div className="card ms-1 p-2 rounded-1">
                     <img
                       src={evento5}
                       class="card-img-top border border-dark border border-3 rounded-1"
@@ -426,7 +426,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="card ms-1 p-2">
+                  <div className="card ms-1 p-2 rounded-1">
                     <img
                       src={evento6}
                       className="card-img-top border border-dark border border-3 rounded-1"
@@ -485,7 +485,8 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </div>
+      </div> 
+            
       <div>Jercy1</div>
       <div>Jercy2</div>
       <div>footer</div>
