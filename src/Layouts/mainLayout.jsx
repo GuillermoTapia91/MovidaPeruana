@@ -16,16 +16,16 @@ window.addEventListener("scroll", function (){
                     <div >
                         <ul className="d-flex gap-5">
                             <li>
-                                <a href="#eventos">Eventos</a>
+                                <a className="selectLayout" href="#eventos">Eventos</a>
                             </li>
                             <li>
-                            <a href="">¿eres un negocio?</a>
+                            <a className="selectLayout" href="">¿eres un negocio?</a>
                             </li>
                             <li>
-                                <a href="">SingIn</a>
+                                <a className="selectLayout" href="http://localhost:3000/signin">Iniciar Sesión</a>
                             </li>
                             <li>
-                                <a href="">Registrate</a>
+                                <a className="selectLayout" href="http://localhost:3000/signup">Registrate</a>
                             </li>
                         </ul>
                     </div>

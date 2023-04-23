@@ -5,7 +5,7 @@
 li{
     list-style: none;
 }
-a{
+.selectLayout{
     text-decoration: none;
     color: floralwhite;
     text-shadow: 0 0 5px white ,  0 0 15px white  , 0 0 30px white  , 0 0 50px white  ;
