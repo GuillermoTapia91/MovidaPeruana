@@ -1,0 +1,31 @@
+.derechos {
+  /* border: solid red; */
+  font-size: 12px;
+}
+
+.derechos1 {
+ width: 450px;
+  /* border: solid yellow; */
+}
+
+.linkg {
+  /* border: solid red; */
+  font-size: 10px;
+  width:180px;
+}
+
+.acercag {
+  /* border: solid red; */
+  text-align: center;
+}
+
+.contacg{
+  /* border: solid red; */
+}
+
+.footer {
+  height: 20%vh;
+  /* border: solid red; */
+  padding-bottom: 20px;
+  border: none;
+}
