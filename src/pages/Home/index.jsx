@@ -3,7 +3,7 @@ import "./indexGuillermo.css";
 import "./indexJoel.css";
 import "./indexJercy.css";
 //GuillermoImportInicio
-
+import Footer from "../../components/Footer/Footer";
 import { useState, useRef } from "react"
 import { db } from "./db"
 import { districts } from "./districts"
@@ -427,9 +427,10 @@ export default function Home() {
           </div>
         </div> 
       </div>
-      <div>Jercy1</div>
-      <div>Jercy2</div>
-      <div>footer</div>
+      {/* <div className="bg-black text-white">Abraham2</div>
+      <div className="bg-black text-white">Jercy1</div>
+      <div className="bg-black text-white">Jercy2</div> */}
+      <Footer/>
       <SchedulePlace currentList={currentList} />
       <FotosLugar currentList={currentList} />
     </div>
