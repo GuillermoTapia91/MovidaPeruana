@@ -43,30 +43,107 @@ import foto11_2 from "../../assets/Miraflores/wahios/fotoInterior2.jpg"
 import foto11_3 from "../../assets/Miraflores/wahios/fotoInterior3.jpg"
 import foto11_4 from "../../assets/Miraflores/wahios/fotoInterior4.jpg"
 import logo12 from "../../assets/Miraflores/mollysIrishBar&Restobar/logo.jpg"
+import foto12_1 from "../../assets/Miraflores/mollysIrishBar&Restobar/fotoInterior1.jpg"
+import foto12_2 from "../../assets/Miraflores/mollysIrishBar&Restobar/fotoInterior2.jpg"
+import foto12_3 from "../../assets/Miraflores/mollysIrishBar&Restobar/fotoInterior3.jpg"
+import foto12_4 from "../../assets/Miraflores/mollysIrishBar&Restobar/fotoInterior4.jpg"
 import logo13 from "../../assets/Miraflores/laCachinaBar/logo.jpg"
+import foto13_1 from "../../assets/Miraflores/laCachinaBar/fotoInterior1.jpg"
+import foto13_2 from "../../assets/Miraflores/laCachinaBar/fotoInterior2.jpg"
+import foto13_3 from "../../assets/Miraflores/laCachinaBar/fotoInterior3.jpg"
+import foto13_4 from "../../assets/Miraflores/laCachinaBar/fotoInterior4.jpg"
 import logo14 from "../../assets/Miraflores/elInfusionista/logo.jpg"
+import foto14_1 from "../../assets/Miraflores/elInfusionista/fotoInterior1.jpg"
+import foto14_2 from "../../assets/Miraflores/elInfusionista/fotoInterior2.jpg"
+import foto14_3 from "../../assets/Miraflores/elInfusionista/fotoInterior3.jpg"
+import foto14_4 from "../../assets/Miraflores/elInfusionista/fotoInterior4.jpg"
 import logo15 from "../../assets/Miraflores/barPublico/logo.jpg"
+import foto15_1 from "../../assets/Miraflores/barPublico/fotoInterior1.jpg"
+import foto15_2 from "../../assets/Miraflores/barPublico/fotoInterior2.jpg"
+import foto15_3 from "../../assets/Miraflores/barPublico/fotoInterior3.jpg"
+import foto15_4 from "../../assets/Miraflores/barPublico/fotoInterior4.jpg"
 
 import logo16 from "../../assets/Barranco/barrancoBar/logo.jpg"
+import foto16_1 from "../../assets/Barranco/barrancoBar/fotoInterior1.jpg"
+import foto16_2 from "../../assets/Barranco/barrancoBar/fotoInterior2.jpg"
+import foto16_3 from "../../assets/Barranco/barrancoBar/fotoInterior3.jpg"
+import foto16_4 from "../../assets/Barranco/barrancoBar/fotoInterior4.jpg"
 import logo17 from "../../assets/Barranco/garrison/logo.jpg"
+import foto17_1 from "../../assets/Barranco/garrison/fotoInterior1.jpg"
+import foto17_2 from "../../assets/Barranco/garrison/fotoInterior2.jpg"
+import foto17_3 from "../../assets/Barranco/garrison/fotoInterior3.jpg"
+import foto17_4 from "../../assets/Barranco/garrison/fotoInterior4.jpg"
 import logo18 from "../../assets/Barranco/laPosadaDelMirador/logo.jpg"
+import foto18_1 from "../../assets/Barranco/laPosadaDelMirador/fotoExterior1.jpg"
+import foto18_2 from "../../assets/Barranco/laPosadaDelMirador/fotoInterior1.jpg"
+import foto18_3 from "../../assets/Barranco/laPosadaDelMirador/fotoInterior2.jpg"
+import foto18_4 from "../../assets/Barranco/laPosadaDelMirador/fotoInterior3.jpg"
 import logo19 from "../../assets/Barranco/aguaBenditaBar/logo.jpg"
+import foto19_1 from "../../assets/Barranco/aguaBenditaBar/fotoInterior1.jpg"
+import foto19_2 from "../../assets/Barranco/aguaBenditaBar/fotoInterior2.jpg"
+import foto19_3 from "../../assets/Barranco/aguaBenditaBar/fotoInterior3.jpg"
+import foto19_4 from "../../assets/Barranco/aguaBenditaBar/fotoInterior4.jpg"
 import logo20 from "../../assets/Barranco/ayahuasca/logo.png"
+import foto20_1 from "../../assets/Barranco/ayahuasca/fotoInterior1.jpg"
+import foto20_2 from "../../assets/Barranco/ayahuasca/fotoInterior2.jpg"
+import foto20_3 from "../../assets/Barranco/ayahuasca/fotoInterior3.jpg"
+import foto20_4 from "../../assets/Barranco/ayahuasca/fotoInterior4.jpg"
 
 import logo21 from "../../assets/Chancay/img/kaemalogo.jpg"
+import foto21_1 from "../../assets/Chancay/img/kaema1.jpg"
+import foto21_2 from "../../assets/Chancay/img/kaema2.jpg"
+import foto21_3 from "../../assets/Chancay/img/kaema3.jpg"
+import foto21_4 from "../../assets/Chancay/img/kaema4.jpg"
 import logo22 from "../../assets/Chancay/img/waikylogo.png"
+import foto22_1 from "../../assets/Chancay/img/wayki1.jpg"
+import foto22_2 from "../../assets/Chancay/img/waiky2.jpg"
 import logo23 from "../../assets/Chancay/img/lahuertaencantadalogo.png"
+import foto23_1 from "../../assets/Chancay/img/lahuertaencantada1.png"
+import foto23_2 from "../../assets/Chancay/img/lahuertaencantada2.png"
 import logo24 from "../../assets/Chancay/img/lobitologo.png"
+import foto24_1 from "../../assets/Chancay/img/lobito1.png"
+import foto24_2 from "../../assets/Chancay/img/lobito2.png"
+import foto24_3 from "../../assets/Chancay/img/lobito3.png"
+
 
 import logo25 from "../../assets/Huaral/img/legonlogo.png"
+import foto25_1 from "../../assets/Huaral/img/logon1.png"
+import foto25_2 from "../../assets/Huaral/img/logon2.png"
+import foto25_3 from "../../assets/Huaral/img/logon3.png"
 import logo26 from "../../assets/Huaral/img/gothiklogo.jpg"
+import foto26_1 from "../../assets/Huaral/img/gothik1.png"
+import foto26_2 from "../../assets/Huaral/img/gothik2.png"
+import foto26_3 from "../../assets/Huaral/img/gothik3.png"
 import logo27 from "../../assets/Huaral/img/casaviejalogo.png"
+import foto27_1 from "../../assets/Huaral/img/casavieja1.png"
+import foto27_2 from "../../assets/Huaral/img/casavieja2.png"
+import foto27_3 from "../../assets/Huaral/img/casavieja3.png"
 
 import logo61 from "../../assets/PuebloLibre/theClubLima/logo.jpg"
+import foto61_1 from "../../assets/PuebloLibre/theClubLima/fotoInterior1.jpg"
+import foto61_2 from "../../assets/PuebloLibre/theClubLima/fotoInterior2.jpg"
+import foto61_3 from "../../assets/PuebloLibre/theClubLima/fotoInterior3.jpg"
+import foto61_4 from "../../assets/PuebloLibre/theClubLima/fotoInterior4.jpg"
 import logo62 from "../../assets/PuebloLibre/kalua/logo.jpg"
+import foto62_1 from "../../assets/PuebloLibre/kalua/fotoInterior1.jpg"
+import foto62_2 from "../../assets/PuebloLibre/kalua/fotoInterior2.jpg"
+import foto62_3 from "../../assets/PuebloLibre/kalua/fotoInterior3.jpg"
+import foto62_4 from "../../assets/PuebloLibre/kalua/fotoInterior4.jpg"
 import logo63 from "../../assets/PuebloLibre/Hops/logo.jpg"
+import foto63_1 from "../../assets/PuebloLibre/Hops/fotoInterior1.jpg"
+import foto63_2 from "../../assets/PuebloLibre/Hops/fotoInterior2.jpg"
+import foto63_3 from "../../assets/PuebloLibre/Hops/fotoInterior3.jpg"
+import foto63_4 from "../../assets/PuebloLibre/Hops/fotoInterior4.jpg"
 import logo64 from "../../assets/PuebloLibre/barelyBar/logo.jpeg"
+import foto64_1 from "../../assets/PuebloLibre/barelyBar/fotoInterior1.jpg"
+import foto64_2 from "../../assets/PuebloLibre/barelyBar/fotoInterior2.jpg"
+import foto64_3 from "../../assets/PuebloLibre/barelyBar/fotoInterior3.jpg"
+import foto64_4 from "../../assets/PuebloLibre/barelyBar/fotoInterior4.jpg"
 import logo65 from "../../assets/PuebloLibre/MiTercerLugarP/logo.jpg"
+import foto65_1 from "../../assets/PuebloLibre/MiTercerLugarP/fotoInterior1.jpg"
+import foto65_2 from "../../assets/PuebloLibre/MiTercerLugarP/fotoInterior2.jpg"
+import foto65_3 from "../../assets/PuebloLibre/MiTercerLugarP/fotoInterior3.jpg"
+import foto65_4 from "../../assets/PuebloLibre/MiTercerLugarP/fotoInterior4.jpg"
 
 
 export const db = [
@@ -330,6 +407,10 @@ export const db = [
     nombre: "Molly’s Irish Bar & restobar",
     direccion: "C. Berlín 172, Miraflores",
     logo: logo12,
+    foto1:foto12_1,
+    foto2:foto12_2,
+    foto3:foto12_3,
+    foto4:foto12_4,
     carta: "https://molly-s-irish-bar-restaurant.cluvi.pe/molly-s-irish-bar-restaurant/menu",//si es que hay
     horario: {
       lun: "12:00pm a 01:00am",
@@ -350,6 +431,10 @@ export const db = [
     nombre: "La Cachina Bar",
     direccion: "C. Manuel Bonilla 116, Miraflores",
     logo: logo13,
+    foto1:foto13_1,
+    foto2:foto13_2,
+    foto3:foto13_3,
+    foto4:foto13_4,
     carta: "",//si es que hay
     horario: {
       lun: "05:00pm a 12:30am",
@@ -370,6 +455,10 @@ export const db = [
     nombre: "El infusionista",
     direccion: "C. Manuel Bonilla 123, Miraflores",
     logo: logo14,
+    foto1:foto14_1,
+    foto2:foto14_2,
+    foto3:foto14_3,
+    foto4:foto14_4,
     carta: "",//si es que hay
     horario: {
       lun: "05:00pm a 12:30am",
@@ -390,6 +479,10 @@ export const db = [
     nombre: "Bar público",
     direccion: "C. Esperanza 339, Miraflores",
     logo: logo15,
+    foto1:foto15_1,
+    foto2:foto15_2,
+    foto3:foto15_3,
+    foto4:foto15_4,
     carta: "",//si es que hay
     horario: {
       lun: "07:00pm a 01:00am",
@@ -410,6 +503,10 @@ export const db = [
     nombre: "Barranco Bar",
     direccion: "Pl. Butters 291, Barranco",
     logo: logo16,
+    foto1:foto16_1,
+    foto2:foto16_2,
+    foto3:foto16_3,
+    foto4:foto16_4,
     carta: "",//si es que hay
     horario: {
       lun: "No hay atención",
@@ -430,6 +527,10 @@ export const db = [
     nombre: "Garrison Bar",
     direccion: "28 De Julio 203, Barranco",
     logo: logo17,
+    foto1:foto17_1,
+    foto2:foto17_2,
+    foto3:foto17_3,
+    foto4:foto17_4,
     carta: "",//si es que hay
     horario: {
       lun: "No hay atención",
@@ -450,6 +551,10 @@ export const db = [
       nombre: "La posada del mirador",
       direccion: "C. la Ermita 104, Barranco",
       logo: logo18,
+      foto1:foto18_1,
+      foto2:foto18_2,
+      foto3:foto18_3,
+      foto4:foto18_4,
       carta: "",//si es que hay
       horario: {
         lun: "12:00pm a 12:00am",
@@ -470,6 +575,10 @@ export const db = [
     nombre: "Aguabendita Bar",
     direccion: "Av. Francisco Bolognesi 235, Barranco",
     logo: logo19,
+    foto1:foto19_1,
+    foto2:foto19_2,
+    foto3:foto19_3,
+    foto4:foto19_4,
     carta: "",//si es que hay
     horario: {
       lun: "06:00pm a 12:00am",
@@ -490,6 +599,10 @@ export const db = [
     nombre: "Ayahuasca",
     direccion: "Av. Prol. Gral. Jose de San Martin 130, Barranco",
     logo: logo20,
+    foto1:foto20_1,
+    foto2:foto20_2,
+    foto3:foto20_3,
+    foto4:foto20_4,
     carta: "",//si es que hay
     horario: {
       lun: "12:00pm a 01:00am",
@@ -510,6 +623,10 @@ export const db = [
     nombre: "Kaema club",
     direccion: "C. Lopez de Zuñiga, Chancay 15131 ",
     logo: logo21,
+    foto1:foto21_1,
+    foto2:foto21_2,
+    foto3:foto21_3,
+    foto4:foto21_4,
     carta: "",//si es que hay
     telefono: " 981 522 697",
     horario: {
@@ -530,6 +647,8 @@ export const db = [
     nombre: "WAYKI'S BAR",
     direccion: "Calle San Martin 153, Chancay 15131 ",
     logo: logo22,
+    foto1:foto22_1,
+    foto2:foto22_2,
     carta: "",//si es que hay
     telefono: "933 694 706",
     horario: {
@@ -550,6 +669,8 @@ export const db = [
     nombre: "la huerta encantada",
     direccion: "Boulevard Diego, C. Lopez de Zuñiga 450, Chancay 15131",
     logo: logo23,
+    foto1:foto23_1,
+    foto2:foto23_2,
     carta: "",//si es que hay
     telefono: "946 519 352",
     horario: {
@@ -570,6 +691,9 @@ export const db = [
     nombre: "Lobitos Restobar",
     direccion: "Junin 380, Chancay 15131",
     logo: logo24,
+    foto1:foto24_1,
+    foto2:foto24_2,
+    foto3:foto24_3,
     carta: "cdn.me-qr.com",//si es que hay
     telefono: "958 534 920",
     horario: {
@@ -590,6 +714,9 @@ export const db = [
     nombre: "Legon",
     direccion: "Los Geranios 347, Huaral 15202 ",
     logo: logo25,
+    foto1:foto25_1,
+    foto2:foto25_2,
+    foto3:foto25_3,
     carta: "",//si es que hay
     telefono: " 934 557 270",
     horario: {
@@ -609,6 +736,9 @@ export const db = [
     nombre: "Gothik Disco",
     direccion: "Julio C. Tello 152, Huaral 15202 ",
     logo: logo26,
+    foto1:foto26_1,
+    foto2:foto26_2,
+    foto3:foto26_3,
     carta: "",//si es que hay
     telefono: "",
     horario: {
@@ -625,9 +755,12 @@ export const db = [
     establecimiento: "discoteca",
     id: 27,
     distrito: "huaral",
-    nombre: "casa vieja",
+    nombre: "Casa vieja",
     direccion: "Perú 120, Huaral 15202 ",
     logo: logo27,
+    foto1:foto27_1,
+    foto2:foto27_2,
+    foto3:foto27_3,
     carta: "",//si es que hay
     telefono: " ",
     horario: {
@@ -647,6 +780,10 @@ export const db = [
     nombre: "The Club Lima",
     direccion: "Av. La Marina 1518, Pueblo Libre",
     logo: logo61,
+    foto1:foto61_1,
+    foto2:foto61_2,
+    foto3:foto61_3,
+    foto4:foto61_4,
     carta: "",//si es que hay
     telefono: " ",
     horario: {
@@ -668,6 +805,10 @@ export const db = [
     nombre: "Kalúa",
     direccion: "Av. La Marina 1520, Pueblo Libre",
     logo: logo62,
+    foto1:foto62_1,
+    foto2:foto62_2,
+    foto3:foto62_3,
+    foto4:foto62_4,
     carta: "",//si es que hay
     telefono: " ",
     horario: {
@@ -689,6 +830,10 @@ export const db = [
     nombre: "Hops",
     direccion: "Av. General Vivanco 785, Pueblo Libre",
     logo: logo63,
+    foto1:foto63_1,
+    foto2:foto63_2,
+    foto3:foto63_3,
+    foto4:foto63_4,
     carta: "",//si es que hay
     telefono: " ",
     horario: {
@@ -710,6 +855,10 @@ export const db = [
     nombre: "Barely Bar",
     direccion: "Calle Antonio Polo 756, Pueblo Libre",
     logo: logo64,
+    foto1:foto64_1,
+    foto2:foto64_2,
+    foto3:foto64_3,
+    foto4:foto64_4,
     carta: "",//si es que hay
     telefono: " ",
     horario: {
@@ -731,6 +880,10 @@ export const db = [
     nombre: "Mi tercer lugar",
     direccion: "Av. José de San Martín 493, Pueblo Libre",
     logo: logo65,
+    foto1:foto65_1,
+    foto2:foto65_2,
+    foto3:foto65_3,
+    foto4:foto65_4,
     carta: "https://www.mitercerlugar.com.pe/static/documentos/carta.pdf",//si es que hay
     horario: {
       lun: "5:00pm a 11:00pm",
