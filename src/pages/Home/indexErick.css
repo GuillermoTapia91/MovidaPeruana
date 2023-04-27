@@ -1,1 +1,83 @@
+.containerEr{
+    min-width: 100%;
+    min-height: 100vh;
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    padding: 0;
+    
+  }
+  video{
+    position: relative;
+    top:0;
+    left:0;
+    margin: 0;
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+  }
+  .capa{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1c1c1d;
+    opacity: 0.5;
+    mix-blend-mode:overlay; 
+  }
+  .intro{
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    
+  }
+  .lyric1 {
+    font-size: 5.5rem;
+    text-shadow: 0 0 5px red ,  0 0 15px red , 0 0 30px red , 0 0 50px red ;
+}
+  .lyric2 {
+  font-size: 2rem;
+  text-shadow: 0 0 5px white ,  0 0 15px white  , 0 0 30px white  , 0 0 50px white  ;
+}
+  .busqueda{
+  
+  color: rgb(255 247 5);
+  font-size: 32px;
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgb(255 247 5) ,  0 0 15px rgb(255 247 5)  , 0 0 30px rgb(255 247 5)  , 0 0 50px rgb(255 247 5)  ;
+  animation: parpadear 3s infinite backwards steps(4) ;
+}
 
+@keyframes parpadear{
+  to{
+    color: gray;
+    text-shadow: none;
+
+  }
+}
+
+  /* .busqueda:hover{
+    background-color: rgb(243, 44, 94);
+    color:black;
+    border-color:rgb(243, 44, 94);
+  } */
+  .h3G{
+    margin-bottom: 18px;
+  }
+  .buble{
+    z-index: 1;
+    position:absolute;
+    width: 100%;
+    max-width: 100%;
+    height:0px;
+  }
+.base{
+  width: 100%;
+}
