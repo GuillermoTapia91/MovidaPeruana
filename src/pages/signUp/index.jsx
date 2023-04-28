@@ -11,7 +11,7 @@ export default function SingUp (){
         <div className="login-body">
 
       <div className="container-sign">
-        <img className="loginLogo" src={logo} alt="" />
+         <a href="./"> <img className="loginLogo" src={logo} alt="" /> </a>
         <h5 className="in-up">
           <a className="inicio-crear mar-20" href="http://localhost:3000/signin">Iniciar Sesión</a>
           <a className="inicio-crear mar-20"href="">Crear Cuenta</a>

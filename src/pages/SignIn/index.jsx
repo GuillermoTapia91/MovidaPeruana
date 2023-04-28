@@ -1,3 +1,4 @@
+import { useState } from "react"
 import "./style.css"
 import logo from "../../assets/img/Logo.png"
 import GitHublogo from "../../assets/img/github.svg"
@@ -5,11 +6,18 @@ import GoogleLogo from "../../assets/img/GoogleLogo.png"
 import FacebookLogo from "../../assets/img/FacebookLogo.png"
 import TwitterLogo from "../../assets/img/TwitterLogo.png"
 export default function SignIn() {
+  const {email , setEmail} = useState("");
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    console.log(email)
+  }
+
   return (
     <div className="login-body">
 
       <div className="container-sign">
-        <img className="loginLogo" src={logo} alt="" />
+         <a href="./"><img className="loginLogo" src={logo} alt="" /></a> 
         <h5 className="in-up">
           <a className="inicio-crear mar-20" href="">Iniciar Sesión</a>
           <a className="inicio-crear mar-20"href="http://localhost:3000/signup">Crear Cuenta</a>
@@ -17,9 +25,9 @@ export default function SignIn() {
         {/* Iniciar Seccion */}
         <div className="login">
           <div className="bodyForm">
-            <form className="formLogin" action="">
+            <form className="formLogin"  onSubmit={handleSubmit}>
               <h5 className="l" >Inicia sesión en tu cuenta de MovidaPeruana</h5>
-              <input className="W-80" type="email" placeholder="Correo Electronico"/>
+              <input className="W-80" type="email" name="email" placeholder="Correo Electronico" onChange={(e) => setEmail(e.target.value)}/>
               <input className="W-80" type="password" placeholder="Contraseña" />
               <a className="inicio-crear" href="">Problemas para entrar?</a>
               <button className="btn-signin" >SignIn</button>
