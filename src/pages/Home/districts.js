@@ -43,5 +43,9 @@ export const districts =
     {
       value: "huaral",
       label: "Huaral"
+    },
+    {
+      value: "san juan de lurigancho",
+      label: "San Juan de Lurigancho"
     }
   ]

@@ -143,3 +143,11 @@
   display: none;
 } */
 
+.webg {
+  text-decoration: none;
+  color: white;
+}
+
+.webg:hover{
+  color: black
+}
