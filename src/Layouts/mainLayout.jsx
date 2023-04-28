@@ -12,7 +12,7 @@ window.addEventListener("scroll", function (){
         <>
             <nav className="navbar bg-transparent fixed-top">
                 <div className="container-fluid justify-content-around align-items-end">
-                    <img src={logo} width={250} alt="" />
+                   <a href="#Inicio"> <img src={logo} width={250} alt="" /> </a>
                     <div >
                         <ul className="d-flex gap-5">
                             <li>
