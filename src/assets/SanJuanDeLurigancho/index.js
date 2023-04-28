@@ -1,15 +1,15 @@
-import logo42 from  "../SanJuanDeLugirancho/img/DubaiDiscoBar_logo.png"
-import logo43 from  "../SanJuanDeLugirancho/img/DiscotecaBoos_logo.jpg"
-import logo44 from  "../SanJuanDeLugirancho/img/DiscotecaAmnesia_logo.jpg"
-import logo45 from  "../SanJuanDeLugirancho/img/KurdaBar_logo.jpg"
+import logo42 from  "../SanJuanDeLurigancho/img/DubaiDiscoBar_logo.png"
+import logo43 from  "../SanJuanDeLurigancho/img/DiscotecaBoos_logo.jpg"
+import logo44 from  "../SanJuanDeLurigancho/img/DiscotecaAmnesia_logo.jpg"
+import logo45 from  "../SanJuanDeLurigancho/img/KurdaBar_logo.jpg"
 const lista = [
 
 {
     establecimiento: "bar",
-    distrito: "sanjuandelurigancho",
+    distrito: "san juan de lurigancho",
     id: 42,
     nombre: "Dubai Disco Bar",
-    direccion: "Av Canto Rey N° 411, Urb. Canto Rey, San Juan de Luirgancho",
+    direccion: "Av Canto Rey N° 411, Urb. Canto Rey, San Juan de Lurigancho",
     logo: logo42,
     carta: "",//si es que hay
     horario: {
@@ -21,12 +21,12 @@ const lista = [
       sab: "18:30pm a 6:00am",
       dom: "18:30pm a 6:00am"
     },
-  fotos: [],
-  web: "https://www.facebook.com/Dubaidiscobarr/?locale=es_LA"
+    fotos: [],
+    web: "https://www.facebook.com/Dubaidiscobarr/?locale=es_LA"
 },
 {
   establecimiento: "discoteca",
-  distrito: "sanjuandelurigancho",
+  distrito: "san juan de lurigancho",
   id: 43,
   nombre: "Discoteca Boss",
   direccion: "Prdero 4, Mariscal Caceres, Antunez De Mayolo, San Juan de Lurigancho",
@@ -41,12 +41,12 @@ const lista = [
     sab: "17:00pm a 12:00am",
     dom: "17:00pm a 12:00am"
   },
-fotos: [],
-web: "https://www.facebook.com/Discotecabossjl?locale=es_LA"
+  fotos: [],
+  web: "https://www.facebook.com/Discotecabossjl?locale=es_LA"
 },
 {
   establecimiento: "discoteca",
-  distrito: "sanjuandelurigancho",
+  distrito: "san juan de lurigancho",
   id: 44,
   nombre: "Discoteca Amnesia",
   direccion: "Los Jardines Oeste 133, Cercado de Lima, San Juan de Lurigancho",
@@ -61,12 +61,12 @@ web: "https://www.facebook.com/Discotecabossjl?locale=es_LA"
     sab: "17:30pm a 4:00am",
     dom: "17:30pm a 4:00am"
   },
-fotos: [],
-web: "https://www.facebook.com/profile.php?id=100064695636853"
+  fotos: [],
+  web: "https://www.facebook.com/profile.php?id=100064695636853"
 },
 {
   establecimiento: "bar",
-  distrito: "sanjuandelurigancho",
+  distrito: "san juan de lurigancho",
   id: 45,
   nombre: "Kurda Piano Bar",
   direccion: "Av. Los Jardines Oeste 379, San Juan de Lurigancho ",
@@ -81,7 +81,7 @@ web: "https://www.facebook.com/profile.php?id=100064695636853"
     sab: "21:00pm a 6:00am",
     dom: "21:00pm a 6:00am"
   },
-fotos: [],
-web: "https://www.facebook.com/KurdaPianoBar/?locale=es_LA"
+  fotos: [],
+  web: "https://www.facebook.com/KurdaPianoBar/?locale=es_LA"
 },
 ]

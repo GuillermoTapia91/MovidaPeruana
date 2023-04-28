@@ -251,7 +251,7 @@ export default function Home() {
                       >
                         Fotos
                       </button>
-                      <button className="btn btn-color2">Opiniones</button>
+                      <button className="btn btn-color2"><a className="webg" href={lista.web} target="_blank">Web</a> </button>
                     </div>
                   </div>
                 </div>

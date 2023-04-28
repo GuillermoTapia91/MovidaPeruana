@@ -26,6 +26,12 @@
   
 }
 
+.btn-color:hover {
+  background-color: #CD1C65;
+  color: white;
+  
+}
+
 .heartbeat {
 	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	        animation: heartbeat 1.5s ease-in-out infinite both;
@@ -123,6 +129,11 @@
   color: white;
   font-size: 12px;
 }
+.btn-color2:hover {
+  background-color: rgb(52, 58, 185);
+  color: white;
+  
+}
 
 /* .selectG {
   border: solid white; 
@@ -143,3 +154,11 @@
   display: none;
 } */
 
+.webg {
+  text-decoration: none;
+  color: white;
+}
+
+.webg:hover{
+  color: white;
+}
