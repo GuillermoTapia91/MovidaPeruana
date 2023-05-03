@@ -3,9 +3,9 @@ import { supabase } from '../../supabase'
 import logo from "../../assets/img/Logo.png"
 
 import GitHublogo from "../../assets/img/github.svg"
-import GoogleLogo from "../../assets/img/GoogleLogo.png"
-import FacebookLogo from "../../assets/img/FacebookLogo.png"
-import TwitterLogo from "../../assets/img/TwitterLogo.png"
+import GoogleLogo from "../../assets/img/googleLogo.png"
+import FacebookLogo from "../../assets/img/facebookLogo.png"
+import TwitterLogo from "../../assets/img/twitterLogo.png"
 
 
 
