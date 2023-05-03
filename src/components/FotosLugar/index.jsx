@@ -11,12 +11,12 @@ export default function FotosLugar({ currentList: lista }) {
             </div>
             <div className="modal-body text-center">
               <p>Fotos:</p>
-              <div class="container ">
-                <div class="row ">
-                  <div class="col-md-12 m-1 "><img src={lista?.foto1}  alt="" className="img-fluid " /></div>
-                  <div class="col-md-12 m-1"><img src={lista?.foto2}  alt="" className="img-fluid " /></div>
-                  <div class="col-md-12 m-1"><img src={lista?.foto3} width="380px" alt="" className="img-fluid " /></div>
-                  <div class="col-md-12 m-1"><img src={lista?.foto4} width="380px" alt="" className="img-fluid " /></div>
+              <div className="container ">
+                <div className="row ">
+                  <div className="col-md-12 m-1 "><img src={lista?.foto1}  alt="" className="img-fluid " /></div>
+                  <div className="col-md-12 m-1"><img src={lista?.foto2}  alt="" className="img-fluid " /></div>
+                  <div className="col-md-12 m-1"><img src={lista?.foto3} width="380px" alt="" className="img-fluid " /></div>
+                  <div className="col-md-12 m-1"><img src={lista?.foto4} width="380px" alt="" className="img-fluid " /></div>
                 </div>
               </div>  
             </div>

@@ -13,8 +13,8 @@ export default function MainLayout() {
             <nav className=" navbar navbar-expand-md bg-transparent fixed-top">
                 <div className="container-fluid justify-content-around align-items-end gap-6">
                     <a href="#Inicio"> <img src={logo} width={250} alt="" /> </a>
-                    <button id="hamburguesa" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon">
+                    <button id="hamburguesa" className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon">
                             <img src={menu} alt="" />
                         </span>
                     </button>
