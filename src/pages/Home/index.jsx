@@ -36,6 +36,7 @@ export default function Home() {
   let refMenuBtn = useRef();
   let refDiv1 = useRef();
   let refDiv2 = useRef();
+  let refImgG = useRef();
 
   const [listas, setlistas] = useState(db);
   const [currentList, setCurrentList] = useState(null);
@@ -51,11 +52,13 @@ export default function Home() {
       refMenuBtn.current.textContent = "Cerrar";
       refDiv1.current.style.height = "auto";
       refDiv2.current.style.display = "block";
+      refImgG.current.style.display = "none"
     } else {
       setButtonBuscar(false);
       refMenuBtn.current.textContent = "Buscar";
       refDiv1.current.style.height = "100vh";
       refDiv2.current.style.display = "none";
+      refImgG.current.style.display = "block"
     }
   };
 
@@ -174,8 +177,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" d-sm-flex justify-content-sm-center align-items-sm-center gap-5 mt-3 text-center imagenesG">
-          <div className="imgDisco">
+        <div  ref={refImgG} className=" d-sm-flex justify-content-sm-center align-items-sm-center gap-5 mt-3 text-center imagenesG" >
+          <div className="imgDisco" >
             <img
               src={discoImg}
               width="380px"
@@ -183,7 +186,7 @@ export default function Home() {
               className="img-fluid heartbeat"
             />
           </div>
-          <div className="imgBar">
+          <div className="imgBar" >
             <img
               src={barImg}
               width="400px"
