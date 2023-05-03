@@ -135,24 +135,25 @@
   
 }
 
-/* .selectG {
+ /* .selectG {
   border: solid white; 
-}
-.imagenesG {
-  border: solid blue;
-}
-
-.imgDisco {
-  border: solid yellow;
-}
-
-.imgBar {
-  border: solid red;
 } */
+
+.imagenesG {
+  display: block;
+}
+
+/* .imgDisco {
+  border: solid yellow;
+} */
+
+/* .imgBar {
+  border: solid red;
+}  */
 
 /* .horario {
   display: none;
-} */
+}  */
 
 .webg {
   text-decoration: none;
