@@ -3,11 +3,7 @@ import { supabase } from "../../supabase"
 import Auth from "../../service/Auth"
 import Account from "../../service/Account"
 import "./style.css"
-import logo from "../../assets/img/Logo.png"
-import GitHublogo from "../../assets/img/github.svg"
-import GoogleLogo from "../../assets/img/googleLogo.png"
-import FacebookLogo from "../../assets/img/facebookLogo.png"
-import TwitterLogo from "../../assets/img/twitterLogo.png"
+
 export default  function SignIn() {
  
   const [session, setSession] = useState(null)
