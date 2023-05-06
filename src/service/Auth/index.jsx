@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { supabase } from '../../supabase'
+import "./style.css"
 import logo from "../../assets/img/Logo.png"
 
 import GitHublogo from "../../assets/img/github.svg"
@@ -26,24 +27,42 @@ export default function Auth() {
     }
     setLoading(false)
   }
+  async function signInWithGoogle() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        queryParams: {
+          access_type: 'offline',
+          prompt: 'consent',
+        },
+      },
+    })
+  }
+  async function signout() {
+    const { error } = await supabase.auth.signOut()
+  }
 
   return (
     <>
-      <div className='gap-2 d-flex flex-column '>
+      <div className='gap-2 d-flex flex-column ' id='bod'>
         <div className=''>
           <a href="./"> <img className="img-fluid" src={logo} alt="" /> </a>
         </div>
-        <div className="d-flex justify-content-center align-items-center gap-4 row">
+        <div className="d-flex justify-content-center align-items-center gap-4 row ">
           <div className="justify-content-center d-flex flex-column gap-2 col">
 
-            <h1 className="header header text-warning">Inicia Sesión / Registrate</h1>
-            <p className="description text-warning-emphasis">Inicie sesión  con su correo electrónico a continuación</p>
+            <h1 id='inicioReg' className="header header text-light">
+              <span id='palabra1'>Inicia Sesión </span>
+              <span id='signo'> / </span> 
+              <span id='palabra2'>Registrate</span> 
+              </h1>
+            <p id='corto' className="description ">Inicie sesión  con su correo electrónico a continuación</p>
             <form className="form-widget d-flex flex-column align-items-center gap-4 " onSubmit={handleLogin}>
               <div className='input-group mb-3'>
                 <input
                   className="inputField form-control"
                   type="email"
-                  placeholder="Your email"
+                  placeholder="Escribe tu Correo"
                   value={email}
                   required={true}
                   onChange={(e) => setEmail(e.target.value)}
@@ -51,12 +70,12 @@ export default function Auth() {
               </div>
               <div>
                 <button className={'button block btn btn-primary bg-info-subtle text-body-secondary'} disabled={loading}>
-                  {loading ? <span>Loading</span> : <span>Send magic link</span>}
+                  {loading ? <span>Activando...</span> : <span>Activate Ahora!!</span>}
                 </button>
               </div>
             </form>
           </div>
-          <div className="btnMedia col">
+          <div className="btnMedia col" id='botones' >
             <div className="github">
               <button className="btnGit btn">
                 <img src={GitHublogo} alt="" />
@@ -65,7 +84,7 @@ export default function Auth() {
             </div>
             <div className="google">
               <button className="btnGit btn">
-                <img src={GoogleLogo} alt="" />
+                <img src={GoogleLogo} alt={signInWithGoogle} />
                 <h5>continue with Google</h5>
               </button>
             </div>

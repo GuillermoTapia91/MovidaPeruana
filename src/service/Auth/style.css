@@ -1,0 +1,26 @@
+#inicioReg{
+    text-shadow: 0 0 5px yellowgreen, 0 0 15px yellowgreen, 0 0 30px yellowgreen;
+}
+#palabra1{
+    animation: parpadear 2s infinite backwards steps(2);
+}
+#signo{
+    animation: parpadear 2.5s infinite backwards steps(3);
+}
+#palabra2{
+    animation: parpadear 3s infinite backwards steps(2);
+}
+#corto{
+    color: white;
+    text-shadow: 0 0 5px rgb(253, 253, 253), 0 0 15px rgb(251, 252, 250), 0 0 30px rgb(255, 255, 254);
+}
+.heightbtn{
+    height: 45px;
+}
+
+@keyframes parpadear {
+    to {
+        color: gray;
+        text-shadow: none;
+    }
+}
