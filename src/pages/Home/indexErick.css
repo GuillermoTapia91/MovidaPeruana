@@ -8,8 +8,9 @@
     align-items: center;
     object-fit: cover;
     padding: 0;
-    
-  }
+    box-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
+   }
+        
   video{
     position: relative;
     top:0;

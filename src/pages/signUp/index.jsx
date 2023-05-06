@@ -1,9 +1,9 @@
 import "./style.css"
 import logo from "../../assets/img/Logo.png"
 import GitHublogo from "../../assets/img/github.svg"
-import GoogleLogo from "../../assets/img/GoogleLogo.png"
-import FacebookLogo from "../../assets/img/FacebookLogo.png"
-import TwitterLogo from "../../assets/img/TwitterLogo.png"
+import GoogleLogo from "../../assets/img/googleLogo.png"
+import FacebookLogo from "../../assets/img/facebookLogo.png"
+import TwitterLogo from "../../assets/img/twitterLogo.png"
 
 
 export default function SingUp (){
@@ -11,9 +11,9 @@ export default function SingUp (){
         <div className="login-body">
 
       <div className="container-sign">
-        <img className="loginLogo" src={logo} alt="" />
+         <a href="./"> <img className="loginLogo" src={logo} alt="" /> </a>
         <h5 className="in-up">
-          <a className="inicio-crear mar-20" href="http://localhost:3000/signin">Iniciar Sesión</a>
+          <a className="inicio-crear mar-20" href="">Iniciar Sesión</a>
           <a className="inicio-crear mar-20"href="">Crear Cuenta</a>
         </h5 >
         {/* Iniciar Seccion */}

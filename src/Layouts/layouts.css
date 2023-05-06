@@ -16,3 +16,82 @@ li{
     box-shadow: 0px 5px 10px 3px rgb(255 34 124 / 40%);
 
 }
+
+#hamburguesa{
+    border-color: transparent;
+}
+#hamburguesa:active:hover{
+    border-color: transparent;
+}
+.navbar-toggler{
+    color: transparent;
+}
+/* body {
+    background: #212121;
+    padding: 50px 0;
+  }
+   */
+  .van {
+    font-family: 'Titillium Web';
+    
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .van * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+  }
+  
+  .van li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 1em;
+    padding: 0;
+  }
+  
+  .van a {
+    color: whitesmoke;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    
+  }
+  
+  .van a::before,
+  .van a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+  .van a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+    transform: translate(-100%, 50%);
+  }
+  
+  .van a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+    transform: translate(190%, -90%)
+  }
+  
+  .van a:hover:before,
+  .van a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  .van a:hover {
+    color: red;
+  }

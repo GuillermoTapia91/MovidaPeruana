@@ -32,10 +32,10 @@ export const districts =
     //   value: "los olivos",
     //   label: "Los Olivos"
     // },
-    // {
-    //   value: "san juan de miraflores",
-    //   label: "San Juan de Miraflores"
-    // },
+     {
+      value: "san juan de miraflores",
+      label: "San Juan de Miraflores"
+     },
     {
       value: "chancay",
       label: "Chancay"
@@ -43,5 +43,9 @@ export const districts =
     {
       value: "huaral",
       label: "Huaral"
+    },
+    {
+      value: "san juan de lurigancho",
+      label: "San Juan de Lurigancho"
     }
   ]

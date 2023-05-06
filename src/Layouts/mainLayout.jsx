@@ -4,72 +4,46 @@ import "./layouts.css"
 import { Outlet } from "react-router-dom"
 
 export default function MainLayout() {
-window.addEventListener("scroll", function (){
-    const nav = document.querySelector("nav");
-    nav.classList.toggle("abajo",window.scrollY>400);
-})
+    window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("abajo", window.scrollY > 400);
+    })
     return (
         <>
-            <nav className="navbar bg-transparent fixed-top">
-                <div className="container-fluid justify-content-around align-items-end">
-                    <img src={logo} width={250} alt="" />
-                    <div >
-                        <ul className="d-flex gap-5">
-                            <li>
-                                <a className="selectLayout" href="#eventos">Eventos</a>
-                            </li>
-                            <li>
-                            <a className="selectLayout" href="">¿eres un negocio?</a>
-                            </li>
-                            <li>
-                                <a className="selectLayout" href="http://localhost:3000/signin">Iniciar Sesión</a>
-                            </li>
-                            <li>
-                                <a className="selectLayout" href="http://localhost:3000/signup">Registrate</a>
-                            </li>
-                        </ul>
+            <nav className=" navbar navbar-expand-md bg-transparent fixed-top">
+                <div className="container-fluid justify-content-around align-items-end gap-6">
+                    <a href="#Inicio"> <img src={logo} width={230} alt="" /> </a>
+                    <button id="hamburguesa" className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon">
+                            <img src={menu} alt="" />
+                        </span>
+                    </button>
+
+                    <div className="collapse navbar-collapse justify-content-end me-5 " id="menu">
+
+                        <div >
+                            <ul className="d-flex gap-5 me-auto van">
+                                <li className="nav-item ">
+                                    <a className="selectLayout nav-link" href="#eventos">Eventos</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="selectLayout nav-link" href="">¿eres un negocio?</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="selectLayout nav-link " href="/signin">Iniciar Sesión</a>
+                                </li>
+                                {/* <li>
+                                    <a className="selectLayout" href="http://localhost:3000/signin">Registrate</a>
+                                </li> */}
+                            </ul>
+                        </div>
+
                     </div>
 
-                    {/* <button className="menu navbar-toggler text-" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <img src={menu}alt="" />
-                </button> */}
-                    <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                        <div className="offcanvas-header">
-                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div className="offcanvas-body">
-                            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Link</a>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li>
-                                            <hr className="dropdown-divider"></hr>
-                                        </li>
-                                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <form className="d-flex mt-3" role="search">
-                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-                                <button className="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-                        </div>
-                    </div>
                 </div>
-            </nav> 
+            </nav>
             <Outlet />
-            
+
         </>
     )
 }

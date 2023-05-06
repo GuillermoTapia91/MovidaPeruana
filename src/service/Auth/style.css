@@ -1,0 +1,61 @@
+#inicioReg{
+    text-shadow: 0 0 5px yellowgreen, 0 0 15px yellowgreen, 0 0 30px yellowgreen;
+}
+#palabra1{
+    animation: parpadear 2s infinite backwards steps(2);
+}
+#signo{
+    animation: parpadear 2.5s infinite backwards steps(3);
+}
+#palabra2{
+    animation: parpadear 3s infinite backwards steps(2);
+}
+#corto{
+    color: white;
+    text-shadow: 0 0 5px rgb(253, 253, 253), 0 0 15px rgb(251, 252, 250), 0 0 30px rgb(255, 255, 254);
+}
+.heightbtn{
+    height: 45px;
+}
+
+@keyframes parpadear {
+    to {
+        color: gray;
+        text-shadow: none;
+    }
+}
+/* 
+section{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #001300;
+    display:flex;
+    overflow: hidden;
+    
+}
+.molecula{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: block;
+
+}
+.molecula::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#00ff0a ;
+    transform: scale(0.1);
+    box-shadow: 0 0 10px #00ff0a,0 0 20px #00ff0a, 0 0 40px #00ff0a, 0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 2s;
+}
+.molecula:hover::before{
+    transform: scale(1);
+    transition: 0s;
+} */
