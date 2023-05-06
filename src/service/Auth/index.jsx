@@ -35,6 +35,21 @@ export default function Auth() {
       },
     })
   }
+
+  async function signInWithGithub() {
+    const {data,error} = await supabase.auth.signInWithOAuth({
+      provider: "github"
+    })
+    
+    if (error) {
+      console.log(error)
+      return
+    }
+
+    return data
+
+  }
+
   async function signout() {
     const { error } = await supabase.auth.signOut()
   }
@@ -75,14 +90,14 @@ export default function Auth() {
           </div>
           <div className="btnMedia col" id='botones' >
             <div className="github">
-              <button className="btnGit btn">
+              <button className="btnGit btn" onClick={signInWithGithub}>
                 <img src={GitHublogo} alt="" />
                 <h5>continue with GitHub</h5>
               </button>
             </div>
             <div className="google">
-              <button className="btnGit btn">
-                <img src={GoogleLogo} alt={signInWithGoogle} />
+              <button className="btnGit btn" onClick={signInWithGoogle}>
+                <img src={GoogleLogo}  />
                 <h5>continue with Google</h5>
               </button>
             </div>
