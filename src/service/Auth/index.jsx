@@ -2,13 +2,10 @@ import { useState } from 'react'
 import { supabase } from '../../supabase'
 import "./style.css"
 import logo from "../../assets/img/Logo.png"
-
 import GitHublogo from "../../assets/img/github.svg"
 import GoogleLogo from "../../assets/img/googleLogo.png"
 import FacebookLogo from "../../assets/img/facebookLogo.png"
 import TwitterLogo from "../../assets/img/twitterLogo.png"
-
-
 
 export default function Auth() {
   const [loading, setLoading] = useState(false)
