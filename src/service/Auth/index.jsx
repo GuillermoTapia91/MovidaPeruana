@@ -56,6 +56,7 @@ export default function Auth() {
 
   return (
     <>
+
       <div className='gap-2 d-flex flex-column ' id='bod'>
         <div className=''>
           <a href="./"> <img className="img-fluid" src={logo} alt="" /> </a>
