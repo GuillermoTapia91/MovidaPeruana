@@ -27,6 +27,20 @@ export default function Auth() {
     }
     setLoading(false)
   }
+  async function signInWithGoogle() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        queryParams: {
+          access_type: 'offline',
+          prompt: 'consent',
+        },
+      },
+    })
+  }
+  async function signout() {
+    const { error } = await supabase.auth.signOut()
+  }
 
   return (
     <>
@@ -70,7 +84,7 @@ export default function Auth() {
             </div>
             <div className="google">
               <button className="btnGit btn">
-                <img src={GoogleLogo} alt="" />
+                <img src={GoogleLogo} alt={signInWithGoogle} />
                 <h5>continue with Google</h5>
               </button>
             </div>

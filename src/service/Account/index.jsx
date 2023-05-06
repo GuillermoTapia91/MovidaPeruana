@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../../supabase'
-import {footer} from "../../components/Footer/Footer"
 import "./style.css"
 
 export default function Account({ session }) {
