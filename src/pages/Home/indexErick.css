@@ -11,6 +11,9 @@
     box-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
    }
         
+   .modal-backdrop {
+    z-index: 1;
+   }
   video{
     position: relative;
     top:0;
@@ -21,7 +24,7 @@
     object-fit: cover;
   }
   .capa{
-    position: absolute;
+    position:absolute;
     top:0;
     left:0;
     width: 100%;
