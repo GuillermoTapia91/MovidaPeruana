@@ -24,17 +24,21 @@ export default function MainLayout() {
         const nav = document.querySelector("#hamburguesa");
         nav.classList.toggle("hamburguesa-mediamod", window.scrollY > 400);
     })
+    window.addEventListener("scroll", function () {
+        const nav = document.querySelector("#menu");
+        nav.classList.toggle("hamburguesa-mediamod", window.scrollY > 400);
+    })
     return (
         <>
             <nav className=" navbar navbar-expand-md bg-transparent fixed-top">
                 <div className=" margin-left container-fluid justify-content-around align-items-end gap-6">
-                    <a href="#Inicio"> <img className="mod-img" src={logo} width={230} alt="" /> </a>
+                    <a href="#Inicio"> <img className="mod-img with-media-180" src={logo} width={230} alt="" /> </a>
                     <button id="hamburguesa" className="navbar-toggler hamburguesa-media" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon">
                             <img src={menu} alt="" />
                         </span>
                     </button>
-                    <div className="collapse navbar-collapse justify-content-end me-5 " id="menu">
+                    <div className="collapse navbar-collapse justify-content-end me-5 hamburguesa-media" id="menu">
                         <div className="margin-40">
                             <ul className="d-flex gap-5 me-auto van">
                                 <li className="nav-item ">

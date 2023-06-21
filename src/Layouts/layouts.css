@@ -188,4 +188,7 @@ li {
 .hamburguesa-mediamod{
   display: block;
 }
+.with-media-180{
+  width: 180px;
+}
 }
