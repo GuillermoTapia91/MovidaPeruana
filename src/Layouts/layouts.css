@@ -137,9 +137,6 @@ li {
   }
 }
 @media (max-width: 540px){
-  .d-flex{
-
-  }
   .media-btn{
     background: black;
   cursor: pointer;
