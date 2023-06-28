@@ -4,76 +4,32 @@ import Auth from "../../service/Auth"
 import Account from "../../service/Account"
 import "./style.css"
 
-export default  function SignIn() {
- 
-  const [session, setSession] = useState(null)
+export default function SignIn() {
 
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session)
-    })
-
-    supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session)
-    })
-  }, [])
 
 
 
   return (
-    <>
-    <div className="container-fluid d-flex justify-content-center align-items-center  login-body" >
-      {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
+    <div className="container py-4">
+      <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mi-modal">Abrir modal</button>
+
+    <div className="modal fade" id="mi-modal" data-bs-backdroo="static">
+    <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div className="modal-content">
+            <div className="modal-header">
+                <h5 className="modal-title">Conectate</h5>
+                <button className="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div className="modal-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolor tempora, distinctio dignissimos quasi cumque ducimus ratione numquam inventore, facilis obcaecati dolorum natus et, temporibus accusamus id sed velit! Deserunt!</p>
+            </div>
+            <div className="modal-footer">
+              <button className="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
+              <button className="btn btn-primary">Guardar</button>
+            </div>
+        </div>
     </div>
-    </>
-    // <div className="login-body">
-
-    //   <div className="container-sign">
-    //      <a href="./"><img className="loginLogo" src={logo} alt="" /></a> 
-    //     <h5 className="in-up">
-    //       <a className="inicio-crear mar-20" href="">Iniciar Sesión</a>
-    //       <a className="inicio-crear mar-20"href="http://localhost:3000/signup">Crear Cuenta</a>
-    //     </h5 >
-    //     {/* Iniciar Seccion */}
-    //     <div className="login">
-    //       <div className="bodyForm">
-    //         <form className="formLogin"  >
-    //           <h5 className="l" >Inicia sesión en tu cuenta de MovidaPeruana</h5>
-    //           <input className="W-80" type="email" name="email" placeholder="Correo Electronico"/>
-    //           <input className="W-80" type="password" placeholder="Contraseña" />
-    //           <a className="inicio-crear" href="">Problemas para entrar?</a>
-    //           <button className="btn-signin" >SignIn</button>
-    //         </form>
-    //       </div>
-
-    //       <div className="btnMedia">
-    //         <div className="github">
-    //           <button className="btnGit btn">
-    //           <img src={GitHublogo} alt="" />
-    //           <h5>continue with GitHub</h5>
-    //          </button>             
-    //         </div>
-    //         <div className="google">
-    //         <button className="btnGit btn">
-    //           <img src={GoogleLogo} alt="" />
-    //           <h5>continue with Google</h5>
-    //          </button> 
-    //         </div>
-    //         <div className="facebook">
-    //         <button className="btnGit btn">
-    //           <img src={FacebookLogo} alt="" />
-    //           <h5>continue with Facebook</h5>
-    //          </button>  
-    //         </div>
-    //         <div className="twitter">
-    //         <button className="btnGit btn">
-    //           <img src={TwitterLogo} alt="" />
-    //           <h5>continue with Twitter</h5>
-    //          </button>  
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
+</div>
+</div>
   )
 }

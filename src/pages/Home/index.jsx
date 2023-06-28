@@ -128,7 +128,6 @@ export default function Home() {
               Bares/Discotecas
             </a>
           </div>
-          <div>{/* <img className="base" src={Buble} alt="" /> */}</div>
         </div>
       </div>
 
@@ -137,7 +136,7 @@ export default function Home() {
       <div
         id="BusquedaDistrito"
         className="SectionBuscarPorDistritos d-sm-flex justify-content-sm-center align-items-sm-center 
-       gap-4 bg-black  text-white p-2 "
+        gap-4 bg-black  text-white p-2 "
         ref={refDiv1}
       >
         <div className="gap-1 mb-3 selectG">
