@@ -8,12 +8,9 @@
     align-items: center;
     object-fit: cover;
     padding: 0;
-    box-shadow: 0 0 5px red, 0 0 15px blue, 0 0 30px black, 0 0 50px red;
-  }
+    box-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
+   }
         
-  .modal-backdrop {
-    z-index: 1;
-  }
   video{
     position: relative;
     top:0;
@@ -24,7 +21,7 @@
     object-fit: cover;
   }
   .capa{
-    position:absolute;
+    position: absolute;
     top:0;
     left:0;
     width: 100%;
@@ -49,6 +46,7 @@
   text-shadow: 0 0 5px white ,  0 0 15px white  , 0 0 30px white  , 0 0 50px white  ;
 }
   .busqueda{
+  
   color: rgb(255 247 5);
   font-size: 32px;
   display: inline-block;
@@ -57,6 +55,7 @@
   text-shadow: 0 0 5px rgb(255 247 5) ,  0 0 15px rgb(255 247 5)  , 0 0 30px rgb(255 247 5)  , 0 0 50px rgb(255 247 5)  ;
   animation: parpadear 3s infinite backwards steps(4) ;
 }
+
 @keyframes parpadear{
   to{
     color: gray;
@@ -64,6 +63,12 @@
 
   }
 }
+
+  /* .busqueda:hover{
+    background-color: rgb(243, 44, 94);
+    color:black;
+    border-color:rgb(243, 44, 94);
+  } */
   .h3G{
     margin-bottom: 18px;
   }
