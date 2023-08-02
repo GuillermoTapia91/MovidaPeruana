@@ -1,41 +1,41 @@
-import logo1 from "../../assets/Sanmiguel/MiTercerLugar/logo.jpg"
-import foto1_1 from "../../assets/Sanmiguel/MiTercerLugar/fotoInterior1.jpg"
-import foto1_2 from "../../assets/Sanmiguel/MiTercerLugar/fotoInterior2.jpg"
-import foto1_3 from "../../assets/Sanmiguel/MiTercerLugar/fotoInterior3.jpg"
-import foto1_4 from "../../assets/Sanmiguel/MiTercerLugar/fotoInterior4.jpg"
-import logo2 from "../../assets/Sanmiguel/PachaInti/logo.jpg"
-import foto2_1 from "../../assets/Sanmiguel/PachaInti/fotoInterior1.jpg"
-import foto2_2 from "../../assets/Sanmiguel/PachaInti/fotoInterior2.jpg"
-import foto2_3 from "../../assets/Sanmiguel/PachaInti/fotoInterior3.jpg"
-import foto2_4 from "../../assets/Sanmiguel/PachaInti/fotoInterior4.jpg"
-import logo3 from "../../assets/Sanmiguel/EnLounge&Bar/logo.jpg"
-import foto3_1 from "../../assets/Sanmiguel/EnLounge&Bar/fotoInterior1.jpg"
-import foto3_2 from "../../assets/Sanmiguel/EnLounge&Bar/fotoInterior2.jpg"
-import foto3_3 from "../../assets/Sanmiguel/EnLounge&Bar/fotoInterior3.jpg"
-import foto3_4 from "../../assets/Sanmiguel/EnLounge&Bar/fotoInterior4.jpg"
-import logo4 from "../../assets/Sanmiguel/FestivalSanMiguel/logo.jpg"
-import foto4_1 from "../../assets/Sanmiguel/FestivalSanMiguel/fotoExterior1.jpg"
-import foto4_2 from "../../assets/Sanmiguel/FestivalSanMiguel/fotoInterior1.jpg"
-import foto4_3 from "../../assets/Sanmiguel/FestivalSanMiguel/fotoInterior2.jpg"
-import foto4_4 from "../../assets/Sanmiguel/FestivalSanMiguel/fotoInterior3.jpg"
-import logo5 from "../../assets/Sanmiguel/Sopranos31/logo.jpg"
-import foto5_1 from "../../assets/Sanmiguel/Sopranos31/fotoInterior1.jpg"
-import foto5_2 from "../../assets/Sanmiguel/Sopranos31/fotoInterior2.jpg"
-import logo6 from "../../assets/Sanmiguel/Sopranos16/logo.jpg"
-import foto6_1 from "../../assets/Sanmiguel/Sopranos16/fotoInterior1.jpg"
-import foto6_2 from "../../assets/Sanmiguel/Sopranos16/fotoInterior2.jpg"
-import logo7 from "../../assets/Sanmiguel/Rustica/logo.jpg"
-import foto7_1 from "../../assets/Sanmiguel/Rustica/fotoInterior1.jpg"
-import foto7_2 from "../../assets/Sanmiguel/Rustica/fotoInterior2.jpg"
-import logo8 from "../../assets/Sanmiguel/FridayS/logo.jpg"
-import foto8_1 from "../../assets/Sanmiguel/FridayS/fotoInterior1.jpg"
-import foto8_2 from "../../assets/Sanmiguel/FridayS/fotoInterior2.jpg"
-import logo9 from "../../assets/Sanmiguel/FridaysO/logo.jpg"
-import foto9_1 from "../../assets/Sanmiguel/FridaysO/fotoInterior1.jpg"
-import foto9_2 from "../../assets/Sanmiguel/FridaysO/fotoInterior2.jpg"
-import logo10 from "../../assets/Sanmiguel/Chilis/logo.png"
-import foto10_1 from "../../assets/Sanmiguel/Chilis/fotoInterior1.jpg"
-import foto10_2 from "../../assets/Sanmiguel/Chilis/fotoInterior2.jpg"
+import logo1 from "../../assets/SanMiguel/MiTercerLugar/logo.jpg"
+import foto1_1 from "../../assets/SanMiguel/MiTercerLugar/fotoInterior1.jpg"
+import foto1_2 from "../../assets/SanMiguel/MiTercerLugar/fotoInterior2.jpg"
+import foto1_3 from "../../assets/SanMiguel/MiTercerLugar/fotoInterior3.jpg"
+import foto1_4 from "../../assets/SanMiguel/MiTercerLugar/fotoInterior4.jpg"
+import logo2 from "../../assets/SanMiguel/PachaInti/logo.jpg"
+import foto2_1 from "../../assets/SanMiguel/PachaInti/fotoInterior1.jpg"
+import foto2_2 from "../../assets/SanMiguel/PachaInti/fotoInterior2.jpg"
+import foto2_3 from "../../assets/SanMiguel/PachaInti/fotoInterior3.jpg"
+import foto2_4 from "../../assets/SanMiguel/PachaInti/fotoInterior4.jpg"
+import logo3 from "../../assets/SanMiguel/EnLounge&Bar/logo.jpg"
+import foto3_1 from "../../assets/SanMiguel/EnLounge&Bar/fotoInterior1.jpg"
+import foto3_2 from "../../assets/SanMiguel/EnLounge&Bar/fotoInterior2.jpg"
+import foto3_3 from "../../assets/SanMiguel/EnLounge&Bar/fotoInterior3.jpg"
+import foto3_4 from "../../assets/SanMiguel/EnLounge&Bar/fotoInterior4.jpg"
+import logo4 from "../../assets/SanMiguel/FestivalSanMiguel/logo.jpg"
+import foto4_1 from "../../assets/SanMiguel/FestivalSanMiguel/fotoExterior1.jpg"
+import foto4_2 from "../../assets/SanMiguel/FestivalSanMiguel/fotoInterior1.jpg"
+import foto4_3 from "../../assets/SanMiguel/FestivalSanMiguel/fotoInterior2.jpg"
+import foto4_4 from "../../assets/SanMiguel/FestivalSanMiguel/fotoInterior3.jpg"
+import logo5 from "../../assets/SanMiguel/Sopranos31/logo.jpg"
+import foto5_1 from "../../assets/SanMiguel/Sopranos31/fotoInterior1.jpg"
+import foto5_2 from "../../assets/SanMiguel/Sopranos31/fotoInterior2.jpg"
+import logo6 from "../../assets/SanMiguel/Sopranos16/logo.jpg"
+import foto6_1 from "../../assets/SanMiguel/Sopranos16/fotoInterior1.jpg"
+import foto6_2 from "../../assets/SanMiguel/Sopranos16/fotoInterior2.jpg"
+import logo7 from "../../assets/SanMiguel/Rustica/logo.jpg"
+import foto7_1 from "../../assets/SanMiguel/Rustica/fotoInterior1.jpg"
+import foto7_2 from "../../assets/SanMiguel/Rustica/fotoInterior2.jpg"
+import logo8 from "../../assets/SanMiguel/FridayS/logo.jpg"
+import foto8_1 from "../../assets/SanMiguel/FridayS/fotoInterior1.jpg"
+import foto8_2 from "../../assets/SanMiguel/FridayS/fotoInterior2.jpg"
+import logo9 from "../../assets/SanMiguel/FridaysO/logo.jpg"
+import foto9_1 from "../../assets/SanMiguel/FridaysO/fotoInterior1.jpg"
+import foto9_2 from "../../assets/SanMiguel/FridaysO/fotoInterior2.jpg"
+import logo10 from "../../assets/SanMiguel/Chilis/logo.png"
+import foto10_1 from "../../assets/SanMiguel/Chilis/fotoInterior1.jpg"
+import foto10_2 from "../../assets/SanMiguel/Chilis/fotoInterior2.jpg"
 
 import logo11 from "../../assets/Miraflores/wahios/logo.jpg"
 import foto11_1 from "../../assets/Miraflores/wahios/fotoInterior1.jpg"
@@ -124,11 +124,11 @@ import foto61_1 from "../../assets/PuebloLibre/theClubLima/fotoInterior1.jpg"
 import foto61_2 from "../../assets/PuebloLibre/theClubLima/fotoInterior2.jpg"
 import foto61_3 from "../../assets/PuebloLibre/theClubLima/fotoInterior3.jpg"
 import foto61_4 from "../../assets/PuebloLibre/theClubLima/fotoInterior4.jpg"
-import logo62 from "../../assets/PuebloLibre/kalua/logo.jpg"
-import foto62_1 from "../../assets/PuebloLibre/kalua/fotoInterior1.jpg"
-import foto62_2 from "../../assets/PuebloLibre/kalua/fotoInterior2.jpg"
-import foto62_3 from "../../assets/PuebloLibre/kalua/fotoInterior3.jpg"
-import foto62_4 from "../../assets/PuebloLibre/kalua/fotoInterior4.jpg"
+import logo62 from "../../assets/PuebloLibre/Kalua/logo.jpg"
+import foto62_1 from "../../assets/PuebloLibre/Kalua/fotoInterior1.jpg"
+import foto62_2 from "../../assets/PuebloLibre/Kalua/fotoInterior2.jpg"
+import foto62_3 from "../../assets/PuebloLibre/Kalua/fotoInterior3.jpg"
+import foto62_4 from "../../assets/PuebloLibre/Kalua/fotoInterior4.jpg"
 import logo63 from "../../assets/PuebloLibre/Hops/logo.jpg"
 import foto63_1 from "../../assets/PuebloLibre/Hops/fotoInterior1.jpg"
 import foto63_2 from "../../assets/PuebloLibre/Hops/fotoInterior2.jpg"
@@ -149,6 +149,9 @@ import logo42 from  "../../assets/SanJuanDeLurigancho/img/DubaiDiscoBar_logo.png
 import logo43 from  "../../assets/SanJuanDeLurigancho/img/DiscotecaBoss_logo.jpg"
 import logo44 from  "../../assets/SanJuanDeLurigancho/img/DiscoteAmnesia_logo.jpg"
 import logo45 from  "../../assets/SanJuanDeLurigancho/img/KurdaBar_logo.jpg"
+
+import logo46 from "../../assets/SanJuanDeMiraflores/img/KaliBar_logo.jpg"
+import logo47 from "../../assets/SanJuanDeMiraflores/img/DiscotecaAkilaVip_logo.jpg"
 
 export const db = [
   {
@@ -981,5 +984,45 @@ export const db = [
     },
     fotos: [],
     web: "https://www.facebook.com/KurdaPianoBar/?locale=es_LA"
+  },
+  {
+    establecimiento: "bar",
+    distrito: "san juan de miraflores",
+    id: 46,
+    nombre: "KALI Resto Bar Lima Sur",
+    direccion: "Av. Nicolas de Pierola 890, San Juan de Miraflores ",
+    logo: logo46,
+    carta: "",//si es que hay
+    horario: {
+      lun: "cerrado",
+      mar: "cerrado",
+      mie: "19:00pm a 6:00am",
+      jue: "19:00pm a 6:00am",
+      vie: "19:00pm a 6:00am",
+      sab: "19:00pm a 6:00am",
+      dom: "19:00pm a 6:00am"
+    },
+    fotos: [],
+    web: "https://www.facebook.com/KaliRestoBar"
+  },
+  {
+    stablecimiento: "bar",
+    distrito: "san juan de miraflores",
+    id: 47,
+    nombre: "Akila VIP",
+    direccion: "Joaquín Bernal 498, San Juan de Miraflores",
+    logo: logo47,
+    carta: "",//si es que hay
+    horario: {
+      lun: "cerrado",
+      mar: "cerrado",
+      mie: "19:00pm a 6:00am",
+      jue: "19:00pm a 6:00am",
+      vie: "19:00pm a 6:00am",
+      sab: "19:00pm a 6:00am",
+      dom: "19:00pm a 6:00am"
+      },
+    fotos: [],
+    web: "https://www.facebook.com/AkilaVIP.Sur/"
   },
 ]

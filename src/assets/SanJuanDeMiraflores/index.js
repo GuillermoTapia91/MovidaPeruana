@@ -4,9 +4,9 @@ import logo47 from "../SanJuanDeMiraflores/img/DiscotecaAkilaVip_logo.jpg"
 
 const lista = [
 
-{
+  {
     establecimiento: "bar",
-    distrito: "sanjuandemiraflores",
+    distrito: "san juan de miraflores",
     id: 46,
     nombre: "KALI Resto Bar Lima Sur",
     direccion: "Av. Nicolas de Pierola 890, San Juan de Miraflores ",
@@ -21,12 +21,12 @@ const lista = [
       sab: "19:00pm a 6:00am",
       dom: "19:00pm a 6:00am"
     },
-  fotos: [],
-  web: "https://www.facebook.com/KaliRestoBar"
+    fotos: [],
+    web: "https://www.facebook.com/KaliRestoBar"
   },
   {
-    establecimiento: "bar",
-    distrito: "sanjuandemiraflores",
+    stablecimiento: "bar",
+    distrito: "san juan de miraflores",
     id: 47,
     nombre: "Akila VIP",
     direccion: "Joaquín Bernal 498, San Juan de Miraflores",
@@ -40,8 +40,8 @@ const lista = [
       vie: "19:00pm a 6:00am",
       sab: "19:00pm a 6:00am",
       dom: "19:00pm a 6:00am"
-    },
-  fotos: [],
-  web: "https://www.facebook.com/AkilaVIP.Sur/"
+      },
+    fotos: [],
+    web: "https://www.facebook.com/AkilaVIP.Sur/"
   },
 ]

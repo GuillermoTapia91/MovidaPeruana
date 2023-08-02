@@ -10,7 +10,7 @@ export default function Router() {
         <Route element={<MainLayout/>}>
           <Route path="/" element={<HomeView />} />
         </Route>
-        <Route path="/SignIn" element={<SignInView />} />
+        <Route path="/signin" element={<SignInView />} />
         <Route path="/SignUp" element={<SignUpView />} />
       </Routes>
     </BrowserRouter>
