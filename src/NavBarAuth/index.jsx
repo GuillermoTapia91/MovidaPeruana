@@ -1,9 +1,8 @@
 import logo from "../assets/img/Logo.png"
 import menu from "../assets/img/hamburg.png"
-import "./layouts.css"
 import { Outlet } from "react-router-dom"
 
-export default function MainLayout() {
+export default function NavBarAuth() {
     window.addEventListener("scroll", function () {
         const nav = document.querySelector("nav");
         nav.classList.toggle("abajo", window.scrollY > 400);
@@ -28,6 +27,7 @@ export default function MainLayout() {
         const nav = document.querySelector("#menu");
         nav.classList.toggle("hamburguesa-mediamod", window.scrollY > 400);
     })
+  
     return (
         <>
             <nav className=" navbar navbar-expand-md bg-transparent fixed-top">
@@ -42,72 +42,53 @@ export default function MainLayout() {
                         <div className="margin-40">
                             <ul className="d-flex gap-5 me-auto van">
                                 <li className="nav-item ">
-                                    <button id="btn-2" className="selectLayout second-btn media-btn ">¿Eres un Negocio?</button>
+                                    <a id="btn-2" className="selectLayout second-btn media-btn" href="">¿Eres un Negocio?</a>
                                 </li>
                                 <li className="nav-item">
-                                <button id="btn-3" className="selectLayout second-btn media-btn" data-bs-toggle="modal" data-bs-target="#mi-modal">Registrate</button>
+                                <a id="btn-3" className="selectLayout second-btn media-btn" href="/SignUp">Registrate</a>
                                 </li>
-                                <div className="modal fade" id="mi-modal" data-bs-backdrop="static">
-                                    <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-                                                <h5 className="modal-title">Registrate</h5>
-                                                <button className="btn-close" data-bs-dismiss="modal"></button>
-                                            </div>
-                                            <div className="modal-body">
-                                                <div className="container-registro">
-                                                    <div className="formulario-opciones">
-                                                    <h5>Nombre de usuario :</h5>
-                                                    <input type="text" />
-                                                    </div>
-                                                    <div className="formulario-opciones">
-                                                    <h5>Email :</h5>
-                                                    <input type="email" />
-                                                    </div>
-                                                    <div className="formulario-opciones">
-                                                    <h5>Contraseña :</h5>
-                                                    <input type="password" />
-                                                    </div>
-                                                    <div className="formulario-opciones">
-                                                    <h5>Fecha de nacimiento :</h5>
-                                                    <input type="date" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="modal-footer">
-                                                <button className="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
-                                                <button className="btn btn-primary">Guardar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <li className="nav-item">
                                     <button id="btn-4" className="selectLayout second-btn media-btn"data-bs-toggle="modal" data-bs-target="#entrada">Entrar</button>
                                 </li>
                                 <div className="modal fade" id="entrada" data-bs-backdrop="static">
+
                                     <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-                                        <div className="modal-content">
+                                        <form className={`needs-validation ${showValidation} modal-content `}
+                                                        onSubmit={handleSubmit}>
                                             <div className="modal-header">
                                                 <h5 className="modal-title">Conectate</h5>
-                                                <button className="btn-close" data-bs-dismiss="modal"></button>
+                                                <button className="btn-close"
+                                                         data-bs-dismiss="modal">❌
+                                                 </button>
                                             </div>
                                             <div className="modal-body">
                                             <div className="container-registro">                                                   
                                                     <div className="formulario-opciones">
                                                     <h5>Email :</h5>
-                                                    <input type="email" />
+                                                    <input  type="email"
+                                                            onChange={handleInputChange}
+                                                            name="correo"
+                                                            placeholder="example@host.com"
+                                                            required
+                                                            value={inputData.correo} />
                                                     </div>
                                                     <div className="formulario-opciones">
                                                     <h5>Contraseña :</h5>
-                                                    <input type="password" />
+                                                    <input  type="password"
+                                                            onChange={handleInputChange}
+                                                            name="password"
+                                                            placeholder="password"
+                                                            required
+                                                            value={inputData.password} 
+                                                    />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="modal-footer">
-                                                <button className="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
-                                                <button className="btn btn-primary">Guardar</button>
+                                                <button className="btn btn-primary" 
+                                                        type="submit">Login</button>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </ul>
