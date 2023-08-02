@@ -1,97 +1,201 @@
-.menu{
-    color:transparent;
-    border-color: transparent;
-}
-li{
-    list-style: none;
-}
-.selectLayout{
-    text-decoration: none;
-    color: floralwhite;
-    text-shadow: 0 0 5px white ,  0 0 15px white  , 0 0 30px white  , 0 0 50px white  ;
+.menu {
+  color: transparent;
+  border-color: transparent;
 }
 
-.abajo{
-    background-color: rgb(2, 2, 2) !important;
-    box-shadow: 0px 5px 10px 3px rgb(255 34 124 / 40%);
+.btn-close{
+  padding-right: 24px;
+}
+.margin-left{
+  margin-left: 30px;
+}
+
+li {
+  list-style: none;
+}
+
+.modal-backdrop.show {
+    z-index: 1;
+}
+
+.modal-content{
+  background-color: black;
+    color: white;
+}
+
+.second-btn{
+  background-color: transparent;
+  border: none;
+}
+
+.mod-img{
+  vertical-align: baseline !important;
 
 }
 
-#hamburguesa{
-    border-color: transparent;
+.modbutton{
+  background: black;
+  cursor: pointer;
+  border :none;
+  padding: 12px 28px;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
 }
-#hamburguesa:active:hover{
-    border-color: transparent;
+
+.modbutton::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    red, blue, deeppink ,blue,
+    red, blue, deeppink, blue
+  );
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: folk 20seg linear infinite;
 }
-.navbar-toggler{
-    color: transparent;
+
+@keyframes folk{
+  0%{
+    background-position:0 0;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
 }
-/* body {
-    background: #212121;
-    padding: 50px 0;
+
+.container-registro{
+  display: flex;
+  flex-direction:column;
+  gap: 20px;
+}
+
+.formulario-opciones{
+    display: flex;
+    gap: 30px;
+    padding-left: 30px;
+    justify-content: space-between;
+}
+.selectLayout {
+  text-decoration: none;
+  color: floralwhite;
+  text-shadow: 0 0 5px white, 0 0 15px white, 0 0 30px white, 0 0 50px white;
+}
+
+.abajo {
+  background-color: rgb(2, 2, 2) !important;
+  box-shadow: 0px 5px 10px 3px rgb(255 34 124 / 40%);
+}
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+#hamburguesa {
+  border-color: transparent;
+}
+
+#hamburguesa:active:hover {
+  border-color: transparent;
+}
+
+.navbar-toggler {
+  color: transparent;
+}
+
+.van {
+  font-family: 'Titillium Web';
+  text-align: center;
+  font-weight: 600;
+}
+
+.margin-40{
+    margin-right: 40px;
+}
+
+.van * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+.van li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .d-flex {
+    display: flex!important;
+    align-items: flex-end;
+    background-color: transparent !important;
   }
-   */
-  .van {
-    font-family: 'Titillium Web';
-    
-    text-align: center;
-    font-weight: 600;
+}
+@media (max-width: 540px){
+  .media-btn{
+    background: black;
+  cursor: pointer;
+  border :none;
+  padding: 7px 13px;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+  margin: -20px !important;
+
   }
-  
-  .van * {
-    box-sizing: border-box;
-    transition: all .35s ease;
-  }
-  
-  .van li {
-    display: inline-block;
-    list-style: outside none none;
-    margin: .5em 1em;
-    padding: 0;
-  }
-  
-  .van a {
-    color: whitesmoke;
-    position: relative;
-    text-decoration: none;
-    font-size: 20px;
-    
-  }
-  
-  .van a::before,
-  .van a::after {
-    content: '';
-    height: 14px;
-    width: 14px;
+  .media-btn::before{
+    content: "";
     position: absolute;
-    transition: all .35s ease;
-    opacity: 0;
-  }
-  
-  .van a::before {
-    content: '';
-    right: 0;
     top: 0;
-    border-top: 2px solid red;
-    border-right: 2px solid red;
-    transform: translate(-100%, 50%);
-  }
-  
-  .van a:after {
-    content: '';
     left: 0;
-    bottom: 0;
-    border-bottom: 2px solid red;
-    border-left: 2px solid red;
-    transform: translate(190%, -90%)
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      45deg,
+      red, blue, deeppink ,blue,
+      red, blue, deeppink, blue
+    );
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: folk 20seg linear infinite;
   }
   
-  .van a:hover:before,
-  .van a:hover:after{
-    transform: translate(0,0);
-    opacity: 1;
+  @keyframes folk{
+    0%{
+      background-position:0 0;
+    }
+    50%{
+      background-position: 400% 0;
+    }
+    100%{
+      background-position: 0 0;
+    }
   }
-  
-  .van a:hover {
-    color: red;
-  }
+  .lyric1 {
+    font-size: 2rem;
+}
+.hamburguesa-media{
+  display: none;
+}
+.hamburguesa-mediamod{
+  display: block;
+}
+.with-media-180{
+  width: 180px;
+}
+}

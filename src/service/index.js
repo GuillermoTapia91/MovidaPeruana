@@ -23,7 +23,7 @@ export const get = async () => {
 };
 
 const urlSignUp = "http://127.0.0.1:5000/registro-usuario"
-export const post = async(body) => {
+export const postRegistro = async(body) => {
   try{
     const response = await fetch (urlSignUp,{
       method:"POST",
@@ -42,6 +42,28 @@ export const post = async(body) => {
     console.error(error);
   }
 };
+
+const urlLogin = "http://127.0.0.1:5000/iniciar-sesion"
+export const postLogin = async(body) => {
+  try{
+    const response = await fetch (urlLogin,{
+      method:"POST",
+      headers:{
+        "content-type":"application/json",
+      },
+      body:JSON.stringify(body),
+    });
+
+    if (!response.ok) return false;
+    
+    const data = await response.json();
+    console.log(data)
+    return data;
+  } catch (error){
+    console.error(error);
+  }
+};
+
 
 export const put = async (id, body) => {
   try {

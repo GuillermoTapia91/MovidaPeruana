@@ -5,7 +5,7 @@ import GoogleLogo from "../../assets/img/googleLogo.png"
 import FacebookLogo from "../../assets/img/facebookLogo.png"
 import TwitterLogo from "../../assets/img/twitterLogo.png"
 import { useState } from "react";
-import { post } from "../../service";
+import { postRegistro } from "../../service";
 import Swal from "sweetalert2"
 
 
@@ -35,7 +35,7 @@ const handleSubmit = async (event) => {
 
     setShowValidation("was-validated");
 
-    const data = await post(inputData);
+    const data = await postRegistro(inputData);
     console.log(data);
     if (!data) {
         Swal.fire({
