@@ -1,7 +1,7 @@
 import "./indexErick.css";
 import "./indexGuillermo.css";
 import "./indexJoel.css";
-import "./indexJercy.css";
+
 //GuillermoImportInicio
 import Footer from "../../components/Footer/Footer";
 import { useState, useRef } from "react";
