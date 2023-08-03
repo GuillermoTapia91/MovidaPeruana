@@ -1,13 +1,8 @@
 import logo from "../assets/img/Logo.png"
 import menu from "../assets/img/hamburg.png"
-import "./layouts.css"
 import { Outlet } from "react-router-dom"
-import React, { useState } from "react";
-import { postLogin } from "../service/index";
-import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
 
-export default function MainLayout() {
+export default function NavBarAuth() {
     window.addEventListener("scroll", function () {
         const nav = document.querySelector("nav");
         nav.classList.toggle("abajo", window.scrollY > 400);
@@ -32,47 +27,7 @@ export default function MainLayout() {
         const nav = document.querySelector("#menu");
         nav.classList.toggle("hamburguesa-mediamod", window.scrollY > 400);
     })
-
-    const [inputData, setInputData] = useState({
-        correo: "",
-        password: "",
-    });
-    const [showValidation, setShowValidation] = useState("");
-    const navigate = useNavigate()
-    const handleInputChange = (event) => {
-    const { name, type, checked, value } = event.target;
-
-    setInputData({
-        ...inputData,
-        [name]: type === "checkbox" ? checked : value,
-    });
-    };
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-    
-        setShowValidation("was-validated");
-    
-        const data = await postLogin(inputData);
-        if (!data) {
-            Swal.fire({
-                title: "Todo Mal",
-                text: "Hubo un error",
-                icon: "error",
-            });
-            return;
-        }
-        localStorage.setItem("token",data.content)
-
-        Swal.fire({
-            title: "Todo ok",
-            text: "Bienvenido!!",
-            icon: "success",
-        });
-        navigate("/mi-informacion")
-    };
-
-
-    
+  
     return (
         <>
             <nav className=" navbar navbar-expand-md bg-transparent fixed-top">
@@ -95,7 +50,7 @@ export default function MainLayout() {
                                 <li className="nav-item">
                                     <button id="btn-4" className="selectLayout second-btn media-btn"data-bs-toggle="modal" data-bs-target="#entrada">Entrar</button>
                                 </li>
-                                <div className="modal fade" id="entrada" data-bs-backdrop="true" >
+                                <div className="modal fade" id="entrada" data-bs-backdrop="static">
 
                                     <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered">
                                         <form className={`needs-validation ${showValidation} modal-content `}

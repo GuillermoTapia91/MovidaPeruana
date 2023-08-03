@@ -3,12 +3,19 @@
   border-color: transparent;
 }
 
+.btn-close{
+  padding-right: 24px;
+}
 .margin-left{
   margin-left: 30px;
 }
 
 li {
   list-style: none;
+}
+
+.modal-backdrop.show {
+    z-index: 1;
 }
 
 .modal-content{
