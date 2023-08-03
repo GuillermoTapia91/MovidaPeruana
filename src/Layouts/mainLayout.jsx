@@ -95,7 +95,7 @@ export default function MainLayout() {
                                 <li className="nav-item">
                                     <button id="btn-4" className="selectLayout second-btn media-btn"data-bs-toggle="modal" data-bs-target="#entrada">Entrar</button>
                                 </li>
-                                <div className="modal fade" id="entrada" data-bs-backdrop="static">
+                                <div className="modal fade" id="entrada" data-bs-backdrop="true" >
 
                                     <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered">
                                         <form className={`needs-validation ${showValidation} modal-content `}
