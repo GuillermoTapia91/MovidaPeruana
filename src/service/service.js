@@ -1,7 +1,10 @@
 export const getEstablecimientos = async () => {
   try {
     const response = await fetch(
-      "http://127.0.0.1:5000/establecimientos-generales"
+      "http://127.0.0.1:5000/establecimientos-generales",
+      {headers: {
+        "Authorization": "Bearer "+token
+      },}
     );
     if (!response.ok) {
       return false;
@@ -14,7 +17,7 @@ export const getEstablecimientos = async () => {
   }
 };
 
-export const postEstablecimiento = async (body) => {
+export const postEstablecimiento = async (body, token) => {
   try {
     const formData = new FormData();
     formData.append("nombre", body.nombre);
@@ -39,9 +42,9 @@ export const postEstablecimiento = async (body) => {
       "http://127.0.0.1:5000/establecimientos-miInformacion",
       {
         method: "POST",
-        // headers: {
-        //   "content-type": "application/json",
-        // },
+        headers: {
+          "Authorization": "Bearer "+token
+        },
         // body: JSON.stringify(body),
         body: formData,
       }

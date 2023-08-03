@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom"
 import React, { useState } from "react";
 import { postLogin } from "../service/index";
 import Swal from "sweetalert2";
-
+import { useNavigate } from "react-router-dom";
 
 export default function MainLayout() {
     window.addEventListener("scroll", function () {
@@ -38,7 +38,7 @@ export default function MainLayout() {
         password: "",
     });
     const [showValidation, setShowValidation] = useState("");
-
+    const navigate = useNavigate()
     const handleInputChange = (event) => {
     const { name, type, checked, value } = event.target;
 
@@ -53,7 +53,6 @@ export default function MainLayout() {
         setShowValidation("was-validated");
     
         const data = await postLogin(inputData);
-        console.log(data)
         if (!data) {
             Swal.fire({
                 title: "Todo Mal",
@@ -62,13 +61,16 @@ export default function MainLayout() {
             });
             return;
         }
-    
+        localStorage.setItem("token",data.content)
+
         Swal.fire({
             title: "Todo ok",
             text: "Bienvenido!!",
             icon: "success",
         });
+        navigate()
     };
+
 
     
     return (

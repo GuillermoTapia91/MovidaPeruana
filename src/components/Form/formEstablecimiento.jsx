@@ -43,7 +43,8 @@ export default function FormEstablecimiento() {
 
     setShowValidation("was-validated");
     console.log(inputData);
-    const data = await postEstablecimiento(inputData);
+    const token = localStorage.getItem("token") || ""
+    const data = await postEstablecimiento(inputData, token);
     console.log(data);
 
     if (!data) {
