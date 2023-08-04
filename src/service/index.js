@@ -64,22 +64,93 @@ export const postLogin = async(body) => {
 };
 
 
-export const put = async (id, body) => {
-  try {
-      const response = await fetch(`${url}/${id}`, {
-          method: "PUT",
+// export const put = async (id, body) => {
+//   try {
+//       const response = await fetch(`${url}/${id}`, {
+//           method: "PUT",
+//           headers: {
+//               "content-type": "application/json",
+//           },
+//           body: JSON.stringify(body),
+//       });
+
+//       if (!response.ok) return false;
+
+//       const data = await response.json();
+
+//       return data;
+//   } catch (error) {
+//       console.error(error);
+//   }
+// };
+
+const urlPerfil = "http://127.0.0.1:5000/perfil"
+export const getPerfil = async () =>{
+    try{
+        const token = localStorage.getItem("token");
+        const response = await fetch(urlPerfil, {
           headers: {
-              "content-type": "application/json",
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(body),
-      });
+        });
+        console.log(response)
+        if (!response.ok) return false;
+    
+        const data = await response.json();
+    
+        return data;
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-      if (!response.ok) return false;
+    export const putPerfil = async ( id, body) => {
+      try {
+        
+        const token = localStorage.getItem("token");
+        const id= localStorage.getItem("id")
+        const response = await fetch(
+          `http://127.0.0.1:5000/perfil/${id}`,
+          {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(body),
+          }
+        );
+    
+        if (!response.ok) return false;
+    
+        const data = await response.json();
+    
+        return data;
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-      const data = await response.json();
+    export const borrarPerfil = async (id) => {
+      try {
+        const token = localStorage.getItem("token");
+        const id= localStorage.getItem("id")
 
-      return data;
-  } catch (error) {
-      console.error(error);
-  }
-};
+        const response = await fetch(`http://127.0.0.1:5000/perfil/${id}`, {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+    
+        if (!response.ok) return false;
+    
+        const data = await response.json();
+    
+        return data;
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    

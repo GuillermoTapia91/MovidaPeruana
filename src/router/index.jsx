@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HomeView, SignInView, SignUpView, MiInformacionView } from "../pages";
+import { HomeView, SignUpView, MiInformacionView } from "../pages";
 import MainLayout from "../Layouts/mainLayout";
+import NavBarAuth from "../navBarAuth";
+import { MiPerfilView } from "../pages";
 
 export default function Router() {
   return (
@@ -9,9 +11,11 @@ export default function Router() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomeView />} />
         </Route>
-        <Route path="/signin" element={<SignInView />} />
         <Route path="/SignUp" element={<SignUpView />} />
-        <Route path="/mi-informacion" element={<MiInformacionView />} />
+        <Route element={<NavBarAuth/>}>
+          <Route path="/mi-informacion" element={<MiInformacionView />} />
+          <Route path="/miperfil" element={<MiPerfilView/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -45,12 +45,15 @@ const handleSubmit = async (event) => {
         });
         return;
     }
-
+    
     Swal.fire({
         title: "Todo ok",
         text: "Usuario creado correctamente",
         icon: "success",
     });
+    setTimeout(() => {
+      window.location.href = "/miperfil";
+    }, 2000);
 };
 
   return (
