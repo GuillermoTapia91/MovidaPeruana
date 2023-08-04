@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import logo from "../assets/img/Logo.png";
 import menu from "../assets/img/hamburg.png";
 import "./layouts.css";
-import { Outlet } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 import { getPerfil } from "../service";
 
 export const PerfilComponent = () => {
@@ -25,8 +25,9 @@ export const PerfilComponent = () => {
 
     return (
 
-        <div>
-            <a>{perfil.content && perfil.content.nombre} {perfil.content && perfil.content.apellido}</a>
+        <div className="nombreUsuario">
+            <p className="paquito">Bienvenido </p>
+            <a className="subtitulo">{perfil.content && perfil.content.nombre} {perfil.content && perfil.content.apellido}</a>
         </div>
     );
 };
@@ -57,6 +58,11 @@ export default function NavBarAuth() {
         const nav = document.querySelector("#menu");
         nav.classList.toggle("hamburguesa-mediamod", window.scrollY > 400);
     })
+    const logout = () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("id");
+        window.location.reload();
+      };
 
 
     return (
@@ -93,14 +99,18 @@ export default function NavBarAuth() {
                         <div className="margin-40">
                             <ul className="d-flex gap-5 me-auto van">
                                 <li>
-                                    <a href="/">Inicio</a>
+                                    <a className="subtitulo" href="/">Inicio</a>
                                 </li>
                                 <li>
-                                    <a href="/miperfil">mi Perfil</a>
+                                <a className="subtitulo" href="/miperfil">mi Perfil</a>
+                                </li>
+                                <li>
+                                    <button onClick={logout}>Cerrar Sesión</button>
                                 </li>
                                 <li>
                                     <PerfilComponent />
                                 </li>
+                                
                             </ul>
                         </div>
                     </div>

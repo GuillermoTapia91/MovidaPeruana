@@ -4,6 +4,7 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
+    background-color: #222222;
 }
 .formularioPerfil{
     display: flex;
@@ -17,4 +18,10 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+}
+.abcd {
+    color: azure;
+}
+.subabcd{
+    color: azure;
 }

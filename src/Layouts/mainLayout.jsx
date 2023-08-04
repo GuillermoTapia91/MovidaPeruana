@@ -75,7 +75,7 @@ export default function MainLayout() {
             text: "Bienvenido!!",
             icon: "success",
         });
-        navigate("/mi-informacion")
+        navigate("/")
         handleCloseModal();
         
         
@@ -96,9 +96,6 @@ export default function MainLayout() {
                     <div className="collapse navbar-collapse justify-content-end me-5 hamburguesa-media" id="menu">
                         <div className="margin-40">
                             <ul className="d-flex gap-5 me-auto van">
-                                <li className="nav-item ">
-                                    <a id="btn-2" className="selectLayout second-btn media-btn" href="">¿Eres un Negocio?</a>
-                                </li>
                                 <li className="nav-item">
                                 <a id="btn-3" className="selectLayout second-btn media-btn" href="/SignUp">Registrate</a>
                                 </li>

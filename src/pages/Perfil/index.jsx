@@ -61,9 +61,9 @@ export default function MiPerfil({ id }) {
   return (
     <div className="centro">
       <div className="formularioPerfil" action="" method="post">
-        <h2>Editar Perfil</h2>
+        <h2 className="subabcd">Editar Perfil</h2>
         <div className="cajita">
-          <p>Nombre</p>
+          <p className="abcd ">Nombre</p>
           <input
             type="text"
             value={nombre}
@@ -71,7 +71,7 @@ export default function MiPerfil({ id }) {
           />
         </div>
         <div className="cajita">
-          <p>apellidos</p>
+          <p className="abcd ">apellidos</p>
           <input
             type="text"
             value={apellido}
@@ -79,7 +79,7 @@ export default function MiPerfil({ id }) {
           />
         </div>
         <div className="cajita">
-          <p>Correo</p>
+          <p className="abcd ">Correo</p>
           <input
             type="mail"
             placeholder={""}

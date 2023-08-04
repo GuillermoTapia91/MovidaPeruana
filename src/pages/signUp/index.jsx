@@ -47,13 +47,13 @@ const handleSubmit = async (event) => {
     }
     
     Swal.fire({
-        title: "Todo ok",
-        text: "Usuario creado correctamente",
+        title: "Usuario creado correctamente",
+        text: "Por favor inicia sesión",
         icon: "success",
     });
     setTimeout(() => {
-      window.location.href = "/miperfil";
-    }, 2000);
+      window.location.href = "/landing";
+    }, 10000);
 };
 
   return (
