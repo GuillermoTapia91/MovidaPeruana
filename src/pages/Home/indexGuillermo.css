@@ -1,40 +1,28 @@
-/* --bs-breakpoint-xs: 0;
---bs-breakpoint-sm: 576px;
---bs-breakpoint-md: 768px;
---bs-breakpoint-lg: 992px;
---bs-breakpoint-xl: 1200px;
---bs-breakpoint-xxl: 1400px; */
-
-
 .SectionBuscarPorDistritos {
-  /* border: solid slateblue;  */
   height: 100vh;
- 
 }
 
 .inputg {
-  width: 249px;  
+  width: 249px;
 }
 
 .inputSelectEstablecimiento {
-  width: 200px;  
+  width: 200px;
 }
 
 .btn-color {
-  background-color: #CD1C65;
+  background-color: #cd1c65;
   color: white;
-  
 }
 
 .btn-color:hover {
-  background-color: #CD1C65;
+  background-color: #cd1c65;
   color: white;
-  
 }
 
 .heartbeat {
-	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-	        animation: heartbeat 1.5s ease-in-out infinite both;
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
 /* ----------------------------------------------
@@ -49,117 +37,99 @@
  * animation heartbeat
  * ----------------------------------------
  */
- @-webkit-keyframes heartbeat {
+@-webkit-keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   10% {
     -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   17% {
     -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   33% {
     -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   45% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 @keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   10% {
     -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   17% {
     -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   33% {
     -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   45% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 
 .SectionBuscarFiltros {
-  /* border: solid yellow; */
   height: auto;
   display: none;
 }
 
 .btn-color2 {
-  background-color: #CD1C65;
+  background-color: #cd1c65;
   color: white;
   font-size: 12px;
 }
 .btn-color2:hover {
   background-color: rgb(52, 58, 185);
   color: white;
-  
 }
-
- /* .selectG {
-  border: solid white; 
-} */
 
 .imagenesG {
   display: block;
 }
-
-/* .imgDisco {
-  border: solid yellow;
-} */
-
-/* .imgBar {
-  border: solid red;
-}  */
-
-/* .horario {
-  display: none;
-}  */
 
 .webg {
   text-decoration: none;
   color: white;
 }
 
-.webg:hover{
+.webg:hover {
   color: white;
 }

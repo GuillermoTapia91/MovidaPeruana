@@ -20,16 +20,14 @@ export default function EditEstablecimiento({
     });
   };
 
-  // const handleImageChange = (e) => {
-  //   setInputData({ ...inputData, [e.target.name]: e.target.files[0] });
-  //   console.log(e.target);
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setShowValidation("was-validated");
     console.log(inputData);
-    const data = await putEstablecimiento(selectedRow.id, inputData);
+    const token = localStorage.getItem("token") || "";
+
+    const data = await putEstablecimiento(selectedRow.id, inputData, token);
+
     console.log(data);
 
     if (!data) {
@@ -42,7 +40,7 @@ export default function EditEstablecimiento({
 
     Swal.fire({
       title: "Todo ok",
-      text: "Establecimiento creado exitosamente",
+      text: "Establecimiento actualizado exitosamente",
       icon: "success",
     });
 
@@ -92,16 +90,6 @@ export default function EditEstablecimiento({
                   </div>
                   <div className="valid-feedback">Bien hecho</div>
                   <div>
-                    {/* <input
-                required
-                className="form-control mt-3"
-                value={inputData.tipoEstablecimiento}
-                onChange={handleInputChange}
-                placeholder="Escribe el tipo de Establecimiento BAR o DISCOTECA"
-                type="text"
-                name="tipoEstablecimiento"
-              /> */}
-
                     <select
                       required
                       name="tipoEstablecimiento"
@@ -221,7 +209,6 @@ export default function EditEstablecimiento({
                     <input
                       required
                       className="form-control "
-                      // value={inputData.fotoLogo}
                       onChange={handleInputChange}
                       type="file"
                       name="fotoLogo"
@@ -236,7 +223,6 @@ export default function EditEstablecimiento({
                     <input
                       required
                       className="form-control "
-                      // value={inputData.fotoLocal1}
                       onChange={handleInputChange}
                       type="file"
                       name="fotoLocal1"
@@ -245,13 +231,12 @@ export default function EditEstablecimiento({
                   </div>
                   <div>
                     <p className="mt-3">
-                      Sube una imagen del interior o exterior de tu
+                      Sube una imagen 2 del interior o exterior de tu
                       establecimiento:
                     </p>
                     <input
                       required
                       className="form-control "
-                      // value={inputData.fotoLocal2}
                       onChange={handleInputChange}
                       type="file"
                       name="fotoLocal2"
@@ -260,13 +245,12 @@ export default function EditEstablecimiento({
                   </div>
                   <div>
                     <p className="mt-3">
-                      Sube una imagen del interior o exterior de tu
+                      Sube una imagen 3 del interior o exterior de tu
                       establecimiento:
                     </p>
                     <input
                       required
                       className="form-control "
-                      // value={inputData.fotoLocal3}
                       onChange={handleInputChange}
                       type="file"
                       name="fotoLocal3"
@@ -275,17 +259,15 @@ export default function EditEstablecimiento({
                   </div>
                   <div>
                     <p className="mt-3">
-                      Sube una imagen del interior o exterior de tu
+                      Sube una imagen 4 del interior o exterior de tu
                       establecimiento:
                     </p>
                     <input
                       required
                       className="form-control"
-                      // value={inputData.fotoLocal4}
                       onChange={handleInputChange}
                       type="file"
                       name="fotoLocal4"
-                      // placeholder="Sube una imagen del interior o exterior de tu establecimiento"
                     />
                   </div>
                   <div>

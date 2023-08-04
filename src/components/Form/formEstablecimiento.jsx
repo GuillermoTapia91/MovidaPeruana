@@ -83,7 +83,7 @@ export default function FormEstablecimiento() {
       paginaWeb: "",
     });
 
-    await fetchEstablecimientos();
+    // await fetchEstablecimientos();
   };
 
   return (
