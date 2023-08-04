@@ -43,7 +43,9 @@ export default function FormEstablecimiento() {
 
     setShowValidation("was-validated");
     console.log(inputData);
-    const data = await postEstablecimiento(inputData);
+    const token = localStorage.getItem("token") || "";
+    const data = await postEstablecimiento(inputData, token);
+    // const data = await postEstablecimiento(inputData);
     console.log(data);
 
     if (!data) {
@@ -60,13 +62,36 @@ export default function FormEstablecimiento() {
       text: "Establecimiento creado exitosamente",
       icon: "success",
     });
+
+    setInputData({
+      nombre: "",
+      tipoEstablecimiento: "",
+      distrito: "",
+      direccion: "",
+      horarioLunes: "",
+      horarioMartes: "",
+      horarioMiercoles: "",
+      horarioJueves: "",
+      horarioViernes: "",
+      horarioSabado: "",
+      horarioDomingo: "",
+      fotoLogo: "",
+      fotoLocal1: "",
+      fotoLocal2: "",
+      fotoLocal3: "",
+      fotoLocal4: null,
+      paginaWeb: "",
+    });
+
+    await fetchEstablecimientos();
   };
 
   return (
     <div className="container mt-5">
       <div className="card">
         <div className="card-body">
-          <h2>Formulario</h2>
+          <h1>Crea un establecimiento llenando el Formulario</h1>
+
           <form
             className={`needs-validation ${showValidation}`}
             onSubmit={handleSubmit}
@@ -94,7 +119,7 @@ export default function FormEstablecimiento() {
                 type="text"
                 name="tipoEstablecimiento"
               /> */}
-
+              <p className="mt-3">Selecciona el tipo de Establecimiento:</p>
               <select
                 required
                 name="tipoEstablecimiento"
