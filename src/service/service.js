@@ -1,3 +1,24 @@
+// export const getEstablecimientos = async (token) => {
+//   try {
+//     const response = await fetch(
+//       "http://127.0.0.1:5000/establecimientos-miInformacion",
+//       {
+//         headers: {
+//           Authorization: "Bearer " + token,
+//         },
+//       }
+//     );
+//     if (!response.ok) {
+//       return false;
+//     }
+
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
 export const getEstablecimientos = async () => {
   try {
     const response = await fetch(
@@ -14,7 +35,7 @@ export const getEstablecimientos = async () => {
   }
 };
 
-export const postEstablecimiento = async (body) => {
+export const postEstablecimiento = async (body, token) => {
   try {
     const formData = new FormData();
     formData.append("nombre", body.nombre);
@@ -42,6 +63,9 @@ export const postEstablecimiento = async (body) => {
         // headers: {
         //   "content-type": "application/json",
         // },
+        headers: {
+          Authorization: "Bearer " + token,
+        },
         // body: JSON.stringify(body),
         body: formData,
       }
@@ -58,12 +82,12 @@ export const postEstablecimiento = async (body) => {
   }
 };
 
-export const putEstablecimiento = async (id, body) => {
+export const putEstablecimiento = async (id, body, token) => {
   try {
     const formData = new FormData();
     formData.append("nombre", body.nombre);
     formData.append("tipoEstablecimiento", body.tipoEstablecimiento);
-    formData.append("distrito", body.distrito);
+    formData.append("distrito", body.distrito.toLowerCase());
     formData.append("direccion", body.direccion);
     formData.append("horarioLunes", body.horarioLunes);
     formData.append("horarioMartes", body.horarioMartes);
@@ -87,7 +111,9 @@ export const putEstablecimiento = async (id, body) => {
         //   "content-type": "application/json",
         // },
         // body: JSON.stringify(body),
-
+        headers: {
+          Authorization: "Bearer " + token,
+        },
         body: formData,
       }
     );
@@ -97,6 +123,32 @@ export const putEstablecimiento = async (id, body) => {
     const data = await response.json();
 
     return data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const deleteEstablecimiento = async (id, token) => {
+  try {
+    const response = await fetch(
+      `http://127.0.0.1:5000/establecimiento-miInformacion/${id}`,
+      {
+        method: "DELETE",
+        // headers: {
+        //   "content-type": "application/json",
+        // },
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+        // body: JSON.stringify(body),
+      }
+    );
+
+    if (!response.ok) return false;
+
+    // const data = await response.json();
+
+    // return data;
   } catch (error) {
     console.error(error);
   }
