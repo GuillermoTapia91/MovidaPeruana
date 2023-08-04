@@ -75,7 +75,9 @@ export default function MainLayout() {
             text: "Bienvenido!!",
             icon: "success",
         });
-        navigate("/")
+        setTimeout(() => {
+            window.location.href = "/inicio";
+          }, 2000);
         handleCloseModal();
         
         

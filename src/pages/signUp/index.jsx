@@ -52,8 +52,8 @@ const handleSubmit = async (event) => {
         icon: "success",
     });
     setTimeout(() => {
-      window.location.href = "/landing";
-    }, 10000);
+      window.location.href = "/";
+    }, 3000);
 };
 
   return (

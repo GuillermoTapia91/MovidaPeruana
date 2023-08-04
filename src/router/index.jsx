@@ -9,11 +9,11 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/landing" element={<LandingPageView />} />
+          <Route path="/" element={<LandingPageView />} />
         </Route>
           <Route path="/SignUp" element={<SignUpView />} />
         <Route element={<NavBarAuth/>}>
-          <Route path="/" element={<HomeView />} />
+          <Route path="/inicio" element={<HomeView />} />
           <Route path="/mi-informacion" element={<MiInformacionView />} />
           <Route path="/miperfil" element={<MiPerfilView/>}/>
           <Route path="/crear-establecimiento" element={<CrearEstablecimientoView />}/>

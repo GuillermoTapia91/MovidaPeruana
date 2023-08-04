@@ -61,7 +61,7 @@ export default function NavBarAuth() {
     const logout = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("id");
-        window.location.reload();
+        window.location.href="/";
       };
 
 
