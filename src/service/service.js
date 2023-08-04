@@ -82,7 +82,7 @@ export const postEstablecimiento = async (body, token) => {
   }
 };
 
-export const putEstablecimiento = async (id, body) => {
+export const putEstablecimiento = async (id, body, token) => {
   try {
     const formData = new FormData();
     formData.append("nombre", body.nombre);
@@ -111,7 +111,9 @@ export const putEstablecimiento = async (id, body) => {
         //   "content-type": "application/json",
         // },
         // body: JSON.stringify(body),
-
+        headers: {
+          Authorization: "Bearer " + token,
+        },
         body: formData,
       }
     );
@@ -126,7 +128,7 @@ export const putEstablecimiento = async (id, body) => {
   }
 };
 
-export const deleteEstablecimiento = async (id) => {
+export const deleteEstablecimiento = async (id, token) => {
   try {
     const response = await fetch(
       `http://127.0.0.1:5000/establecimiento-miInformacion/${id}`,
@@ -135,6 +137,9 @@ export const deleteEstablecimiento = async (id) => {
         // headers: {
         //   "content-type": "application/json",
         // },
+        headers: {
+          Authorization: "Bearer " + token,
+        },
         // body: JSON.stringify(body),
       }
     );

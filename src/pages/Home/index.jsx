@@ -27,9 +27,6 @@ import evento7 from "../../assets/img/antologia.jpg";
 import evento8 from "../../assets/img/corazon-serrano.jpeg";
 import FotosLugar from "../../components/FotosLugar";
 //AbrahamImportFinal
-//JercyImportInicio
-
-//JercyImportFinal
 
 export default function Home() {
   //GuillermoInicio
@@ -106,12 +103,6 @@ export default function Home() {
   //ErickInicio
 
   //ErickFinal
-  //AbrahamInicio
-
-  //AbrahamFinal
-  //JercyInicio
-
-  //JercyFinal
 
   return (
     <div>
@@ -151,7 +142,6 @@ export default function Home() {
           </div>
           <div className=" input-container mt-3 d-flex   justify-content-center align-items-center gap-3 ">
             <div className="inputg">
-              {/* <input className="form-control" type="text" placeholder="Ej: San Miguel" id="input-buscar" /> */}
               <select
                 name="distrito"
                 className="form-select"
@@ -221,7 +211,6 @@ export default function Home() {
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
             {listas.map((lista) => (
-              // <div className='mm' key={lista.id}>{lista.nombre}</div>
               <div key={lista.id} className="col">
                 <div className="card">
                   <div className="card-body">
@@ -266,7 +255,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-            {/* arrays.filter(array=>array.algo === algo).map((array) =>()) */}
           </div>
         </div>
       </div>
@@ -552,9 +540,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      {/* <div className="bg-black text-white">Abraham2</div>
-      <div className="bg-black text-white">Jercy1</div>
-      <div className="bg-black text-white">Jercy2</div> */}
+
       <Footer />
       <SchedulePlace currentList={currentList} />
       <FotosLugar currentList={currentList} />

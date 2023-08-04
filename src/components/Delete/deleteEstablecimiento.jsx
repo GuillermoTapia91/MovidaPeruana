@@ -10,21 +10,17 @@ export default function DeleteEstablecimiento({ id, fetchEstablecimientos }) {
   }, [id]);
 
   const borrarEstablecimiento = async (e) => {
-    //
+    const token = localStorage.getItem("token") || "";
+    const data = await deleteEstablecimiento(selectedId, token);
 
-    //  setShowValidation("was-validated");
-    //   console.log(inputData);
-    const data = await deleteEstablecimiento(selectedId);
-    //   console.log(data);
-
-    // if (!data) {
-    //   Swal.fire({
-    //     title: "Todo Mal",
-    //     text: "Hubo un error",
-    //     icon: "error",
-    //   });
-    //   return;
-    // }
+    if (!data) {
+      Swal.fire({
+        title: "Todo Mal",
+        text: "Hubo un error",
+        icon: "error",
+      });
+      return;
+    }
 
     Swal.fire({
       title: "Todo ok",
@@ -34,22 +30,10 @@ export default function DeleteEstablecimiento({ id, fetchEstablecimientos }) {
 
     await fetchEstablecimientos();
   };
-  // // await fetchUsers();
+
   return (
     <>
       <div>
-        {/* <button onClick={borrarEstablecimiento} className="btn btn-dark">
-          ❌
-        </button> */}
-        {/* <button
-          type="button"
-          className="btn btn-dark"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal1"
-        >
-          ❌
-        </button> */}
-
         {/* <!-- Modal --> */}
         <div
           className="modal fade"
