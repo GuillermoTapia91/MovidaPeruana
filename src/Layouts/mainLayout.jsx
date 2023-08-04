@@ -32,12 +32,13 @@ export default function MainLayout() {
         const nav = document.querySelector("#menu");
         nav.classList.toggle("hamburguesa-mediamod", window.scrollY > 400);
     })
-
+    
     const [inputData, setInputData] = useState({
         correo: "",
         password: "",
     });
     const [showValidation, setShowValidation] = useState("");
+
     const navigate = useNavigate()
     const handleInputChange = (event) => {
     const { name, type, checked, value } = event.target;
@@ -47,12 +48,18 @@ export default function MainLayout() {
         [name]: type === "checkbox" ? checked : value,
     });
     };
+    const handleCloseModal = () => {
+        const modalElement = document.getElementById("entrada");
+        const modal = bootstrap.Modal.getInstance(modalElement);
+        modal.hide();
+    }
     const handleSubmit = async (event) => {
         event.preventDefault();
     
         setShowValidation("was-validated");
     
         const data = await postLogin(inputData);
+        console.log(data)
         if (!data) {
             Swal.fire({
                 title: "Todo Mal",
@@ -68,7 +75,10 @@ export default function MainLayout() {
             text: "Bienvenido!!",
             icon: "success",
         });
-        navigate("/mi-informacion")
+        navigate("/")
+        handleCloseModal();
+        
+        
     };
 
 
@@ -86,9 +96,6 @@ export default function MainLayout() {
                     <div className="collapse navbar-collapse justify-content-end me-5 hamburguesa-media" id="menu">
                         <div className="margin-40">
                             <ul className="d-flex gap-5 me-auto van">
-                                <li className="nav-item ">
-                                    <a id="btn-2" className="selectLayout second-btn media-btn" href="">¿Eres un Negocio?</a>
-                                </li>
                                 <li className="nav-item">
                                 <a id="btn-3" className="selectLayout second-btn media-btn" href="/SignUp">Registrate</a>
                                 </li>
@@ -146,5 +153,4 @@ export default function MainLayout() {
             <Outlet />
 
         </>
-    )
-}
+    )}

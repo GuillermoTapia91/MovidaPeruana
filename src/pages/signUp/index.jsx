@@ -45,12 +45,15 @@ const handleSubmit = async (event) => {
         });
         return;
     }
-
+    
     Swal.fire({
-        title: "Todo ok",
-        text: "Usuario creado correctamente",
+        title: "Usuario creado correctamente",
+        text: "Por favor inicia sesión",
         icon: "success",
     });
+    setTimeout(() => {
+      window.location.href = "/landing";
+    }, 10000);
 };
 
   return (
