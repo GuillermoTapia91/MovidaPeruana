@@ -39,21 +39,19 @@ export default function MiPerfil({ id }) {
     }
   };
 
-  const deletePerfil =async () =>{
+  const deletePerfil =async (id) =>{
     try{
       const response = await borrarPerfil(id);
-      Console.log("perfil Borrado", response);
-
+      console.log("perfil Borrado", response);
       Swal.fire({
         title: "Todo ok",
         text: "Borrado Correctamente",
         icon: "success",
       });
-
-      setTimeout(() => {
-        window.location.href = "/";
-      }, 2000);
-    }
+      localStorage.removeItem("token");
+      localStorage.removeItem("id");
+      window.location.href="/";
+    }   
     catch(error){
       console.error("Error al borrar el perfil", error);
     }
