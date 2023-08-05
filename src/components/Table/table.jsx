@@ -26,7 +26,7 @@ export const Table = () => {
 
   return (
     <div className="mt-5 table-responsive">
-      <table className="table table-success table-striped">
+      <table className="table table-hover table-striped">
         <thead className="table-dark text-center">
           <tr>
             <th scope="col">Nombre</th>
@@ -134,12 +134,6 @@ export const Table = () => {
                     >
                       ❌
                     </button>
-
-                    {/* <button onClick={()=>{}} className="btn btn-dark">❌</button> */}
-                    {/* <DeleteEstablecimiento
-                      id={row.id}
-                      fetchEstablecimientos={fetchEstablecimientos}
-                    /> */}
                   </div>
                 </td>
               </tr>
