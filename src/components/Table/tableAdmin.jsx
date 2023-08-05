@@ -1,13 +1,12 @@
 import Swal from "sweetalert2";
 import DeleteEstablecimiento from "../Delete/deleteEstablecimiento";
 import EditEstablecimiento from "../Edit/editEstablecimiento";
-import {
-  getEstablecimientos,
-  getMisEstablecimientos,
-} from "../../service/service";
+import { getAdminEstablecimientos } from "../../service/service";
 import { useEffect, useState } from "react";
+import EditAdminEstablecimiento from "../Edit/editAdminEstablecimiento";
+import DeleteAdminEstablecimiento from "../Delete/deleteAdminEstablecimiento";
 
-export const Table = () => {
+export const TableAdmin = () => {
   const [tableRows, setTableRows] = useState([]);
   const [selectedRow, setSelectedRow] = useState({});
 
@@ -15,7 +14,7 @@ export const Table = () => {
     // const data = await getEstablecimientos();
 
     const token = localStorage.getItem("token") || "";
-    const data = await getMisEstablecimientos(token);
+    const data = await getAdminEstablecimientos(token);
     console.log(data);
     if (!data) {
       return Swal.fire({
@@ -53,24 +52,25 @@ export const Table = () => {
             <th>Foto3</th>
             <th>Foto4</th>
             <th>Página web</th>
+            <th>UsuarioId</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
           {tableRows.length > 0 &&
-            tableRows.map((row) => (
-              <tr key={row.id} className="text-center">
-                <td>{row.nombre}</td>
-                <td>{row.tipoEstablecimiento}</td>
-                <td>{row.distrito}</td>
-                <td>{row.direccion}</td>
-                <td>{row.horarioLunes}</td>
-                <td>{row.horarioMartes}</td>
-                <td>{row.horarioMiercoles}</td>
-                <td>{row.horarioJueves}</td>
-                <td>{row.horarioViernes}</td>
-                <td>{row.horarioSabado}</td>
-                <td>{row.horarioDomingo}</td>
+            tableRows.map((row1, index) => (
+              <tr key={index} className="text-center">
+                <td>{row1.nombre}</td>
+                <td>{row1.tipoEstablecimiento}</td>
+                <td>{row1.distrito}</td>
+                <td>{row1.direccion}</td>
+                <td>{row1.horarioLunes}</td>
+                <td>{row1.horarioMartes}</td>
+                <td>{row1.horarioMiercoles}</td>
+                <td>{row1.horarioJueves}</td>
+                <td>{row1.horarioViernes}</td>
+                <td>{row1.horarioSabado}</td>
+                <td>{row1.horarioDomingo}</td>
 
                 <td>
                   <img
@@ -78,7 +78,7 @@ export const Table = () => {
                     width={40}
                     height={40}
                     alt=""
-                    src={row.fotoLogo}
+                    src={row1.fotoLogo}
                   />
                 </td>
                 <td>
@@ -87,7 +87,7 @@ export const Table = () => {
                     width={40}
                     height={40}
                     alt=""
-                    src={row.fotoLocal1}
+                    src={row1.fotoLocal1}
                   />
                 </td>
                 <td>
@@ -96,7 +96,7 @@ export const Table = () => {
                     width={40}
                     height={40}
                     alt=""
-                    src={row.fotoLocal2}
+                    src={row1.fotoLocal2}
                   />
                 </td>
                 <td>
@@ -105,7 +105,7 @@ export const Table = () => {
                     width={40}
                     height={40}
                     alt=""
-                    src={row.fotoLocal3}
+                    src={row1.fotoLocal3}
                   />
                 </td>
                 <td>
@@ -114,22 +114,23 @@ export const Table = () => {
                     width={40}
                     height={40}
                     alt=""
-                    src={row.fotoLocal4}
+                    src={row1.fotoLocal4}
                   />
                 </td>
                 <td>
-                  <a href={row.paginaWeb} target="_blank" rel="noreferrer">
+                  <a href={row1.paginaWeb} target="_blank" rel="noreferrer">
                     Web
                   </a>
                 </td>
+                <td>{row1.usuarioId}</td>
                 <td>
                   <div className="d-flex justify-content-around">
                     <button
                       type="button"
                       className="btn btn-primary"
                       data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      onClick={() => setSelectedRow(row)}
+                      data-bs-target="#exampleModal2"
+                      onClick={() => setSelectedRow(row1)}
                     >
                       ✏
                     </button>
@@ -137,8 +138,8 @@ export const Table = () => {
                       type="button"
                       className="btn btn-dark"
                       data-bs-toggle="modal"
-                      data-bs-target="#exampleModal1"
-                      onClick={() => setSelectedRow(row)}
+                      data-bs-target="#exampleModal3"
+                      onClick={() => setSelectedRow(row1)}
                     >
                       ❌
                     </button>
@@ -148,11 +149,11 @@ export const Table = () => {
             ))}
         </tbody>
       </table>
-      <EditEstablecimiento
+      <EditAdminEstablecimiento
         selectedRow={selectedRow}
         fetchEstablecimientos={fetchEstablecimientos}
       />
-      <DeleteEstablecimiento
+      <DeleteAdminEstablecimiento
         id={selectedRow.id}
         fetchEstablecimientos={fetchEstablecimientos}
       />
