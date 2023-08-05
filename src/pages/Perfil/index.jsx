@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { borrarPerfil, putPerfil} from "../../service/index";
-import "./style.css"
+import { borrarPerfil, putPerfil } from "../../service/index";
+import "./style.css";
 import Swal from "sweetalert2";
 // import { Console } from "console";
 
@@ -9,10 +9,14 @@ export default function MiPerfil({ id }) {
   const [apellido, setApellido] = useState("");
   const [correo, setCorreo] = useState("");
 
+  const name = localStorage.getItem("nombre");
+  const lastname = localStorage.getItem("apellido");
+  const email = localStorage.getItem("correo");
+  console.log("nombre", name);
   useEffect(() => {
-    setNombre("");
-    setApellido("");
-    setCorreo("");
+    setNombre(name);
+    setApellido(lastname);
+    setCorreo(email);
   }, [id]);
 
   const editarPerfil = async () => {
@@ -39,8 +43,8 @@ export default function MiPerfil({ id }) {
     }
   };
 
-  const deletePerfil =async (id) =>{
-    try{
+  const deletePerfil = async (id) => {
+    try {
       const response = await borrarPerfil(id);
       console.log("perfil Borrado", response);
       Swal.fire({
@@ -50,12 +54,11 @@ export default function MiPerfil({ id }) {
       });
       localStorage.removeItem("token");
       localStorage.removeItem("id");
-      window.location.href="/";
-    }   
-    catch(error){
+      window.location.href = "/";
+    } catch (error) {
       console.error("Error al borrar el perfil", error);
     }
-  }
+  };
   return (
     <div className="centro">
       <div className="formularioPerfil" action="" method="post">
@@ -65,6 +68,7 @@ export default function MiPerfil({ id }) {
           <input
             type="text"
             value={nombre}
+            placeholder={name}
             onChange={(e) => setNombre(e.target.value)}
           />
         </div>

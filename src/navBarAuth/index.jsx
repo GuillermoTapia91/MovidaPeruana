@@ -11,8 +11,12 @@ export const PerfilComponent = () => {
     try {
       const data = await getPerfil();
       setPerfil(data);
-      console.log(data);
+      console.log("get perfil", data);
       localStorage.setItem("id", data.content.id);
+      localStorage.setItem("nombre", data.content.nombre);
+      localStorage.setItem("apellido", data.content.apellido);
+      localStorage.setItem("correo", data.content.correo);
+      console.log("nombre", data.content.nombre);
     } catch (error) {
       console.error("Error al obtener el perfil:", error);
     }
@@ -23,12 +27,14 @@ export const PerfilComponent = () => {
   }, []);
 
   return (
-
     <div className="nombreUsuario">
-        <p className="paquito">Bienvenido </p>
-        <a className="subtitulo">{perfil.content && perfil.content.nombre} {perfil.content && perfil.content.apellido}</a>
+      <p className="paquito">Bienvenido </p>
+      <a className="subtitulo">
+        {perfil.content && perfil.content.nombre}{" "}
+        {perfil.content && perfil.content.apellido}
+      </a>
     </div>
-);
+  );
 };
 
 export default function NavBarAuth() {
@@ -84,13 +90,13 @@ export default function NavBarAuth() {
             <div className="margin-40">
               <ul className="d-flex gap-5 me-auto van menu-horizontal">
                 <li>
-                  <a className="subtitulo" href="/mi-informacion">
+                  <a className="subtitulo" href="/crear-establecimiento">
                     Crear establecimiento
                   </a>
                 </li>
                 <li>
                   <a className="subtitulo" href="/mi-informacion">
-                    Mis establecimiento
+                    Mis establecimientos
                   </a>
                 </li>
                 <li>
