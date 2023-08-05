@@ -146,9 +146,9 @@ export const deleteEstablecimiento = async (id, token) => {
 
     if (!response.ok) return false;
 
-    // const data = await response.json();
+    const data = await response.json();
 
-    // return data;
+    return data;
   } catch (error) {
     console.error(error);
   }
