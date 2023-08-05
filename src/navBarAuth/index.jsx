@@ -105,7 +105,7 @@ export default function NavBarAuth() {
                   </a>
                 </li>
                 <li>
-                  <button onClick={logout}>Cerrar Sesión</button>
+                  <button className="boton-cerrar-sesion" onClick={logout}>Cerrar Sesión</button>
                 </li>
                 <li>
                   <PerfilComponent />

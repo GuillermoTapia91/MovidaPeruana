@@ -9,6 +9,7 @@ export default function DeleteEstablecimiento({ id, fetchEstablecimientos }) {
     setSelectedId(id);
   }, [id]);
 
+
   const borrarEstablecimiento = async (e) => {
     try {
       const token = localStorage.getItem("token") || "";
@@ -23,6 +24,7 @@ export default function DeleteEstablecimiento({ id, fetchEstablecimientos }) {
         });
         return;
       }
+
 
       Swal.fire({
         title: "Todo ok",
