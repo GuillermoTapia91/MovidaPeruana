@@ -52,7 +52,7 @@ export const Table = () => {
             <th>Foto2</th>
             <th>Foto3</th>
             <th>Foto4</th>
-            <th>Paágina web</th>
+            <th>Página web</th>
             <th>Acciones</th>
           </tr>
         </thead>
