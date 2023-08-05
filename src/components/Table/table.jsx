@@ -1,7 +1,10 @@
 import Swal from "sweetalert2";
 import DeleteEstablecimiento from "../Delete/deleteEstablecimiento";
 import EditEstablecimiento from "../Edit/editEstablecimiento";
-import { getEstablecimientos } from "../../service/service";
+import {
+  getEstablecimientos,
+  getMisEstablecimientos,
+} from "../../service/service";
 import { useEffect, useState } from "react";
 
 export const Table = () => {
@@ -9,7 +12,11 @@ export const Table = () => {
   const [selectedRow, setSelectedRow] = useState({});
 
   const fetchEstablecimientos = async () => {
-    const data = await getEstablecimientos();
+    // const data = await getEstablecimientos();
+
+    const token = localStorage.getItem("token") || "";
+    const data = await getMisEstablecimientos(token);
+    console.log(data);
     if (!data) {
       return Swal.fire({
         title: "Todo Mal",
@@ -45,7 +52,7 @@ export const Table = () => {
             <th>Foto2</th>
             <th>Foto3</th>
             <th>Foto4</th>
-            <th>Paágina web</th>
+            <th>Página web</th>
             <th>Acciones</th>
           </tr>
         </thead>

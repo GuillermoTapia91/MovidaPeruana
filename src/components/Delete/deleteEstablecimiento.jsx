@@ -9,26 +9,33 @@ export default function DeleteEstablecimiento({ id, fetchEstablecimientos }) {
     setSelectedId(id);
   }, [id]);
 
-  const borrarEstablecimiento = async () => {
-    const token = localStorage.getItem("token") || "";
-    const data = await deleteEstablecimiento(selectedId, token);
 
-    if (!data) {
+  const borrarEstablecimiento = async (e) => {
+    try {
+      const token = localStorage.getItem("token") || "";
+      const data = await deleteEstablecimiento(selectedId, token);
+      console.log(data);
+
+      if (data.message === "Este establecimiento no existe") {
+        Swal.fire({
+          title: "Todo Mal",
+          text: "Hubo un error",
+          icon: "error",
+        });
+        return;
+      }
+
+
       Swal.fire({
-        title: "Todo Mal",
-        text: "Hubo un error",
-        icon: "error",
+        title: "Todo ok",
+        text: "Establecimiento eliminado exitosamente",
+        icon: "success",
       });
-      return;
+
+      await fetchEstablecimientos();
+    } catch (error) {
+      console.error("Error al borrar el perfil", error);
     }
-
-    Swal.fire({
-      title: "Todo ok",
-      text: "Establecimiento eliminado exitosamente",
-      icon: "success",
-    });
-
-    await fetchEstablecimientos();
   };
 
   return (

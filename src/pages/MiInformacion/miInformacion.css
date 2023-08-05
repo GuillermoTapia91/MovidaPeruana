@@ -1,0 +1,14 @@
+.establecimientos {
+  height: 100vh;
+  width: 100vw;
+  /* margin-top: 200px; */
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.establecimientosG {
+  background-color: white;
+  width: 100%;
+  padding: 30px;
+}

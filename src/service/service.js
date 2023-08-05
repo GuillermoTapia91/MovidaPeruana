@@ -35,6 +35,31 @@ export const getEstablecimientos = async () => {
   }
 };
 
+export const getMisEstablecimientos = async (token) => {
+  try {
+    const response = await fetch(
+      "http://127.0.0.1:5000//establecimientos-miInformacion",
+      {
+        // headers: {
+        //   "content-type": "application/json",
+        // },
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+        // body: JSON.stringify(body),
+      }
+    );
+    if (!response.ok) {
+      return false;
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 export const postEstablecimiento = async (body, token) => {
   try {
     const formData = new FormData();
@@ -146,9 +171,9 @@ export const deleteEstablecimiento = async (id, token) => {
 
     if (!response.ok) return false;
 
-    // const data = await response.json();
+    const data = await response.json();
 
-    // return data;
+    return data;
   } catch (error) {
     console.error(error);
   }
