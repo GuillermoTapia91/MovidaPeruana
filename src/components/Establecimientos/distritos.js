@@ -27,20 +27,20 @@ export const districts = [
   //   value: "los olivos",
   //   label: "Los Olivos"
   // },
-  {
-    value: "san juan de miraflores",
-    label: "San Juan de Miraflores",
-  },
-  {
-    value: "chancay",
-    label: "Chancay",
-  },
-  {
-    value: "huaral",
-    label: "Huaral",
-  },
-  {
-    value: "san juan de lurigancho",
-    label: "San Juan de Lurigancho",
-  },
+  // {
+  //   value: "san juan de miraflores",
+  //   label: "San Juan de Miraflores",
+  // },
+  // {
+  //   value: "chancay",
+  //   label: "Chancay",
+  // },
+  // {
+  //   value: "huaral",
+  //   label: "Huaral",
+  // },
+  // {
+  //   value: "san juan de lurigancho",
+  //   label: "San Juan de Lurigancho",
+  // },
 ];

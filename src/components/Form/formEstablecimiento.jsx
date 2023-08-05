@@ -21,6 +21,7 @@ export default function FormEstablecimiento() {
     fotoLocal3: "",
     fotoLocal4: null,
     paginaWeb: "",
+    usuarioId: "",
   });
 
   const [showValidation, setShowValidation] = useState("");
@@ -81,6 +82,7 @@ export default function FormEstablecimiento() {
       fotoLocal3: "",
       fotoLocal4: null,
       paginaWeb: "",
+      usuarioId: "",
     });
 
     // await fetchEstablecimientos();
@@ -312,7 +314,17 @@ export default function FormEstablecimiento() {
                 placeholder="Coloca el link de la pagina o red social de tu establecimiento "
               />
             </div>
-
+            <div>
+              <input
+                required
+                className="form-control mt-3"
+                value={inputData.usuarioId}
+                onChange={handleInputChange}
+                type="text"
+                name="usuarioId"
+                placeholder="Escribe el id del Usuario "
+              />
+            </div>
             <div>
               <button type="submit" className="btn btn-primary mt-3">
                 Enviar

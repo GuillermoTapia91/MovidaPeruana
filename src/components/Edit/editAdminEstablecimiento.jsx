@@ -1,8 +1,8 @@
 import Swal from "sweetalert2";
-import { putEstablecimiento } from "../../service/service";
+import { putAdminEstablecimiento } from "../../service/service";
 import { useEffect, useState } from "react";
 
-export default function EditEstablecimiento({
+export default function EditAdminEstablecimiento({
   selectedRow,
   fetchEstablecimientos,
 }) {
@@ -27,7 +27,11 @@ export default function EditEstablecimiento({
     console.log(inputData);
     const token = localStorage.getItem("token") || "";
 
-    const data = await putEstablecimiento(selectedRow.id, inputData, token);
+    const data = await putAdminEstablecimiento(
+      selectedRow.id,
+      inputData,
+      token
+    );
 
     console.log(data);
 
@@ -53,9 +57,9 @@ export default function EditEstablecimiento({
       <div>
         <div
           className="modal fade"
-          id="exampleModal"
+          id="exampleModal2"
           tabIndex="-1"
-          aria-labelledby="exampleModalLabel"
+          aria-labelledby="exampleModalLabel2"
           aria-hidden="true"
         >
           <div className="modal-dialog">
@@ -66,7 +70,7 @@ export default function EditEstablecimiento({
                 noValidate
               >
                 <div className="modal-header">
-                  <h1 className="modal-title fs-5" id="exampleModalLabel">
+                  <h1 className="modal-title fs-5" id="exampleModalLabel2">
                     Modal title
                   </h1>
                   <button
@@ -280,6 +284,17 @@ export default function EditEstablecimiento({
                       type="text"
                       name="paginaWeb"
                       placeholder="Coloca el link de la pagina o red social de tu establecimiento "
+                    />
+                  </div>
+                  <div>
+                    <input
+                      required
+                      className="form-control mt-3"
+                      value={inputData?.usuarioId}
+                      onChange={handleInputChange}
+                      type="text"
+                      name="usuarioId"
+                      placeholder="Escribe el id del Usuario "
                     />
                   </div>
                 </div>

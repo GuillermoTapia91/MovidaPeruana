@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
-import { deleteEstablecimiento } from "../../service/service";
+import {
+  deleteAdminEstablecimiento,
+  deleteEstablecimiento,
+} from "../../service/service";
 import Swal from "sweetalert2";
 
-export default function DeleteEstablecimiento({ id, fetchEstablecimientos }) {
+export default function DeleteAdminEstablecimiento({
+  id,
+  fetchEstablecimientos,
+}) {
   const [selectedId, setSelectedId] = useState(id);
 
   useEffect(() => {
@@ -12,7 +18,7 @@ export default function DeleteEstablecimiento({ id, fetchEstablecimientos }) {
   const borrarEstablecimiento = async (e) => {
     try {
       const token = localStorage.getItem("token") || "";
-      const data = await deleteEstablecimiento(selectedId, token);
+      const data = await deleteAdminEstablecimiento(selectedId, token);
       console.log(data);
 
       if (data.message === "Este establecimiento no existe") {
@@ -42,15 +48,15 @@ export default function DeleteEstablecimiento({ id, fetchEstablecimientos }) {
         {/* <!-- Modal --> */}
         <div
           className="modal fade"
-          id="exampleModal1"
+          id="exampleModal3"
           tabIndex="-1"
-          aria-labelledby="exampleModalLabel1"
+          aria-labelledby="exampleModalLabel3"
           aria-hidden="true"
         >
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h1 className="modal-title fs-5" id="exampleModalLabel1">
+                <h1 className="modal-title fs-5" id="exampleModalLabel3">
                   Borrar Establecimiento
                 </h1>
                 <button

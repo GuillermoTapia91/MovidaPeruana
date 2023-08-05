@@ -91,7 +91,7 @@ export default function NavBarAuth() {
               <ul className="d-flex gap-5 me-auto van menu-horizontal">
                 <li>
                   <a className="subtitulo" href="/crear-establecimiento">
-                    Crear establecimiento
+                    Admin
                   </a>
                 </li>
                 <li>
@@ -101,11 +101,13 @@ export default function NavBarAuth() {
                 </li>
                 <li>
                   <a className="subtitulo" href="/miperfil">
-                    mi Perfil
+                    Mi Perfil
                   </a>
                 </li>
                 <li>
-                  <button className="boton-cerrar-sesion" onClick={logout}>Cerrar Sesión</button>
+                  <button className="boton-cerrar-sesion" onClick={logout}>
+                    Cerrar Sesión
+                  </button>
                 </li>
                 <li>
                   <PerfilComponent />
