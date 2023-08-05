@@ -9,7 +9,7 @@ export default function DeleteEstablecimiento({ id, fetchEstablecimientos }) {
     setSelectedId(id);
   }, [id]);
 
-  const borrarEstablecimiento = async (e) => {
+  const borrarEstablecimiento = async () => {
     const token = localStorage.getItem("token") || "";
     const data = await deleteEstablecimiento(selectedId, token);
 

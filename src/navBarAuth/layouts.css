@@ -8,6 +8,12 @@
 .btn-close{
   padding-right: 24px;
 }
+.boton-cerrar-sesion{
+      background: none;
+      color: red;
+      border: 0;
+      font-weight: bold;
+}
 .margin-left{
   margin-left: 30px;
 }
@@ -16,9 +22,9 @@
   font-size: small;
 }
 .subtitulo{
- color: aqua;
- text-decoration: none;
- font-size: large;
+  color: red;
+  text-decoration: none;
+  font-size: large;
 }
 li {
   list-style: none;
